@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <title>CP | Novo Tipo de Serviço</title>
+  <title>CP | Nova OS</title>
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
@@ -44,22 +44,23 @@ to get the desired effect
       <!-- Right navbar links -->
       <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown"></li>
-        <li class="nav-item dropdown show">
+        <li class="nav-item dropdown ">
           <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="true">
             <i class="far fa-bell"></i>
             <span class="badge badge-warning navbar-badge">2</span>
           </a>
-          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right ">
             <span class="dropdown-item dropdown-header">2 Notificações</span>
             <div class="dropdown-divider"></div>
             <a href="#" class="dropdown-item">
-              <i class="fas fa-envelope mr-2"></i> O técnico Rafael Silveira solicitou novo
+              <i class="fas fa-envelope mr-2"></i> 2 novas mensagens
               <span class="float-right text-muted text-sm">3 mins</span>
             </a>
 
             <div class="dropdown-divider"></div>
             <a href="#" class="dropdown-item dropdown-footer">Veja Todas as Notificações</a>
           </div>
+        </li>
         </li>
         <li class="nav-item">
           <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#"><i
@@ -254,7 +255,6 @@ to get the desired effect
       <!-- /.sidebar -->
     </aside>
 
-
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
       <!-- Content Header (Page header) -->
@@ -262,51 +262,180 @@ to get the desired effect
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0 text-dark">Novo Tipo de Serviço</h1>
+              <h1 class="m-0 text-dark">Nova Solicitação de Serviço</h1>
             </div><!-- /.col -->
           </div><!-- /.row -->
         </div><!-- /.container-fluid -->
       </div>
-
       <!-- /.content-header -->
-      <section class="content">
-        <div class="container-fluid">
-          <div class="row">
-            <!-- left column -->
-            <div class="col-md-6">
-              <!-- general form elements -->
-              <div class="card card-primary">
-                <div class="card-header">
-                  <h3 class="card-title">Cadastro de Serviço</h3>
-                </div>
-                <!-- /.card-header -->
-                <!-- form start -->
-                <form role="form">
-                  <div class="card-body">
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Código do Serviço</label>
-                      <input type="number" class="form-control" id="exampleInputEmail1" placeholder="Digite o código">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Nome do Serviço</label>
-                      <input type="password" class="form-control" id="exampleInputPassword1"
-                        placeholder="Nome para o serviço">
-                    </div>
-                  </div>
-                  <!-- /.card-body -->
-
-                  <div class="card-footer">
-                    <button type="submit" class="btn btn-primary">Cadastrar</button>
-                  </div>
-                </form>
-              </div>
-              <!-- /.card -->
-
+      
+      <!-- /.content-header -->
+      <div class="card card-primary">
+        <div class="card-body">
+          <h5><b>Patrimônio</b></h5>
+          <hr>
+          <div class="col-sm-3">
+            <!-- select -->
+            <div class="form-group">
+              <label>Nome do Patrimônio</label>
+              <select class="form-control">
+                <option>Cadeira</option>
+                <option>Mesa</option>
+                <option>Ar Condicionado</option>
+                <option>Quadro Branco</option>
+                <option>Projetor</option>
+                <option>Ventilador</option>
+              </select>
             </div>
           </div>
+
+          <h5><b>Serviço</b></h5>
+          <hr>
+          <div class="col-sm-3">
+            <!-- select -->
+            <div class="form-group">
+              <label>Tipo do Serviço</label>
+              <select class="form-control">
+                <option>Man. Elétrica/Equipamento</option>
+                <option>Manutenção Predial</option>
+                <option>Marcenaria</option>
+                <option>Serviços de Rede</option>
+                <option>Serviços de Suporte</option>
+                <option>Telefonia</option>
+              </select>
+            </div>
+          </div>
+          
+          <br>
+          <h5><b>Descrição da OS</b></h5>
+          <hr>
+
+          <div class="col-sm-6">
+            <label>Informe seus Dias e Horários com Disponibilidade</label>
+            
+            <table class="table table-bordered">
+              <thead>                  
+                <tr>
+                  <th><input type="checkbox"></th> <!-- marca todos os dias -->
+                  <th>Dia</th>
+                  <th>Horário</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>Segunda</td>
+                  <td>
+                    <input type="time"> às <input type="time">
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>Terça</td>
+                  <td>
+                    <input type="time"> às <input type="time">
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>Quarta</td>
+                  <td>
+                    <input type="time"> às <input type="time">
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>Quinta</td>
+                  <td>
+                    <input type="time"> às <input type="time">
+                  </td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td>Sexta</td>
+                  <td>
+                    <input type="time"> às <input type="time">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+
+          </div>
+
+          <div class="col-sm-6">
+            <!-- textarea -->
+            <div class="form-group">
+              <br><label>Descreva sua Solicitação</label>
+              <textarea class="form-control" rows="3" placeholder="Digite aqui ..."></textarea>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <p id="demo">Clique abaixo para obter sua localização ou preencha os campos:</p>
+            <button type="submit" class="btn btn-primary" onclick="getLocation()">Clique aqui</button>
+            <div id="mapholder"></div>
+          </div>
+
+          <br>
+
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label>Estado</label>
+              <select class="form-control">
+                <option>----------</option>
+                <option>Sergipe</option>
+                <option>Salvador</option>
+                <option>Alagoas</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label>Cidade</label>
+              <select class="form-control">
+                <option>----------</option>
+                <option>Aracaju</option>
+                <option>São Cristóvão</option>
+                <option>Lagarto</option>
+                <option>Itabaiana</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label>Prédio</label>
+              <select class="form-control">
+                <option>----------</option>
+                <option>Universidade Federal de Sergipe</option>
+                <option>Instituto Federal de Sergipe</option>
+                
+              </select>
+            </div>
+          </div>
+          
+
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label>Local</label>
+              <select class="form-control">
+                <option>----------</option>
+                <option>Sala do Prof. Dósea</option>
+                <option>Bloco D - Sala 104</option>
+                <option>Laboratório de Sistema I</option>
+              </select>
+            </div>
+          </div>
+
         </div>
-        <!--/.col (left) -->
-      </section>
+        
+        <div class="card-footer">
+          <a href="homePage.html"><button type="submit" class="btn btn-primary">Cancelar</button></a>
+          <a href="homePage.html"><button type="submit" class="btn btn-primary">Salvar</button></a>
+        </div>
+      </div>
       <!-- /.container-fluid -->
       <!-- /.content -->
     </div>
@@ -342,6 +471,135 @@ to get the desired effect
   <script src="../../plugins/chart.js/Chart.min.js"></script>
   <script src="../../dist/js/demo.js"></script>
   <script src="../../dist/js/pages/dashboard3.js"></script>
+
+  <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+  <script>
+    var x = document.getElementById("demo");
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+      }
+      else { x.innerHTML = "Geolocalização não é suportada nesse browser."; }
+    }
+
+    function showPosition(position) {
+      lat = position.coords.latitude;
+      lon = position.coords.longitude;
+      latlon = new google.maps.LatLng(lat, lon)
+      mapholder = document.getElementById('mapholder')
+      mapholder.style.height = '250px';
+      mapholder.style.width = '500px';
+
+      var myOptions = {
+        center: latlon, zoom: 14,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        mapTypeControl: false,
+        navigationControlOptions: { style: google.maps.NavigationControlStyle.SMALL }
+      };
+      var map = new google.maps.Map(document.getElementById("mapholder"), myOptions);
+      var marker = new google.maps.Marker({ position: latlon, map: map, title: "Você está Aqui!" });
+    }
+
+    function showError(error) {
+      switch (error.code) {
+        case error.PERMISSION_DENIED:
+          x.innerHTML = "Usuário rejeitou a solicitação de Geolocalização."
+          break;
+        case error.POSITION_UNAVAILABLE:
+          x.innerHTML = "Localização indisponível."
+          break;
+        case error.TIMEOUT:
+          x.innerHTML = "O tempo da requisição expirou."
+          break;
+        case error.UNKNOWN_ERROR:
+          x.innerHTML = "Algum erro desconhecido aconteceu."
+          break;
+      }
+    }
+  </script>
+
+<script type="text/javascript">
+
+	var idContador = 0;
+			
+	function exclui(id){
+		var campo = $("#"+id.id);
+		campo.hide(200);
+	}
+
+	$( document ).ready(function() {
+		
+		$("#btnAdicionaEmail").click(function(e){
+			e.preventDefault();
+			var tipoCampo = "email";
+			adicionaCampo(tipoCampo);
+		})
+		
+		// $("#btnAdicionaTelefone").click(function(e){
+		// 	e.preventDefault();
+		// 	var tipoCampo = "telefone";
+		// 	adicionaCampo(tipoCampo);
+		// })
+		
+		function adicionaCampo(tipo){
+
+			idContador++;
+			
+			var idCampo = "campoExtra"+idContador;
+			var idForm = "formExtra"+idContador;
+		
+			var html = "";
+			
+			html += "<div style='margin-top: 8px;' class='input-group' id='"+idForm+"'>";
+			html += "<input type='text' id='"+idCampo+"' class='form-control novoCampo' placeholder='Insira um sublocal'/>";
+			html += "<span class='input-group-btn'>";
+			html +=	"<button class='btn' onclick='exclui("+idForm+")' type='button'><span class='fa fa-trash'></span></button>";//html +=	"<button class='btn' onclick='exclui("+idForm+")' type='button'><span class='fa fa-trash'></span></button>";
+			html += "</span>";
+			html += "</div>";
+			
+			$("#imendaHTML"+tipo).append(html);
+		}
+		
+		$(".btnExcluir").click(function(){
+			console.log("clicou");
+			$(this).slideUp(200);
+		})
+		
+		$("#btnSalvar").click(function(){
+		
+		var mensagem = "";
+		var novosCampos = [];
+		var camposNulos = false;
+		
+			$('.campoDefault').each(function(){
+				if($(this).val().length < 1){
+					camposNulos = true;
+				}
+			});
+			$('.novoCampo').each(function(){
+				if($(this).is(":visible")){
+					if($(this).val().length < 1){
+						camposNulos = true;
+					}
+					//novosCampos.push($(this).val());
+					mensagem+= $(this).val()+"\n";
+				}
+			});
+			
+			if(camposNulos == true){
+				alert("Atenção: existem campos nulos");
+			}else{
+				alert("Novos campos adicionados: \n\n "+mensagem);
+			}
+			
+			novosCampos = [];
+		})
+		
+	});
+	
+	</script>
+
 </body>
 
 </html>
