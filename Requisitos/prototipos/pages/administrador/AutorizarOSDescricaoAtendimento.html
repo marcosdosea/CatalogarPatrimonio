@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>CP | Visualizar Andamento</title>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
+  <!-- IonIcons -->
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin" rel="stylesheet">
+</head>
+<!--
+BODY TAG OPTIONS:
+=================
+Apply one or more of the following classes to to the body tag
+to get the desired effect
+|---------------------------------------------------------|
+|LAYOUT OPTIONS | sidebar-collapse                        |
+|               | sidebar-mini                            |
+|---------------------------------------------------------|
+-->
+
+<body class="hold-transition sidebar-mini">
+  <div class="wrapper">
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="" class="nav-link">Início</a>
+        </li>
+      </ul>
+      <!-- Right navbar links -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown"></li>
+        <li class="nav-item dropdown ">
+          <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="true">
+            <i class="far fa-bell"></i>
+            <span class="badge badge-warning navbar-badge">2</span>
+          </a>
+          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right ">
+            <span class="dropdown-item dropdown-header">2 Notificações</span>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item">
+              <i class="fas fa-envelope mr-2"></i> 2 novas mensagens
+              <span class="float-right text-muted text-sm">3 mins</span>
+            </a>
+
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item dropdown-footer">Veja Todas as Notificações</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#"><i
+              class="fas fa-th-large"></i></a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <!-- Brand Logo -->
+      <a href="#" class="brand-link">
+        <img src="../../images/logo.png" alt="logo do catalogar patrimonio" class="brand-text elevation-1" style="width: 100%;">
+      </a>
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+          <div class="image">
+            <img src="../../dist/img/user3-128x128.jpg" class="img-circle elevation-2" alt="User Image">
+          </div>
+          <div class="info">
+            <a href="#" class="d-block">Liliane Aparecida</a>
+            <a>Administrador</p>
+          </div>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
+              <!-- Add icons to the links using the .nav-icon class
+                 with font-awesome or any other icon font library -->
+              <li class="nav-item">
+                <a href="listaEstoque.html" class="nav-link active">
+                  <i class="fas fa-warehouse"></i>
+                  <p>
+                    Lista de Estoque
+                  </p>
+                </a>
+              </li>
+            </ul>
+  
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
+              <!-- Add icons to the links using the .nav-icon class
+                 with font-awesome or any other icon font library -->
+              <li class="nav-item">
+                <a href="listaServicos.html" class="nav-link active">
+                  <i class="fas fa-tools"></i>
+                  <p>
+                    Tipo de Serviço
+                  </p>
+                </a>
+              </li>
+            </ul>
+            
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
+              <!-- Add icons to the links using the .nav-icon class
+           with font-awesome or any other icon font library -->
+              <li class="nav-item">
+                  <a href="atenderSolicitacoes.html" class="nav-link active">
+                      <i class="fas fa-concierge-bell"></i>
+                      <p>
+                          Atender Solicitações
+                      </p>
+                  </a>
+              </li>
+          </ul>
+
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
+              <!-- Add icons to the links using the .nav-icon class
+           with font-awesome or any other icon font library -->
+              <li class="nav-item">
+                  <a href="solicitarServico.html" class="nav-link active">
+                      <i class="fas fa-tasks"></i>
+                      <p>
+                          Solicitar Serviço
+                      </p>
+                  </a>
+              </li>
+          </ul>
+
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
+              <!-- Add icons to the links using the .nav-icon class
+           with font-awesome or any other icon font library -->
+              <li class="nav-item">
+                  <a href="consultarHistoricoPatrimonio.html" class="nav-link active">
+                      <i class="fas fa-history"></i>
+                      <p>
+                          Histórico de Patrimônio
+                      </p>
+                  </a>
+              </li>
+          </ul>
+
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
+              <!-- Add icons to the links using the .nav-icon class
+           with font-awesome or any other icon font library -->
+              <li class="nav-item">
+                  <a href="estoque.html" class="nav-link active">
+                      <i class="fas fa-boxes"></i>
+                      <p>
+                          Estoque
+                      </p>
+                  </a>
+              </li>
+          </ul>
+
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
+              <!-- Add icons to the links using the .nav-icon class
+           with font-awesome or any other icon font library -->
+              <li class="nav-item">
+                  <a href="listaTransferencias.html" class="nav-link active">
+                      <i class="fas fa-exchange-alt"></i>
+                      <p>
+                          Transferir Material
+                      </p>
+                  </a>
+              </li>
+          </ul>
+
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
+              <!-- Add icons to the links using the .nav-icon class
+           with font-awesome or any other icon font library -->
+              <li class="nav-item">
+                  <a href="listaEntradaMaterial.html" class="nav-link active">
+                      <i class="fas fa-box"></i>
+                      <p>
+                          Entrada de Material
+                      </p>
+                  </a>
+              </li>
+          </ul>
+
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
+              <!-- Add icons to the links using the .nav-icon class
+           with font-awesome or any other icon font library -->
+              <li class="nav-item">
+                  <a href="materialHome.html" class="nav-link active">
+                      <i class="fas fa-box-open"></i>
+                      <p>
+                          Material
+                      </p>
+                  </a>
+              </li>
+          </ul>
+
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
+              <!-- Add icons to the links using the .nav-icon class
+           with font-awesome or any other icon font library -->
+              <li class="nav-item">
+                  <a href="listaFornecedor.html" class="nav-link active">
+                      <i class="fas fa-arrow-right"></i>
+                      <p>
+                          Fornecedor
+                      </p>
+                  </a>
+              </li>
+          </ul>
+
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
+              <!-- Add icons to the links using the .nav-icon class
+           with font-awesome or any other icon font library -->
+              <li class="nav-item">
+                  <a href="listaLocal.html" class="nav-link active">
+                      <i class="fas fa-map-marker-alt"></i>
+                      <p>
+                          Locais
+                      </p>
+                  </a>
+              </li>
+          </ul>
+
+          <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
+              <!-- Add icons to the links using the .nav-icon class
+           with font-awesome or any other icon font library -->
+              <li class="nav-item">
+                  <a href="../../indexAdministrador.html" class="nav-link active">
+                      <i class="fas fa-sign-out-alt"></i>
+                      <p>
+                          Sair
+                      </p>
+                  </a>
+              </li>
+          </ul>
+
+        </nav>
+
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1 class="m-0 text-dark">Ordem de Serviço - 2221/2020</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                <li class="breadcrumb-item"><a href="#">OS 2221/2020</a></li>
+              </ol>
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+      </div>
+      <!-- /.content-header -->
+      <section class="content">
+
+        <!-- Default box -->
+        <div class="card collapsed-card">
+          <div class="card-header">
+            <h3 class="card-title"><b>Informações do Serviço</b></h3>
+            <div class="card-tools">
+              <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip"
+                title="Collapse">
+                <i class="fas fa-plus"></i></button>
+            </div>
+          </div>
+          <div class="card-body p-3" style="display: true;">
+            <div class="form-group">
+            <label>Patrimônio</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" value="Ar Condicionado" disabled>
+          </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Data da Solicitação</label>
+              <input type="date" class="form-control" id="exampleInputEmail1" value="2020-02-21" disabled>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Nome do Solicitante</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" value="Marcos Dosea" disabled>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Telefone</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" value="----" disabled>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" value="marcosdosea@gmail.com" disabled>
+            </div>
+            <div class="form-group">
+              <label>Descrição</label>
+              <textarea class="form-control" rows="3"
+                disabled>O ar-condicionado da Itatech-jr, empresa júnior do departamento de Sistemas de Informação, não está funcionando há muito tempo. Aparentemente o problema é na hélice.</textarea>
+            </div>
+            <div class="form-group">
+              <label>Local</label>
+              <textarea class="form-control" rows="3"
+                disabled>Universidade Federal de Sergipe Campus Itabaiana - Bloca A - Sala da ItatechJr</textarea>
+            </div>
+            <hr>
+            <div class="col-sm-3">
+              <!-- select -->
+              <div class="form-group">
+                <label>Tipo do Serviço</label>
+                <select class="form-control" disabled>
+                  <option>Man. Elétrica/Equipamento</option>
+                </select>
+              </div>
+            </div>
+            
+          </div>
+          <!-- /.card-body -->
+        </div>
+
+
+        <!-- Default box -->
+        <div class="card float-right col-4">
+          <div class="card-header">
+            <h3 class="card-title"><b>Conversas Recentes</b></h3>
+            <div class="card-tools">
+              <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip"
+                title="Collapse">
+                <i class="fas fa-plus"></i></button>
+            </div>
+          </div>
+          <div class="card-body p-3" style="display: true;">
+
+            <div class="row">
+              <div class="col-12">
+                <!-- <h4>Recent Activity</h4> -->
+                <div class="post">
+                  <div class="user-block">
+                    <span class="username">
+                      <a href="#">Liliane Aparecida</a>
+                    </span>
+                    <span class="description">Enviado em - 7:45 AM hoje</span>
+                  </div>
+                  <p>
+                    Necessita de mais alguma coisa para finalizar o serviço?
+                  </p>
+                  <!-- /.user-block -->
+                </div>
+
+                <div class="post clearfix">
+                  <div class="user-block">
+                    <span class="username">
+                      <a href="#">Wagner Prata</a>
+                    </span>
+                    <span class="description">Recebida em - 3 dias atrás</span>
+                  </div>
+                  <!-- /.user-block -->
+                  <p>
+                    Solicito os seguintes materiais para cumprir a solicitação: Capacitor RF30 e uma Hélice RF0.5nós.
+                    Elas estão listadas mais abaixo na página.
+                  </p>
+                </div>
+
+                <div class="post">
+                  <div class="user-block">
+                    <span class="username">
+                      <a href="#">Rafael Silveira</a>
+                    </span>
+                    <span class="description">Recebida em - 5 dias atrás</span>
+                  </div>
+                  <!-- /.user-block -->
+                  <p>
+                    Olá estive no local informado, porém não consigo resolver por hora, pois não identifiquei o
+                    problema.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <hr>
+
+            <form role="form">
+              <div class="card-body">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Entre com a mensagem">
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+              </div>
+
+            </form>
+
+          </div>
+          <!-- /.card-body -->
+        </div>
+
+        <div class="card card-primary">
+          <div class="card-body">
+            <h5><b>Informação Técnica</b></h5>
+            <hr>
+            <div class="col-sm-3">
+              <!-- select -->
+              <div class="form-group">
+                <label>Tipo do Serviço</label>
+                <select class="form-control">
+                  <option>Man. Elétrica/Equipamento</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <!-- select -->
+              <div class="form-group">
+                <label>Nome do Serviço</label>
+                <select class="form-control">
+                  <option>Refrigeração</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <!-- select -->
+              <div class="form-group">
+                <label>Técnico</label>
+                <select class="form-control">
+                  <option>Daniel Santos</option>
+                </select>
+              </div>
+            </div>
+            <hr>
+            <div class="card">
+              <div class="card-header border-0">
+                <h3 class="card-title"> <b> Lista de Materias Solicitados</b></h3>
+                <div class="card-tools">
+                  <a href="#" class="btn btn-tool btn-sm">
+                    <i class="fas fa-download"></i>
+                  </a>
+                  <a href="#" class="btn btn-tool btn-sm">
+                    <i class="fas fa-bars"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="card-body table-responsive p-0">
+                <table class="table table-striped table-valign-middle">
+                  <thead>
+                    <tr>
+                      <th>Nome do Patrimônio</th>
+                      <th>Nome do Material</th>
+                      <th>Quantidade em Estoque</th>
+                      <th>Quantidade Solicitada</th>
+                      <th>Status</th>
+                      <th>Ação</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        Ar-condic. ELGIN 12
+                      </td>
+                      <td>
+                        Capacitor RF30
+                      </td>
+                      <td>15 unidades</td>
+                      <td>
+                        1 unidade
+                      </td>
+                      <td>
+                        Atendido
+                      </td>
+                      <td>
+                        <a href="#" class="text-muted">
+                          <i title="Permitir" class="fas fa-check"></i>
+                        </a>
+                        |
+                        <a href="#" class="text-muted">
+                          <i title="Negar" class="fas fa-times"></i>
+                        </a>
+                        |
+                        <a href="#" class="text-muted">
+                          <i title="Solicitar ao Almoxarifado" class="fas fa-shopping-cart"></i>
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Ar-condic. ELGIN 19
+                      </td>
+                      <td>
+                        Hélice Vortex 16 nós
+                      </td>
+                      <td>14 unidades</td>
+                      <td>
+                        1 unidade
+                      </td>
+                      <td>
+                        Solicitado
+                      </td>
+                      <td>
+                        <a href="#" class="text-muted">
+                          <i title="Permitir" class="fas fa-check"></i>
+                          <!-- Permitir -->
+                        </a>
+                        |
+                        <a href="#" class="text-muted">
+                          <i title="Negar" class="fas fa-times"></i>
+                          <!-- Negar -->
+                        </a>
+                        |
+                        <a href="#" class="text-muted">
+                          <i title="Solicitar ao Almoxarifado" class="fas fa-shopping-cart"></i>
+                          <!-- Solicitar ao Almoxarifado -->
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header border-0">
+                <h3 class="card-title"> <b> Materias Sendo Devolvidos</b></h3>
+                <div class="card-tools">
+                  <a href="#" class="btn btn-tool btn-sm">
+                    <i class="fas fa-download"></i>
+                  </a>
+                  <a href="#" class="btn btn-tool btn-sm">
+                    <i class="fas fa-bars"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="card-body table-responsive p-0">
+                <table class="table table-striped table-valign-middle">
+                  <thead>
+                    <tr>
+                      <th>Nome do Material</th>
+                      <th>Quantidade Solicitada</th>
+                      <th>Quantidade Sendo Devolvida</th>
+                      <th>Ação</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        Lâmpada LED 10W
+                      </td>
+                      <td>14 unidades</td>
+                      <td>
+                        7 unidades
+                      </td>
+                      <td>
+                        <a href="#" class="text-muted">
+                          <i title="Confirmar" class="fas fa-check"></i>
+                        </a>
+                        |
+                        <a href="#" class="text-muted">
+                          <i title="Rejeitar" class="fas fa-times"></i>
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <hr>
+
+          </div>
+
+          <div class="card-footer">
+            <a href="AutorizarOS.html"><button type="submit" class="btn btn-primary">Atualizar</button></a>
+          </div>
+        </div>
+        <!-- /.card -->
+
+      </section>
+      <!-- /.container-fluid -->
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+      <strong>Copyright &copy; 2014-2019 <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
+      All rights reserved.
+      <div class="float-right d-none d-sm-inline-block">
+        <b>Version</b> 3.0.2
+      </div>
+    </footer>
+  </div>
+  <!-- ./wrapper -->
+
+  <!-- REQUIRED SCRIPTS -->
+
+  <!-- jQuery -->
+  <script src="../../plugins/jquery/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- AdminLTE -->
+  <script src="../../dist/js/adminlte.js"></script>
+
+  <!-- OPTIONAL SCRIPTS -->
+  <script src="../../plugins/chart.js/Chart.min.js"></script>
+  <script src="../../dist/js/demo.js"></script>
+  <script src="../../dist/js/pages/dashboard3.js"></script>
+</body>
+
+</html>
