@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <title>CP | Entrada de Material</title>
+  <title>CP | Novo Tipo de Serviço</title>
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
@@ -38,11 +38,12 @@ to get the desired effect
           <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-          <a href="AutorizarOS.html" class="nav-link">Início</a>
+          <a href="" class="nav-link">Início</a>
         </li>
       </ul>
       <!-- Right navbar links -->
       <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown"></li>
         <li class="nav-item dropdown show">
           <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="true">
             <i class="far fa-bell"></i>
@@ -52,7 +53,7 @@ to get the desired effect
             <span class="dropdown-item dropdown-header">2 Notificações</span>
             <div class="dropdown-divider"></div>
             <a href="#" class="dropdown-item">
-              <i class="fas fa-envelope mr-2"></i> 2 novas mensagens
+              <i class="fas fa-envelope mr-2"></i> O técnico Rafael Silveira solicitou novo
               <span class="float-right text-muted text-sm">3 mins</span>
             </a>
 
@@ -60,8 +61,6 @@ to get the desired effect
             <a href="#" class="dropdown-item dropdown-footer">Veja Todas as Notificações</a>
           </div>
         </li>
-
-
         <li class="nav-item">
           <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#"><i
               class="fas fa-th-large"></i></a>
@@ -263,7 +262,7 @@ to get the desired effect
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0 text-dark">Entrada de Material</h1>
+              <h1 class="m-0 text-dark">Novo Tipo de Serviço</h1>
             </div><!-- /.col -->
           </div><!-- /.row -->
         </div><!-- /.container-fluid -->
@@ -272,140 +271,41 @@ to get the desired effect
       <!-- /.content-header -->
       <section class="content">
         <div class="container-fluid">
-
-          <div class="card card-primary">
-            <div class="card-body">
-              <div class="col-sm-12" style="width: 200%;">
-                <div class="form-group clearfix">
-                  <!-- select -->
-                
-                <div class="container">
-                  <div class="row" style="background: #d4d1c9;"> 
-                    <div class="col-sm-4">
-                      <div class="form-group">
-                        <label for="exampleInputEmail1">Número da Nota Fiscal</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nome do destinatário">
-                      </div>
+          <div class="row">
+            <!-- left column -->
+            <div class="col-md-6">
+              <!-- general form elements -->
+              <div class="card card-primary">
+                <div class="card-header">
+                  <h3 class="card-title">Cadastro de Serviço</h3>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <form role="form">
+                  <div class="card-body">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Código do Serviço</label>
+                      <input type="number" class="form-control" id="exampleInputEmail1" placeholder="Digite o código">
                     </div>
-                    <div class="col-sm-4">
-                      <div class="form-group">
-                        <label>Nome do Fornecedor</label>
-                        <select class="form-control">
-                          <option>TECH Informática</option>
-                          <option>Resfriar Refrigeração</option>
-                          <option>Mundo da Lâmpada</option>
-                          <option>Silver Eletrônica</option>
-                        </select>
-                      </div>  
-                    </div>
-                    <div class="col-sm-2">
-                      <div class="form-group">
-                        <label for="exampleInputEmail1">Data de Entrada</label>
-                        <input input id="date" type="date" class="form-control" placeholder="Data DD/MM/AAAA">
-                      </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Nome do Serviço</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1"
+                        placeholder="Nome para o serviço">
                     </div>
                   </div>
-                  <hr style="background: black;">
-                </div>
+                  <!-- /.card-body -->
 
-                <div class="container">
-                  <div class="row">
-                    <div class="col-sm-4">
-                      <div class="form-group">
-                        <label>Selecionar o material</label>
-                        <select class="form-control">
-                          <option>HD 500Gb</option>
-                          <option>Capacitor Ar-condicionado RF30</option>
-                          <option>Lâmpada LED 10w</option>
-                          <option>Fechadura Trim</option>
-                          <option>Hélice Ar-condicionado 16</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="col-sm-4">
-                      <div class="form-group">
-                        <label for="exampleInputEmail1">Quantidade</label>
-                        <input type="number" class="form-control" id="exampleInputEmail1" placeholder="Digite a quantidade">
-                      </div>
-                    </div>
+                  <div class="card-footer">
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
                   </div>
-                  <button type="submit" class="btn btn-primary">Adicionar +</button>
-                </div>
-
-                <!-------------------------------------------------------------->
-
-                </div>
+                </form>
               </div>
-              <hr>
-              <div class="card">
-                <div class="card-header border-0">
-                  <h3 class="card-title">Lista dos Materiais Selecionados</h3>
-                  <div class="card-tools">
-                    <a href="#" class="btn btn-tool btn-sm">
-                      <i class="fas fa-download"></i>
-                    </a>
-                    <a href="#" class="btn btn-tool btn-sm">
-                      <i class="fas fa-bars"></i>
-                    </a>
-                  </div>
-                </div>
-                <div class="card-body table-responsive p-0">
-                  <table class="table table-striped table-valign-middle">
-                    <thead>
-                      <tr>
-                        <th>Nome do Material</th>
-                        <th>Quantidade</th>
-                        <!-- <th>Status</th> -->
-                        <!-- <th>Ação</th> -->
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>
-                          Capacitor RF30
-                        </td>
-                        <td>15 unidades</td>
-                        <!-- <td>
-                          Entrada
-                        </td> -->
-                        <td>
-                          <a href="#" class="text-muted">
-                            <i class="fas fa-trash-alt"></i>
-                          </a>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td>
-                          Fechadura Trim
-                        </td>
-                        <td>5 unidades</td>
-                        <!-- <td>
-                          Saída
-                        </td> -->
-                        <td>
-                          <a href="#" class="text-muted">
-                            <i class="fas fa-trash-alt"></i>
-                          </a>
-                        </td>
-                      </tr>
-                      
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-
-              <hr>
-              <div class="card-footer">
-                <a href="controleEstoqueHome.html"><button type="submit" class="btn btn-primary">Salvar</button></a>
-                <a href="controleEstoqueHome.html"><button type="submit" class="btn btn-primary">Cancelar</button></a>
-              </div>
-
+              <!-- /.card -->
 
             </div>
-
           </div>
-          <!--/.col (left) -->
+        </div>
+        <!--/.col (left) -->
       </section>
       <!-- /.container-fluid -->
       <!-- /.content -->

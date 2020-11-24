@@ -252,6 +252,11 @@
             <div class="col-sm-6">
               <h1 class="m-0 text-dark">Histórico Patrimônio</h1>
             </div><!-- /.col -->
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+              </ol>
+            </div><!-- /.col -->
           </div><!-- /.row -->
         </div><!-- /.container-fluid -->
       </div>
@@ -271,9 +276,8 @@
                 <option>Estátua da Liberdade</option>
                 <option>Serra de Itabaiana</option>
               </select>
-              <br>
-              <button type="submit" class="btn btn-primary">Procurar</button>
             </div>
+            <button type="submit" class="btn btn-primary">Procurar</button>
 
           </div>
         </div>
@@ -288,9 +292,14 @@
 
           </div>
 
-          <div class="card">
+          <div class="card collapsed-card">
             <div class="card-header">
               <h3 class="card-title"><b>Produtos desse Patrimônio</b></h3>
+              <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip"
+                  title="Collapse">
+                  <i class="fas fa-plus"></i></button>
+              </div>
             </div>
 
             <!-- card geral com os outros cards -->
@@ -304,25 +313,17 @@
                       <tr role="row">
                         <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                           aria-sort="ascending" aria-label="Código do produto: activate to sort column descending"
-                          style="width: 192.392px;">
-                          Código do produto
-                          <input class="form-control" type="text" name="" id="" style="margin-top: 10px;" placeholder="Pesquise o código do produto">
-                        </th>
+                          style="width: 192.392px;">Código do produto</th>
                         <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
-                          aria-label="Browser: activate to sort column ascending" style="width: 247.776px;">
-                          Nome do Material
-                          <input class="form-control" type="text" name="" id="" style="margin-top: 10px;" placeholder="Pesquise o nome do material">
-                        </th>
+                          aria-label="Browser: activate to sort column ascending" style="width: 247.776px;">Nome do
+                          Material</th>
                         <!-- <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                               aria-label="Nome do Serviço: activate to sort column ascending" style="width: 220.084px;">Nome
                               do Serviço</th> -->
                         <!-- <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                               aria-label="Status: activate to sort column ascending" style="width: 163.93px;">Status</th> -->
                         <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
-                          aria-label="Ações: activate to sort column ascending" style="width: 50px;">
-                          Ações
-                          <br><button type="submit" class="btn btn-primary" style="margin-top: 10px;">Pesquisar</button>
-                        </th>
+                          aria-label="Ações: activate to sort column ascending" style="width: 117.236px;">Ações</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -404,9 +405,14 @@
             <!-- /.card-body -->
           </div>
 
-          <div class="card">
+          <div class="card collapsed-card">
             <div class="card-header">
               <h3 class="card-title"><b>Histórico desse Patrimônio</b></h3>
+              <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip"
+                  title="Collapse">
+                  <i class="fas fa-plus"></i></button>
+              </div>
             </div>
 
             <!-- card geral com os outros cards -->
@@ -420,33 +426,19 @@
                       <tr role="row">
                         <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                           aria-sort="ascending" aria-label="Código do produto: activate to sort column descending"
-                          style="width: 132.392px;">
-                          Cod da manutenção
-                          <input class="form-control" type="text" name="" id="" style="margin-top: 10px;" placeholder="Pesquise o código da manutenção">
-                        </th>
+                          style="width: 132.392px;">Cod da manutenção</th>
                         <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
-                          aria-label="Browser: activate to sort column ascending" style="width: 247.776px;">
-                          Data da Execução
-                          <input class="form-control" type="text" name="" id="" style="margin-top: 10px;" placeholder="Pesquise a data da solicitação">
-                        </th>
+                          aria-label="Browser: activate to sort column ascending" style="width: 247.776px;">Data da
+                          Execução</th>
                         <!-- <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                               aria-label="Nome do Serviço: activate to sort column ascending" style="width: 220.084px;">Nome
                               do Serviço</th> -->
                         <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
-                          aria-label="Ações: activate to sort column ascending" style="width: 117.236px;">
-                          Quem Solicitou
-                          <input class="form-control" type="text" name="" id="" style="margin-top: 10px;" placeholder="Pesquise o nome do solicitante">
+                          aria-label="Ações: activate to sort column ascending" style="width: 117.236px;">Quem Solicitou
                         </th>
                         <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
-                          aria-label="Status: activate to sort column ascending" style="width: 163.93px;">
-                          Produtos Utilizados
-                          <input class="form-control" type="text" name="" id="" style="margin-top: 10px;" placeholder="Pesquise o produto utilizado">
-                        </th>
-                          <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
-                          aria-label="Status: activate to sort column ascending" style="width: 50px;">
-                          Ações
-                          <br><button type="submit" class="btn btn-primary" style="margin-top: 10px;">Pesquisar</button>
-                        </th>
+                          aria-label="Status: activate to sort column ascending" style="width: 163.93px;">Produtos
+                          Utilizados</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -455,12 +447,12 @@
                         <td>01/10/2020</td>
                         <td>
                           Wagner Prata
+                          <a href=""><i class="fas fa-eye"></i></a>
                         </td>
                         <td>
                           produto1, produto2, produto3
-                        </td>
-                        <td>
                           <a href=""><i class="fas fa-eye"></i></a>
+                          <!--vai para os detalhes dos produtos -->
                         </td>
                       </tr>
                       <tr role="row" class="even">
@@ -468,13 +460,12 @@
                         <td>02/06/2019</td>
                         <td>
                           Daniel dos Santos
+                          <a href=""><i class="fas fa-eye"></i></a>
                         </td>
                         <td>
                           produto4, produto5, produto6
-                          <!--vai para os detalhes dos produtos -->
-                        </td>
-                        <td>
                           <a href=""><i class="fas fa-eye"></i></a>
+                          <!--vai para os detalhes dos produtos -->
                         </td>
                       </tr>
                       </tr>
@@ -483,13 +474,12 @@
                         <td>15/10/2020</td>
                         <td>
                           Liliane Aparecida
+                          <a href=""><i class="fas fa-eye"></i></a>
                         </td>
                         <td>
                           produto7, produto8, produto9
-                          <!--vai para os detalhes dos produtos -->
-                        </td>
-                        <td>
                           <a href=""><i class="fas fa-eye"></i></a>
+                          <!--vai para os detalhes dos produtos -->
                         </td>
                       </tr>
                       </tr>
@@ -498,13 +488,12 @@
                         <td>30/12/2018</td>
                         <td>
                           Junior Santos
+                          <a href=""><i class="fas fa-eye"></i></a>
                         </td>
                         <td>
                           produto10, produto11, produto12
-                          <!--vai para os detalhes dos produtos -->
-                        </td>
-                        <td>
                           <a href=""><i class="fas fa-eye"></i></a>
+                          <!--vai para os detalhes dos produtos -->
                         </td>
                       </tr>
                       </tr>
@@ -513,13 +502,12 @@
                         <td>22/04/2020</td>
                         <td>
                           Marcos Dósea
+                          <a href=""><i class="fas fa-eye"></i></a>
                         </td>
                         <td>
                           produto13, produto14, produto15
-                          <!--vai para os detalhes dos produtos -->
-                        </td>
-                        <td>
                           <a href=""><i class="fas fa-eye"></i></a>
+                          <!--vai para os detalhes dos produtos -->
                         </td>
                       </tr>
                     </tbody>
@@ -529,7 +517,6 @@
                         <th rowspan="1" colspan="1">Data da Execução</th>
                         <th rowspan="1" colspan="1">Quem Solicitou</th>
                         <th rowspan="1" colspan="1">Produtos Utilizados</th>
-                        <th rowspan="1" colspan="1">Ações</th>
                       </tr>
                     </tfoot>
                   </table>
