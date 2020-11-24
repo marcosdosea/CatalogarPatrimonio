@@ -18523,7 +18523,7 @@
 											"containerExtending": true,
 											"left": 241,
 											"top": 649,
-											"width": 61.3125,
+											"width": 69.380859375,
 											"height": 12,
 											"text": "«stereotype»"
 										},
@@ -18537,7 +18537,7 @@
 											"containerExtending": true,
 											"left": 241,
 											"top": 663,
-											"width": 61.3125,
+											"width": 69.380859375,
 											"height": 12,
 											"text": "Create"
 										},
@@ -18646,7 +18646,7 @@
 							"containerExtending": true,
 							"left": 236,
 							"top": 644,
-							"width": 71.3125,
+							"width": 79.380859375,
 							"height": 36,
 							"autoResize": true,
 							"nameCompartment": {
@@ -18711,7 +18711,7 @@
 											"containerExtending": true,
 											"left": 241,
 											"top": 713,
-											"width": 61.3125,
+											"width": 69.380859375,
 											"height": 12,
 											"text": "«stereotype»"
 										},
@@ -18725,7 +18725,7 @@
 											"containerExtending": true,
 											"left": 241,
 											"top": 727,
-											"width": 61.3125,
+											"width": 69.380859375,
 											"height": 12,
 											"text": "Call"
 										},
@@ -18834,7 +18834,7 @@
 							"containerExtending": true,
 							"left": 236,
 							"top": 708,
-							"width": 71.3125,
+							"width": 79.380859375,
 							"height": 36,
 							"autoResize": true,
 							"nameCompartment": {
@@ -18899,7 +18899,7 @@
 											"containerExtending": true,
 											"left": 241,
 											"top": 769,
-											"width": 61.3125,
+											"width": 69.380859375,
 											"height": 12,
 											"text": "«stereotype»"
 										},
@@ -18913,7 +18913,7 @@
 											"containerExtending": true,
 											"left": 241,
 											"top": 783,
-											"width": 61.3125,
+											"width": 69.380859375,
 											"height": 12,
 											"text": "Instantiate"
 										},
@@ -19022,7 +19022,7 @@
 							"containerExtending": true,
 							"left": 236,
 							"top": 764,
-							"width": 71.3125,
+							"width": 79.380859375,
 							"height": 36,
 							"autoResize": true,
 							"nameCompartment": {
@@ -19087,7 +19087,7 @@
 											"containerExtending": true,
 											"left": 241,
 											"top": 825,
-											"width": 72.685546875,
+											"width": 82.013671875,
 											"height": 12,
 											"text": "«stereotype»"
 										},
@@ -19101,7 +19101,7 @@
 											"containerExtending": true,
 											"left": 241,
 											"top": 839,
-											"width": 72.685546875,
+											"width": 82.013671875,
 											"height": 12,
 											"text": "Responsibility"
 										},
@@ -19210,7 +19210,7 @@
 							"containerExtending": true,
 							"left": 236,
 							"top": 820,
-							"width": 82.685546875,
+							"width": 92.013671875,
 							"height": 36,
 							"autoResize": true,
 							"nameCompartment": {
@@ -19275,7 +19275,7 @@
 											"containerExtending": true,
 											"left": 241,
 											"top": 881,
-											"width": 61.3125,
+											"width": 69.380859375,
 											"height": 12,
 											"text": "«stereotype»"
 										},
@@ -19289,7 +19289,7 @@
 											"containerExtending": true,
 											"left": 241,
 											"top": 895,
-											"width": 61.3125,
+											"width": 69.380859375,
 											"height": 12,
 											"text": "Send"
 										},
@@ -19398,7 +19398,7 @@
 							"containerExtending": true,
 							"left": 236,
 							"top": 876,
-							"width": 71.3125,
+							"width": 79.380859375,
 							"height": 36,
 							"autoResize": true,
 							"nameCompartment": {
@@ -19441,7 +19441,7 @@
 									"visible": false,
 									"font": "Arial;12;0",
 									"containerExtending": true,
-									"left": 343,
+									"left": 347,
 									"top": 634,
 									"height": 12,
 									"alpha": 1.5707963267948966,
@@ -19463,7 +19463,7 @@
 									"visible": null,
 									"font": "Arial;12;0",
 									"containerExtending": true,
-									"left": 343,
+									"left": 347,
 									"top": 619,
 									"height": 12,
 									"alpha": 1.5707963267948966,
@@ -19485,7 +19485,7 @@
 									"visible": false,
 									"font": "Arial;12;0",
 									"containerExtending": true,
-									"left": 343,
+									"left": 347,
 									"top": 664,
 									"height": 12,
 									"alpha": -1.5707963267948966,
@@ -19504,7 +19504,7 @@
 							"tail": {
 								"$ref": "AAAAAAFFwL4D0mBZIkY="
 							},
-							"points": "306:655;380:655",
+							"points": "314:655;380:655",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAFFwL+LCGFhp5w="
@@ -20157,7 +20157,7 @@
 											"containerExtending": true,
 											"left": 745,
 											"top": 29,
-											"width": 102.427734375,
+											"width": 110.396484375,
 											"height": 12,
 											"text": "«stereotype»"
 										},
@@ -20171,7 +20171,7 @@
 											"containerExtending": true,
 											"left": 745,
 											"top": 43,
-											"width": 102.427734375,
+											"width": 110.396484375,
 											"height": 12,
 											"text": "Derive"
 										},
@@ -20207,7 +20207,7 @@
 									"containerExtending": true,
 									"left": 740,
 									"top": 24,
-									"width": 112.427734375,
+									"width": 120.396484375,
 									"height": 36,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAFFwMGle2H4B8s="
@@ -20245,7 +20245,7 @@
 											"containerExtending": true,
 											"left": 745,
 											"top": 65,
-											"width": 102.427734375,
+											"width": 110.396484375,
 											"height": 12,
 											"text": "+computation: String",
 											"horizontalAlignment": 0
@@ -20296,7 +20296,7 @@
 							"containerExtending": true,
 							"left": 740,
 							"top": 24,
-							"width": 112.427734375,
+							"width": 120.396484375,
 							"height": 58,
 							"autoResize": true,
 							"nameCompartment": {
@@ -20360,7 +20360,7 @@
 											"containerExtending": true,
 											"left": 745,
 											"top": 101,
-											"width": 61.3125,
+											"width": 69.380859375,
 											"height": 12,
 											"text": "«stereotype»"
 										},
@@ -20374,7 +20374,7 @@
 											"containerExtending": true,
 											"left": 745,
 											"top": 115,
-											"width": 61.3125,
+											"width": 69.380859375,
 											"height": 12,
 											"text": "Refine"
 										},
@@ -20483,7 +20483,7 @@
 							"containerExtending": true,
 							"left": 740,
 							"top": 96,
-							"width": 71.3125,
+							"width": 79.380859375,
 							"height": 36,
 							"autoResize": true,
 							"nameCompartment": {
@@ -20548,7 +20548,7 @@
 											"containerExtending": true,
 											"left": 745,
 											"top": 153,
-											"width": 61.3125,
+											"width": 69.380859375,
 											"height": 12,
 											"text": "«stereotype»"
 										},
@@ -20562,7 +20562,7 @@
 											"containerExtending": true,
 											"left": 745,
 											"top": 167,
-											"width": 61.3125,
+											"width": 69.380859375,
 											"height": 12,
 											"text": "Trace"
 										},
@@ -20671,7 +20671,7 @@
 							"containerExtending": true,
 							"left": 740,
 							"top": 148,
-							"width": 71.3125,
+							"width": 79.380859375,
 							"height": 36,
 							"autoResize": true,
 							"nameCompartment": {
@@ -61161,9 +61161,9 @@
 										"$ref": "AAAAAAF1+AWVW37jEok="
 									},
 									"font": "Arial;13;0",
-									"left": 229,
+									"left": 228,
 									"top": 203,
-									"width": 5.05908203125,
+									"width": 6.5,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 25,
@@ -62185,6 +62185,387 @@
 									"type": "fornecedor"
 								}
 							]
+						}
+					]
+				},
+				{
+					"_type": "UMLClass",
+					"_id": "AAAAAAF1+CAQNhzEwkw=",
+					"_parent": {
+						"$ref": "AAAAAAFFxnG7qRNvP5M="
+					},
+					"name": "TelaManterEmpresa",
+					"ownedElements": [
+						{
+							"_type": "UMLDependency",
+							"_id": "AAAAAAF1+CM83x3vpR4=",
+							"_parent": {
+								"$ref": "AAAAAAF1+CAQNhzEwkw="
+							},
+							"source": {
+								"$ref": "AAAAAAF1+CAQNhzEwkw="
+							},
+							"target": {
+								"$ref": "AAAAAAF1+CLDyh223Yw="
+							}
+						},
+						{
+							"_type": "UMLAssociation",
+							"_id": "AAAAAAF1+CNT1R4RKZc=",
+							"_parent": {
+								"$ref": "AAAAAAF1+CAQNhzEwkw="
+							},
+							"end1": {
+								"_type": "UMLAssociationEnd",
+								"_id": "AAAAAAF1+CNT1R4Sr98=",
+								"_parent": {
+									"$ref": "AAAAAAF1+CNT1R4RKZc="
+								},
+								"reference": {
+									"$ref": "AAAAAAF1+CAQNhzEwkw="
+								},
+								"multiplicity": "*"
+							},
+							"end2": {
+								"_type": "UMLAssociationEnd",
+								"_id": "AAAAAAF1+CNT1R4T5NM=",
+								"_parent": {
+									"$ref": "AAAAAAF1+CNT1R4RKZc="
+								},
+								"reference": {
+									"$ref": "AAAAAAF1+CDYMh0UzwQ="
+								},
+								"multiplicity": "1"
+							}
+						}
+					],
+					"stereotype": {
+						"$ref": "AAAAAAFFw0h1/QXL978="
+					},
+					"operations": [
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAF1+CBCghzuhr4=",
+							"_parent": {
+								"$ref": "AAAAAAF1+CAQNhzEwkw="
+							},
+							"name": "adicionarEmpresa",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF1+CBRaRz146U=",
+									"_parent": {
+										"$ref": "AAAAAAF1+CBCghzuhr4="
+									},
+									"name": "empresa",
+									"type": "Empresa"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAF1+CBSKhz3mJc=",
+							"_parent": {
+								"$ref": "AAAAAAF1+CAQNhzEwkw="
+							},
+							"name": "alterarEmpresa",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF1+CBkfhz+q5s=",
+									"_parent": {
+										"$ref": "AAAAAAF1+CBSKhz3mJc="
+									},
+									"name": "empresa",
+									"type": "Empresa"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAF1+CCAIR0Bke8=",
+							"_parent": {
+								"$ref": "AAAAAAF1+CAQNhzEwkw="
+							},
+							"name": "removerEmpresa",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF1+CCiUB0IvVo=",
+									"_parent": {
+										"$ref": "AAAAAAF1+CCAIR0Bke8="
+									},
+									"name": "empresa",
+									"type": "Empresa"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAF1+CCjFB0KlJ0=",
+							"_parent": {
+								"$ref": "AAAAAAF1+CAQNhzEwkw="
+							},
+							"name": "consultarEmpresa",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF1+CDFgB0Rdz8=",
+									"_parent": {
+										"$ref": "AAAAAAF1+CCjFB0KlJ0="
+									},
+									"name": "empresa",
+									"type": "Empresa"
+								}
+							]
+						}
+					]
+				},
+				{
+					"_type": "UMLClass",
+					"_id": "AAAAAAF1+CDYMh0UzwQ=",
+					"_parent": {
+						"$ref": "AAAAAAFFxnG7qRNvP5M="
+					},
+					"name": "ControladorEmpresa",
+					"ownedElements": [
+						{
+							"_type": "UMLDependency",
+							"_id": "AAAAAAF1+CNFjB4AZ90=",
+							"_parent": {
+								"$ref": "AAAAAAF1+CDYMh0UzwQ="
+							},
+							"source": {
+								"$ref": "AAAAAAF1+CDYMh0UzwQ="
+							},
+							"target": {
+								"$ref": "AAAAAAF1+CLDyh223Yw="
+							}
+						},
+						{
+							"_type": "UMLAssociation",
+							"_id": "AAAAAAF1+CNZlh5Ux6w=",
+							"_parent": {
+								"$ref": "AAAAAAF1+CDYMh0UzwQ="
+							},
+							"end1": {
+								"_type": "UMLAssociationEnd",
+								"_id": "AAAAAAF1+CNZlx5VhnQ=",
+								"_parent": {
+									"$ref": "AAAAAAF1+CNZlh5Ux6w="
+								},
+								"reference": {
+									"$ref": "AAAAAAF1+CDYMh0UzwQ="
+								},
+								"multiplicity": "1"
+							},
+							"end2": {
+								"_type": "UMLAssociationEnd",
+								"_id": "AAAAAAF1+CNZlx5W73A=",
+								"_parent": {
+									"$ref": "AAAAAAF1+CNZlh5Ux6w="
+								},
+								"reference": {
+									"$ref": "AAAAAAF1+CHish1mKak="
+								},
+								"multiplicity": "1"
+							}
+						}
+					],
+					"stereotype": {
+						"$ref": "AAAAAAFFwx8Q/35u/80="
+					},
+					"operations": [
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAF1+CEMyB0+G1c=",
+							"_parent": {
+								"$ref": "AAAAAAF1+CDYMh0UzwQ="
+							},
+							"name": "adicionarEmpresa",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF1+CEdeR1Fpps=",
+									"_parent": {
+										"$ref": "AAAAAAF1+CEMyB0+G1c="
+									},
+									"name": "empresa",
+									"type": "Empresa"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAF1+CEeSB1HgpQ=",
+							"_parent": {
+								"$ref": "AAAAAAF1+CDYMh0UzwQ="
+							},
+							"name": "alterarEmpresa",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF1+CE6MB1OOl0=",
+									"_parent": {
+										"$ref": "AAAAAAF1+CEeSB1HgpQ="
+									},
+									"name": "empresa",
+									"type": "Empresa"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAF1+CE6+h1Qdok=",
+							"_parent": {
+								"$ref": "AAAAAAF1+CDYMh0UzwQ="
+							},
+							"name": "removerEmpresa",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF1+CFaRh1Xm2Q=",
+									"_parent": {
+										"$ref": "AAAAAAF1+CE6+h1Qdok="
+									},
+									"name": "empresa",
+									"type": "Empresa"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAF1+CFbEh1Z1Rg=",
+							"_parent": {
+								"$ref": "AAAAAAF1+CDYMh0UzwQ="
+							},
+							"name": "consultarEmpresa",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF1+CF17R1gCEo=",
+									"_parent": {
+										"$ref": "AAAAAAF1+CFbEh1Z1Rg="
+									},
+									"name": "empresa",
+									"type": "Empresa"
+								}
+							]
+						}
+					]
+				},
+				{
+					"_type": "UMLClass",
+					"_id": "AAAAAAF1+CHish1mKak=",
+					"_parent": {
+						"$ref": "AAAAAAFFxnG7qRNvP5M="
+					},
+					"name": "PersistenciaEmpresa",
+					"stereotype": "entity collection",
+					"operations": [
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAF1+CIxhx2S67E=",
+							"_parent": {
+								"$ref": "AAAAAAF1+CHish1mKak="
+							},
+							"name": "adicionarEmpresa",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF1+CJEzB2Zk+s=",
+									"_parent": {
+										"$ref": "AAAAAAF1+CIxhx2S67E="
+									},
+									"name": "empresa",
+									"type": "Empresa"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAF1+CJFkR2b3vM=",
+							"_parent": {
+								"$ref": "AAAAAAF1+CHish1mKak="
+							},
+							"name": "alterarEmpresa",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF1+CJ0oB2ifTU=",
+									"_parent": {
+										"$ref": "AAAAAAF1+CJFkR2b3vM="
+									},
+									"name": "empresa",
+									"type": "Empresa"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAF1+CJ1XR2k68w=",
+							"_parent": {
+								"$ref": "AAAAAAF1+CHish1mKak="
+							},
+							"name": "removerEmpresa",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF1+CKTFR2rIe4=",
+									"_parent": {
+										"$ref": "AAAAAAF1+CJ1XR2k68w="
+									},
+									"name": "empresa",
+									"type": "Empresa"
+								}
+							]
+						},
+						{
+							"_type": "UMLOperation",
+							"_id": "AAAAAAF1+CKT3R2tg4U=",
+							"_parent": {
+								"$ref": "AAAAAAF1+CHish1mKak="
+							},
+							"name": "consultarEmpresa",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF1+CKzPh20T4M=",
+									"_parent": {
+										"$ref": "AAAAAAF1+CKT3R2tg4U="
+									},
+									"name": "empresa",
+									"type": "Empresa"
+								}
+							]
+						}
+					]
+				},
+				{
+					"_type": "UMLClass",
+					"_id": "AAAAAAF1+CLDyh223Yw=",
+					"_parent": {
+						"$ref": "AAAAAAFFxnG7qRNvP5M="
+					},
+					"name": "Empresa",
+					"attributes": [
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAF1+CLv6h3gPIU=",
+							"_parent": {
+								"$ref": "AAAAAAF1+CLDyh223Yw="
+							},
+							"name": "nome",
+							"type": "String"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAF1+CMNZx3nbxU=",
+							"_parent": {
+								"$ref": "AAAAAAF1+CLDyh223Yw="
+							},
+							"name": "local",
+							"type": "String"
 						}
 					]
 				}
