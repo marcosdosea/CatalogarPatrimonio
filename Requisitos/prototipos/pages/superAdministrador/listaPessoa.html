@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>CP | Lista de Gestores</title>
+    <title>CP | Lista de Pessoas</title>
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
@@ -96,7 +96,7 @@ to get the desired effect
 
                     <ul class="nav nav-pills nav-sidebar flex-column">
                         <li class="nav-item">
-                            <a href="./manterEmpresas.html" class="nav-link active">
+                            <a href="../superAdministrador/listaEmpresas.html" class="nav-link active">
                                 <i class="fas fa-university"></i>
                                 <p>
                                     Listar Empresas
@@ -107,10 +107,10 @@ to get the desired effect
 
                     <ul class="nav nav-pills nav-sidebar flex-column">
                         <li class="nav-item">
-                            <a href="./listaGestor.html" class="nav-link active">
-                                <i class="fas fa-user-plus"></i>
+                            <a href="../superAdministrador/novaEmpresa.html" class="nav-link active">
+                                <i class="fas fa-plus"></i>
                                 <p>
-                                    Adicionar Gestores
+                                    Adicionar Empresa
                                 </p>
                             </a>
                         </li>
@@ -142,15 +142,15 @@ to get the desired effect
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0 text-dark">Lista de Gestores</h1>
+                            <h1 class="m-0 text-dark">Lista de Pessoas</h1>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
                 </div><!-- /.container-fluid -->
             </div>
             <div class="col-md-3">
                 <div class="container-block" style="margin-bottom: 10%;">
-                    <a href="./novaGestor.html"><button type="button" class="btn btn-block btn-primary">Novo
-                            Gestor</button></a>
+                    <a href="./novaPessoa.html"><button type="button" class="btn btn-block btn-primary">Nova
+                            Pessoa</button></a>
                 </div>
             </div>
             <!-- /.content-header -->
@@ -168,26 +168,26 @@ to get the desired effect
                                             <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1"
                                                 colspan="1" aria-sort="ascending"
                                                 aria-label="Local: activate to sort column descending"
-                                                style="width: 148px;">
+                                                style="width: 160px;">
                                                 Nome
                                                 <input class="form-control" type="text" name="" id=""
-                                                    style="margin-top: 10px;" placeholder="Pesquise a Nome da Empresa">
+                                                    style="margin-top: 10px;" placeholder="Pesquise o Nome">
                                             </th>
                                             <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1"
                                                 colspan="1" aria-sort="ascending"
                                                 aria-label="Local: activate to sort column descending"
-                                                style="width: 190px;">
+                                                style="width: 180px;">
                                                 CPF
                                                 <input class="form-control" type="text" name="" id=""
-                                                    style="margin-top: 10px;" placeholder="Pesquise o Categoria">
+                                                    style="margin-top: 10px;" placeholder="Pesquise a Categoria">
                                             </th>
                                             <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1"
                                                 colspan="1" aria-sort="ascending"
                                                 aria-label="Local: activate to sort column descending"
                                                 style="width: 190px;">
-                                                Empresa
+                                                Tipo
                                                 <input class="form-control" type="text" name="" id=""
-                                                    style="margin-top: 10px;" placeholder="Pesquise por local">
+                                                    style="margin-top: 10px;" placeholder="Pesquise por Tipo">
                                             </th>
                                             <!-- <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1"
                         aria-sort="ascending" aria-label="Local: activate to sort column descending"
@@ -210,7 +210,7 @@ to get the desired effect
                                         <tr role="row" class="odd">
                                             <td>Rafael Silveira</td>
                                             <td>064.945.215-81</td>
-                                            <td class="sorting_1">São Marcos</td>
+                                            <td class="sorting_1">Administrador</td>
                                             <!-- <td>10000.00</td> -->
                                             <td>
                                                 <a href=""><i class="fas fa-edit"></i></a>
@@ -221,7 +221,7 @@ to get the desired effect
                                         <tr role="row" class="even">
                                             <td>Wagner Prata</td>
                                             <td class="sorting_1">061.214.755-13</td>
-                                            <td>Campus Sertão</td>
+                                            <td>Gestor</td>
                                             <!-- <td>5000.00</td> -->
                                             <td>
                                                 <a href=""><i class="fas fa-edit"></i></a>
@@ -233,7 +233,7 @@ to get the desired effect
                                         <tr role="row" class="even">
                                             <td>José Carlos</td>
                                             <td class="sorting_1">014.316.865-18</td>
-                                            <td>Campus Prof. Alberto Carvalho</td>
+                                            <td>Almoxarife</td>
                                             <!-- <td>100.00</td> -->
                                             <td>
                                                 <a href=""><i class="fas fa-edit"></i></a>
@@ -247,7 +247,7 @@ to get the desired effect
                                             <th rowspan="1" colspan="1">Nome</th>
                                             <!-- <th rowspan="1" colspan="1">Categoria</th> -->
                                             <th rowspan="1" colspan="1">CPF</th>
-                                            <th rowspan="1" colspan="1">Empresa</th>
+                                            <th rowspan="1" colspan="1">Tipo</th>
                                             <th rowspan="1" colspan="1">Ações</th>
                                         </tr>
                                     </tfoot>

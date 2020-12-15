@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>CP | Novo Gestor</title>
+    <title>CP | Nova Pessoa</title>
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
@@ -96,7 +96,7 @@ to get the desired effect
 
                     <ul class="nav nav-pills nav-sidebar flex-column">
                         <li class="nav-item">
-                            <a href="./manterEmpresas.html" class="nav-link active">
+                            <a href="./listaEmpresas.html" class="nav-link active">
                                 <i class="fas fa-university"></i>
                                 <p>
                                     Listar Empresas
@@ -105,12 +105,24 @@ to get the desired effect
                         </li>
                     </ul>
 
+
                     <ul class="nav nav-pills nav-sidebar flex-column">
                         <li class="nav-item">
-                            <a href="./listaGestor.html" class="nav-link active">
-                                <i class="fas fa-user-plus"></i>
+                            <a href="./novaEmpresa.html" class="nav-link active">
+                                <i class="fas fa-plus"></i>
                                 <p>
-                                    Adicionar Gestores
+                                    Nova Empresa
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav nav-pills nav-sidebar flex-column">
+                        <li class="nav-item">
+                            <a href="./listaPessoa.html" class="nav-link active">
+                                <i class="fas fa-user"></i>
+                                <p>
+                                    Listar Pessoas
                                 </p>
                             </a>
                         </li>
@@ -142,7 +154,7 @@ to get the desired effect
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0 text-dark">Novo Gestor</h1>
+                            <h1 class="m-0 text-dark">Nova Pessoa</h1>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
                 </div><!-- /.container-fluid -->
@@ -157,7 +169,7 @@ to get the desired effect
                             <!-- general form elements -->
                             <div class="card card-primary">
                                 <div class="card-header">
-                                    <h3 class="card-title">Cadastro de Gestores</h3>
+                                    <h3 class="card-title">Cadastro de Pessoa</h3>
                                 </div>
                                 <!-- /.card-header -->
                                 <!-- form start -->
@@ -191,11 +203,12 @@ to get the desired effect
                                             </select>
                                         </div> -->
                                         <div class="form-group">
-                                            <label>Selecione a Empresa</label>
+                                            <label>Selecione a Tipo</label>
                                             <select class="form-control">
-                                                <option>São Marcos</option>
-                                                <option>Campus Sertão</option>
-                                                <option>Campus Prof. Alberto Carvalho</option>
+                                                <option>Almoxarife</option>
+                                                <option>Gestor</option>
+                                                <option>Solicitante</option>
+                                                <option>Técnico</option>
                                             </select>
                                         </div>
                                         <!-- <div class="form-group">
