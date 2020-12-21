@@ -16,6 +16,17 @@
   <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin" rel="stylesheet">
+
+  <style>
+    .inputs {
+      display: none;
+    }
+
+    .foo:checked+.inputs {
+      display: initial;
+    }
+  </style>
+
 </head>
 <!--
 BODY TAG OPTIONS:
@@ -155,86 +166,24 @@ to get the desired effect
           </div>
 
           <br>
-          <h5><b>Descrição da OS</b></h5>
+          <h5><b>Descrição da Solicitação</b></h5>
           <hr>
-
-          <div class="col-sm-6">
-            <label>Informe seus Dias e Horários com Disponibilidade</label>
-
-            <table class="table table-bordered">
-              <thead>
-                <tr>
-                  <th><input type="checkbox"></th> <!-- marca todos os dias -->
-                  <th>Dia</th>
-                  <th>Horário</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><input type="checkbox"></td>
-                  <td>Segunda</td>
-                  <td>
-                    <input type="time"> às <input type="time">
-                  </td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"></td>
-                  <td>Terça</td>
-                  <td>
-                    <input type="time"> às <input type="time">
-                  </td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"></td>
-                  <td>Quarta</td>
-                  <td>
-                    <input type="time"> às <input type="time">
-                  </td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"></td>
-                  <td>Quinta</td>
-                  <td>
-                    <input type="time"> às <input type="time">
-                  </td>
-                </tr>
-                <tr>
-                  <td><input type="checkbox"></td>
-                  <td>Sexta</td>
-                  <td>
-                    <input type="time"> às <input type="time">
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-
-
-          </div>
-
-          <div class="col-sm-6">
-            <!-- textarea -->
-            <div class="form-group">
-              <br><label>Descreva sua Solicitação</label>
-              <textarea class="form-control" rows="3" placeholder="Digite aqui ..."></textarea>
-            </div>
-          </div>
-
-          <div class="col-sm-6">
+          <!-- <div class="col-sm-6">
             <p id="demo">Clique abaixo para obter sua localização ou preencha os campos:</p>
             <button type="submit" class="btn btn-primary" onclick="getLocation()">Clique aqui</button>
             <div id="mapholder"></div>
-          </div>
+          </div> -->
 
           <br>
 
-          <div class="col-sm-6">
+          <!-- <div class="col-sm-6">
             <div class="form-group">
               <label>Estado</label>
               <select class="form-control">
                 <option>----------</option>
                 <option>Sergipe</option>
-                <option>Salvador</option>
-                <option>Alagoas</option>
+                <option>Bahia</option>
+                <option>Pernambuco</option>
               </select>
             </div>
           </div>
@@ -254,11 +203,35 @@ to get the desired effect
 
           <div class="col-sm-6">
             <div class="form-group">
+              <label>Bairro</label>
+              <select class="form-control">
+                <option>----------</option>
+                <option>Sala do Prof. Dósea</option>
+                <option>Bloco D - Sala 104</option>
+                <option>Laboratório de Sistema I</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label>Rua</label>
+              <select class="form-control">
+                <option>----------</option>
+                <option>Sala do Prof. Dósea</option>
+                <option>Bloco D - Sala 104</option>
+                <option>Laboratório de Sistema I</option>
+              </select>
+            </div>
+          </div> -->
+
+          <div class="col-sm-6">
+            <div class="form-group">
               <label>Prédio</label>
               <select class="form-control">
                 <option>----------</option>
-                <option>Universidade Federal de Sergipe</option>
-                <option>Instituto Federal de Sergipe</option>
+                <option>Campus Prof. Alberto Carvalho</option>
+                <option>Campus Sertão</option>
 
               </select>
             </div>
@@ -271,9 +244,85 @@ to get the desired effect
               <select class="form-control">
                 <option>----------</option>
                 <option>Sala do Prof. Dósea</option>
-                <option>Bloco D - Sala 104</option>
+                <option>Bloco D</option>
+                <option>Sala 104</option>
                 <option>Laboratório de Sistema I</option>
               </select>
+            </div>
+          </div>
+
+          <!-- <div class="col-sm-6">
+            <div class="form-group">
+              <label>Patrimônio</label>
+              <select class="form-control">
+                <option>----------</option>
+                <option>Poste</option>
+                <option>Ar-condicionado</option>
+
+              </select>
+            </div>
+          </div> -->
+
+          <div class="col-sm-6">
+            <div>
+              <br><label>Informe seus Dias e Horários com Disponibilidade</label>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th><input type="checkbox"></th> <!-- marca todos os dias -->
+                    <th>Dia</th>
+                    <th>Horário</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Segunda</td>
+                    <td>
+                      <input type="time"> às <input type="time">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Terça</td>
+                    <td>
+                      <input type="time"> às <input type="time">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Quarta</td>
+                    <td>
+                      <input type="time"> às <input type="time">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Quinta</td>
+                    <td>
+                      <input type="time"> às <input type="time">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox"></td>
+                    <td>Sexta</td>
+                    <td>
+                      <input type="time"> às <input type="time">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+
+          </div>
+
+
+          <div class="col-sm-6">
+            <!-- textarea -->
+            <div class="form-group">
+              <br><label>Descreva sua Solicitação</label>
+              <textarea class="form-control" rows="3" placeholder="Digite aqui ..."></textarea>
             </div>
           </div>
 
@@ -322,6 +371,7 @@ to get the desired effect
   <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
 
   <script>
+
     var x = document.getElementById("demo");
     function getLocation() {
       if (navigator.geolocation) {
