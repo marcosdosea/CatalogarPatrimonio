@@ -7,7 +7,7 @@ namespace Core
     {
         public Almoxarifado()
         {
-            Estoquematerial = new HashSet<Estoquematerial>();
+            EstoqueMaterial = new HashSet<EstoqueMaterial>();
             TransferenciaIdAlmoxarifadoDestinoNavigation = new HashSet<Transferencia>();
             TransferenciaIdAlmoxarifadoOrigemNavigation = new HashSet<Transferencia>();
         }
@@ -17,7 +17,7 @@ namespace Core
         public int? IdEmpresa { get; set; }
 
         public virtual Empresa IdEmpresaNavigation { get; set; }
-        public virtual ICollection<Estoquematerial> Estoquematerial { get; set; }
+        public virtual ICollection<EstoqueMaterial> EstoqueMaterial { get; set; }
         public virtual ICollection<Transferencia> TransferenciaIdAlmoxarifadoDestinoNavigation { get; set; }
         public virtual ICollection<Transferencia> TransferenciaIdAlmoxarifadoOrigemNavigation { get; set; }
     }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Core
 {
-    public partial class Estoquematerial
+    public partial class EstoqueMaterial
     {
         public int IdMaterial { get; set; }
         public int IdAlmoxarifado { get; set; }
