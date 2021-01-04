@@ -7,8 +7,8 @@ namespace Core
     {
         public Entrada()
         {
-            Entradamaterial = new HashSet<Entradamaterial>();
-            Materialentrada = new HashSet<Materialentrada>();
+            EntradaMaterial = new HashSet<EntradaMaterial>();
+            MaterialEntrada = new HashSet<MaterialEntrada>();
         }
 
         public int Id { get; set; }
@@ -17,7 +17,7 @@ namespace Core
         public int IdFornecedor { get; set; }
 
         public virtual Fornecedor IdFornecedorNavigation { get; set; }
-        public virtual ICollection<Entradamaterial> Entradamaterial { get; set; }
-        public virtual ICollection<Materialentrada> Materialentrada { get; set; }
+        public virtual ICollection<EntradaMaterial> EntradaMaterial { get; set; }
+        public virtual ICollection<MaterialEntrada> MaterialEntrada { get; set; }
     }
 }

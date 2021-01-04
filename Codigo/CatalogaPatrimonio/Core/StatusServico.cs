@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace Core
 {
-    public partial class Statusservico
+    public partial class StatusServico
     {
-        public Statusservico()
+        public StatusServico()
         {
             Servico = new HashSet<Servico>();
         }
