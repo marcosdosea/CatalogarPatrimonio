@@ -6,5 +6,6 @@ namespace Core.DTO
 {
     class TransferenciaDTO
     {
+        public DateTime? Data { get; set; }
     }
 }

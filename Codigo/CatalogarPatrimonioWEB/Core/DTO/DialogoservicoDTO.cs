@@ -6,5 +6,7 @@ namespace Core.DTO
 {
     class DialogoservicoDTO
     {
+        public DateTime? DataHora { get; set; }
+        public string Mensagem { get; set; }
     }
 }

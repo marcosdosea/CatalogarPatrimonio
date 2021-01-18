@@ -6,5 +6,6 @@ namespace Core.DTO
 {
     class EmpresaDTO
     {
+        public string Nome { get; set; }
     }
 }

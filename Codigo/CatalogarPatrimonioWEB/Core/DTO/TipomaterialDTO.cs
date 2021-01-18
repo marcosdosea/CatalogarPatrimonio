@@ -6,5 +6,6 @@ namespace Core.DTO
 {
     class TipomaterialDTO
     {
+        public string Nome { get; set; }
     }
 }

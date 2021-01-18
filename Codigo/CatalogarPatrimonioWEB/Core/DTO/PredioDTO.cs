@@ -6,5 +6,7 @@ namespace Core.DTO
 {
     class PredioDTO
     {
+        public string Estado { get; set; }
+        public string Cidade { get; set; }
     }
 }

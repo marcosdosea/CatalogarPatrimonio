@@ -6,5 +6,6 @@ namespace Core.DTO
 {
     class TipopatrimonioDTO
     {
+        public string Nome { get; set; }
     }
 }

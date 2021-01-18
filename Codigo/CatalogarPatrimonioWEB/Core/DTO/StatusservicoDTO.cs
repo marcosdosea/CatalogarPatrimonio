@@ -6,5 +6,6 @@ namespace Core.DTO
 {
     class StatusservicoDTO
     {
+        public string Descricao { get; set; }
     }
 }

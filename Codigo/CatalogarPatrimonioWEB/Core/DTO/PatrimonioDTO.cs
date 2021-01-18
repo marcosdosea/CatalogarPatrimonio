@@ -6,5 +6,6 @@ namespace Core.DTO
 {
     class PatrimonioDTO
     {
+        public string Nome { get; set; }
     }
 }

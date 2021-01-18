@@ -6,5 +6,6 @@ namespace Core.DTO
 {
     class TiposervicoDTO
     {
+        public string Nome { get; set; }
     }
 }

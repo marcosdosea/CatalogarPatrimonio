@@ -6,5 +6,7 @@ namespace Core.DTO
 {
     class EntradamaterialDTO
     {
+        public int IdMaterial { get; set; }
+        public int? Quantidade { get; set; }
     }
 }

@@ -6,5 +6,7 @@ namespace Core.DTO
 {
     class EstoquematerialDTO
     {
+        public int IdMaterial { get; set; }
+        public int Quantidade { get; set; }
     }
 }

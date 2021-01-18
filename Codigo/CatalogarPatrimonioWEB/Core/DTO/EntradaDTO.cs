@@ -6,5 +6,7 @@ namespace Core.DTO
 {
     class EntradaDTO
     {
+        public double NotaFiscal { get; set; }
+        public DateTime DataEntrada { get; set; }
     }
 }

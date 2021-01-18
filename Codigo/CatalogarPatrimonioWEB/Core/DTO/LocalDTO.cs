@@ -6,5 +6,6 @@ namespace Core.DTO
 {
     class LocalDTO
     {
+        public string Nome { get; set; }
     }
 }
