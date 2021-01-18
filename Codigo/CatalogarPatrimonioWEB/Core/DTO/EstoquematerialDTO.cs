@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Core.DTO
 {
-    class EstoquematerialDTO
+    public class EstoquematerialDTO
     {
         public int IdMaterial { get; set; }
         public int Quantidade { get; set; }

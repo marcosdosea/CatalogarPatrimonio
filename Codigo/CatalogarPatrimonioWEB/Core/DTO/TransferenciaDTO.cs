@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Core.DTO
 {
-    class TransferenciaDTO
+    public class TransferenciaDTO
     {
         public DateTime? Data { get; set; }
     }

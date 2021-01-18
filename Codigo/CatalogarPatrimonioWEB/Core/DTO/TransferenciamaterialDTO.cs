@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Core.DTO
 {
-    class TransferenciamaterialDTO
+    public class TransferenciamaterialDTO
     {
     }
 }

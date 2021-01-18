@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Core.DTO
 {
-    class LocalDTO
+    public class LocalDTO
     {
         public string Nome { get; set; }
     }

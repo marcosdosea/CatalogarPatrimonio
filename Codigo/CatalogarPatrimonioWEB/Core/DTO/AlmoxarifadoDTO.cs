@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Core.DTO
 {
-     public class AlmoxarifadoDTO
+    public class AlmoxarifadoDTO
     {
         public string Nome { get; set; }
     }

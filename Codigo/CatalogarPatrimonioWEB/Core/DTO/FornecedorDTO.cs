@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Core.DTO
 {
-    class FornecedorDTO
+    public class FornecedorDTO
     {
         public string Nome { get; set; }
         public string Telefone { get; set; }

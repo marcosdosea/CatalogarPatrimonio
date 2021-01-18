@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Core.DTO
 {
-    class PatrimonioDTO
+    public class PatrimonioDTO
     {
         public string Nome { get; set; }
     }

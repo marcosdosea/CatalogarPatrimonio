@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Core.DTO
 {
-    class PessoaDTO
+    public class PessoaDTO
     {
         public string Nome { get; set; }
         public string Telefone { get; set; }

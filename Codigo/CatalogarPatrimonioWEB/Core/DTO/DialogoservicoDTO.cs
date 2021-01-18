@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Core.DTO
 {
-    class DialogoservicoDTO
+    public class DialogoservicoDTO
     {
         public DateTime? DataHora { get; set; }
         public string Mensagem { get; set; }
