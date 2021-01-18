@@ -2,12 +2,17 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
+using Core;
+using Core.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Service;
 
 namespace CatalogarPatrimonioWEB
 {
@@ -24,6 +29,18 @@ namespace CatalogarPatrimonioWEB
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddDbContext<CatalogarPatrimonioContext>(options =>
+                options.UseMySQL(
+                    Configuration.GetConnectionString("BibliotecaConnection")));
+
+            services.AddTransient<IAlmoxarifadoService, AlmoxarifadoService>();
+            //services.AddTransient<IDialogoservicoService, Dialogoservico>();
+            //services.AddTransient<IDisponibilidadeService, DisponibilidadeService>();
+            //services.AddTransient<IEmpresaService, EmpresaService>();
+            //services.AddTransient<IEntradaService, EntradaService>();
+            //services.AddTransient<IEntradamaterialService, EntradamaterialService>();
+            // TODO: falta as outras interfaces !!!
+            services.AddAutoMapper(typeof(Startup).Assembly);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

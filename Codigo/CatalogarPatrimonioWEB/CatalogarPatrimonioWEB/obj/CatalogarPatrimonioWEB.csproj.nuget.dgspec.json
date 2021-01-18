@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Wagner Prata\\source\\repos\\CatalogarPatrimonio\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB.csproj": {}
+    "C:\\Users\\DELL\\Documents\\Projetos\\CatalogarPatrimonioNovo\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Wagner Prata\\source\\repos\\CatalogarPatrimonio\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB.csproj": {
+    "C:\\Users\\DELL\\Documents\\Projetos\\CatalogarPatrimonioNovo\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Wagner Prata\\source\\repos\\CatalogarPatrimonio\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\Documents\\Projetos\\CatalogarPatrimonioNovo\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB.csproj",
         "projectName": "CatalogarPatrimonioWEB",
-        "projectPath": "C:\\Users\\Wagner Prata\\source\\repos\\CatalogarPatrimonio\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB.csproj",
-        "packagesPath": "C:\\Users\\Wagner Prata\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Wagner Prata\\source\\repos\\CatalogarPatrimonio\\CatalogarPatrimonioWEB\\obj\\",
+        "projectPath": "C:\\Users\\DELL\\Documents\\Projetos\\CatalogarPatrimonioNovo\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DELL\\Documents\\Projetos\\CatalogarPatrimonioNovo\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Wagner Prata\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -27,7 +31,14 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\DELL\\Documents\\Projetos\\CatalogarPatrimonioNovo\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\DELL\\Documents\\Projetos\\CatalogarPatrimonioNovo\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Core\\Core.csproj"
+              },
+              "C:\\Users\\DELL\\Documents\\Projetos\\CatalogarPatrimonioNovo\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Service\\Service.csproj": {
+                "projectPath": "C:\\Users\\DELL\\Documents\\Projetos\\CatalogarPatrimonioNovo\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Service\\Service.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -39,6 +50,22 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.10, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -57,7 +84,147 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\DELL\\Documents\\Projetos\\CatalogarPatrimonioNovo\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Core\\Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\DELL\\Documents\\Projetos\\CatalogarPatrimonioNovo\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Core\\Core.csproj",
+        "projectName": "Core",
+        "projectPath": "C:\\Users\\DELL\\Documents\\Projetos\\CatalogarPatrimonioNovo\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DELL\\Documents\\Projetos\\CatalogarPatrimonioNovo\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.10, )"
+            },
+            "MySql.Data.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.20, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\DELL\\Documents\\Projetos\\CatalogarPatrimonioNovo\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Service\\Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\DELL\\Documents\\Projetos\\CatalogarPatrimonioNovo\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Service\\Service.csproj",
+        "projectName": "Service",
+        "projectPath": "C:\\Users\\DELL\\Documents\\Projetos\\CatalogarPatrimonioNovo\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Service\\Service.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\DELL\\Documents\\Projetos\\CatalogarPatrimonioNovo\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\DELL\\Documents\\Projetos\\CatalogarPatrimonioNovo\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\DELL\\Documents\\Projetos\\CatalogarPatrimonioNovo\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Core\\Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
