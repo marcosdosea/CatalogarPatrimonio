@@ -7,12 +7,11 @@ namespace Core.Service
 {
     public interface IDialogoservicoService
     {
-        void Editar(Dialogoservico dialogoservico);
-        int Inserir(Dialogoservico dialogoservico);
-        Almoxarifado Obter(int idDialogoservico);
-        IEnumerable<Almoxarifado> ObterPorNome(string nome);
-        IEnumerable<Almoxarifado> ObterTodos();
-        void Remover(int idDialogoservico);
-        IEnumerable<AlmoxarifadoDTO> ObterPorNomeOrdenadoDescending(string nome);
+        public void Editar(DialogoservicoService dialogoservico);
+        public int Inserir(DialogoservicoService dialogoservico);
+        public void Remover(int idDialogoservico);
+        public DialogoservicoService Obter(int idDialogoservico);
+        public IEnumerable<DialogoservicoService> ObterPorNome(string mensagem);
+        public IEnumerable<DialogoservicoService> ObterTodos();
     }
 }

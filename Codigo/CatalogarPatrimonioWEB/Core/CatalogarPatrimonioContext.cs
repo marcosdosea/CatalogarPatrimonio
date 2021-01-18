@@ -16,7 +16,7 @@ namespace Core
         }
 
         public virtual DbSet<Almoxarifado> Almoxarifado { get; set; }
-        public virtual DbSet<Dialogoservico> Dialogoservico { get; set; }
+        public virtual DbSet<DialogoservicoService> Dialogoservico { get; set; }
         public virtual DbSet<Disponibilidade> Disponibilidade { get; set; }
         public virtual DbSet<Empresa> Empresa { get; set; }
         public virtual DbSet<Entrada> Entrada { get; set; }
@@ -78,7 +78,7 @@ namespace Core
                     .HasConstraintName("fk_tb_almoxarifado_empresa");
             });
 
-            modelBuilder.Entity<Dialogoservico>(entity =>
+            modelBuilder.Entity<DialogoservicoService>(entity =>
             {
                 entity.ToTable("dialogoservico");
 

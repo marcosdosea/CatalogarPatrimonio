@@ -8132,25 +8132,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\DELL\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Rafael Silveira\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DELL\\Documents\\Projetos\\CatalogarPatrimonioNovo\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB.csproj",
+      "projectUniqueName": "D:\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB.csproj",
       "projectName": "CatalogarPatrimonioWEB",
-      "projectPath": "C:\\Users\\DELL\\Documents\\Projetos\\CatalogarPatrimonioNovo\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB.csproj",
-      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DELL\\Documents\\Projetos\\CatalogarPatrimonioNovo\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB\\obj\\",
+      "projectPath": "D:\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB.csproj",
+      "packagesPath": "C:\\Users\\Rafael Silveira\\.nuget\\packages\\",
+      "outputPath": "D:\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Rafael Silveira\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -8163,11 +8158,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\DELL\\Documents\\Projetos\\CatalogarPatrimonioNovo\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Core\\Core.csproj": {
-              "projectPath": "C:\\Users\\DELL\\Documents\\Projetos\\CatalogarPatrimonioNovo\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Core\\Core.csproj"
+            "D:\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Core\\Core.csproj": {
+              "projectPath": "D:\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Core\\Core.csproj"
             },
-            "C:\\Users\\DELL\\Documents\\Projetos\\CatalogarPatrimonioNovo\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Service\\Service.csproj": {
-              "projectPath": "C:\\Users\\DELL\\Documents\\Projetos\\CatalogarPatrimonioNovo\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Service\\Service.csproj"
+            "D:\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Service\\Service.csproj": {
+              "projectPath": "D:\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Service\\Service.csproj"
             }
           }
         }

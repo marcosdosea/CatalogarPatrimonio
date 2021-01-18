@@ -34,12 +34,27 @@ namespace CatalogarPatrimonioWEB
                     Configuration.GetConnectionString("BibliotecaConnection")));
 
             services.AddTransient<IAlmoxarifadoService, AlmoxarifadoService>();
-            //services.AddTransient<IDialogoservicoService, Dialogoservico>();
+            services.AddTransient<IDialogoservicoService, DialogoserviceService>();
             //services.AddTransient<IDisponibilidadeService, DisponibilidadeService>();
             //services.AddTransient<IEmpresaService, EmpresaService>();
             //services.AddTransient<IEntradaService, EntradaService>();
             //services.AddTransient<IEntradamaterialService, EntradamaterialService>();
-            // TODO: falta as outras interfaces !!!
+            //services.AddTransient<IEstoquematerialService, EstoquematerialService>();
+            //services.AddTransient<IFornecedorService, FornecedorService>();
+            //services.AddTransient<ILocalService, LocalService>();
+            //services.AddTransient<IMaterialService, MaterialService>();
+            //services.AddTransient<IMaterialenradaService, MaterialentradaService>();
+            //services.AddTransient<IPatrimonioService, PatrimonioService>();
+            //services.AddTransient<IPessoaService, PessoaService>();
+            //services.AddTransient<IPredioService, PredioService>();
+            //services.AddTransient<IServicoService, ServicoService>();
+            //services.AddTransient<IServicomaterialService, ServicomaterialService>();
+            //services.AddTransient<IStatusservicoService, StatusservicoService>();
+            //services.AddTransient<ITipomaterialService, TipomaterialService>();
+            //services.AddTransient<ITipopatrimonioService, TipopatrimonioService > ();
+            //services.AddTransient<ITiposervicoService, TiposervicoService>();
+            //services.AddTransient<ITransferenciaService, TransferenciaService>();
+            //services.AddTransient<ITransferenciamaterialService, TransferenciamaterialService>();
             services.AddAutoMapper(typeof(Startup).Assembly);
         }
 
