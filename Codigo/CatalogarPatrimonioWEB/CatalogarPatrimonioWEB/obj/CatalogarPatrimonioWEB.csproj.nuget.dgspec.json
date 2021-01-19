@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB.csproj": {}
+    "C:\\Users\\Wagner Prata\\Documents\\A UFS 2020.1\\ESII\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB.csproj": {}
   },
   "projects": {
-    "D:\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB.csproj": {
+    "C:\\Users\\Wagner Prata\\Documents\\A UFS 2020.1\\ESII\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB.csproj",
+        "projectUniqueName": "C:\\Users\\Wagner Prata\\Documents\\A UFS 2020.1\\ESII\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB.csproj",
         "projectName": "CatalogarPatrimonioWEB",
-        "projectPath": "D:\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB.csproj",
-        "packagesPath": "C:\\Users\\Rafael Silveira\\.nuget\\packages\\",
-        "outputPath": "D:\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB\\obj\\",
+        "projectPath": "C:\\Users\\Wagner Prata\\Documents\\A UFS 2020.1\\ESII\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB.csproj",
+        "packagesPath": "C:\\Users\\Wagner Prata\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Wagner Prata\\Documents\\A UFS 2020.1\\ESII\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\CatalogarPatrimonioWEB\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Rafael Silveira\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Wagner Prata\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,11 +28,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Core\\Core.csproj": {
-                "projectPath": "D:\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Core\\Core.csproj"
+              "C:\\Users\\Wagner Prata\\Documents\\A UFS 2020.1\\ESII\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\Wagner Prata\\Documents\\A UFS 2020.1\\ESII\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Core\\Core.csproj"
               },
-              "D:\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Service\\Service.csproj": {
-                "projectPath": "D:\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Service\\Service.csproj"
+              "C:\\Users\\Wagner Prata\\Documents\\A UFS 2020.1\\ESII\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Service\\Service.csproj": {
+                "projectPath": "C:\\Users\\Wagner Prata\\Documents\\A UFS 2020.1\\ESII\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Service\\Service.csproj"
               }
             }
           }
@@ -80,21 +80,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Core\\Core.csproj": {
+    "C:\\Users\\Wagner Prata\\Documents\\A UFS 2020.1\\ESII\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Users\\Wagner Prata\\Documents\\A UFS 2020.1\\ESII\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "D:\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Core\\Core.csproj",
-        "packagesPath": "C:\\Users\\Rafael Silveira\\.nuget\\packages\\",
-        "outputPath": "D:\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Core\\obj\\",
+        "projectPath": "C:\\Users\\Wagner Prata\\Documents\\A UFS 2020.1\\ESII\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\Wagner Prata\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Wagner Prata\\Documents\\A UFS 2020.1\\ESII\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Rafael Silveira\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Wagner Prata\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -120,6 +120,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -141,26 +145,32 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Service\\Service.csproj": {
+    "C:\\Users\\Wagner Prata\\Documents\\A UFS 2020.1\\ESII\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Service\\Service.csproj",
+        "projectUniqueName": "C:\\Users\\Wagner Prata\\Documents\\A UFS 2020.1\\ESII\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Service\\Service.csproj",
         "projectName": "Service",
-        "projectPath": "D:\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Service\\Service.csproj",
-        "packagesPath": "C:\\Users\\Rafael Silveira\\.nuget\\packages\\",
-        "outputPath": "D:\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Service\\obj\\",
+        "projectPath": "C:\\Users\\Wagner Prata\\Documents\\A UFS 2020.1\\ESII\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Service\\Service.csproj",
+        "packagesPath": "C:\\Users\\Wagner Prata\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Wagner Prata\\Documents\\A UFS 2020.1\\ESII\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Rafael Silveira\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Wagner Prata\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -174,8 +184,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Core\\Core.csproj": {
-                "projectPath": "D:\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Core\\Core.csproj"
+              "C:\\Users\\Wagner Prata\\Documents\\A UFS 2020.1\\ESII\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\Wagner Prata\\Documents\\A UFS 2020.1\\ESII\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Core\\Core.csproj"
               }
             }
           }
@@ -190,6 +200,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -207,12 +221,18 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

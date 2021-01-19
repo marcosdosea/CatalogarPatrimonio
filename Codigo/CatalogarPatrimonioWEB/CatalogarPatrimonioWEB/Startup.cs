@@ -36,7 +36,7 @@ namespace CatalogarPatrimonioWEB
             services.AddTransient<IAlmoxarifadoService, AlmoxarifadoService>();
             services.AddTransient<IDialogoservicoService, DialogoserviceService>();
             //services.AddTransient<IDisponibilidadeService, DisponibilidadeService>();
-            //services.AddTransient<IEmpresaService, EmpresaService>();
+            services.AddTransient<IEmpresaService, EmpresaService>();
             //services.AddTransient<IEntradaService, EntradaService>();
             //services.AddTransient<IEntradamaterialService, EntradamaterialService>();
             //services.AddTransient<IEstoquematerialService, EstoquematerialService>();

@@ -37,7 +37,7 @@ namespace Service
             _context.SaveChanges();
         }
 
-        public int GetNumeroAlmoxarifados()
+        public int GetNumeroDialogo()
         {
             return _context.Dialogoservico.Count();
         }
