@@ -16,7 +16,7 @@ namespace CatalogarPatrimonioWEB.Controllers
         // private readonly IEmpresa empresa;
         public EmpresaController(IEmpresa empresa, IMapper mapper)
         {
-            _almoxarifadoService = almoxarifadoService;
+            _empresaService = empresaService;
             _mapper = mapper;
         }
 

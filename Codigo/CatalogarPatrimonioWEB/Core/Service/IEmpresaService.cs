@@ -10,7 +10,7 @@ namespace Core.Service
         public void Editar(EmpresaService empresaservice);
         public int Inserir(EmpresaService empresaservice);
         public void Remover(int idEmpresaservico);
-        public EmpresaService Obter(int idDialogoservico);
+        public EmpresaService Obter(int idEmpresa);
         public IEnumerable<EmpresaService> ObterPorNome(string mensagem);
         public IEnumerable<EmpresaService> ObterTodos();
     }
