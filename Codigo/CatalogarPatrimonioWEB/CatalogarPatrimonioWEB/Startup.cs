@@ -40,7 +40,7 @@ namespace CatalogarPatrimonioWEB
             services.AddTransient<IEntradaService, EntradaService>();
             //services.AddTransient<IEntradamaterialService, EntradamaterialService>();
             //services.AddTransient<IEstoquematerialService, EstoquematerialService>();
-            //services.AddTransient<IFornecedorService, FornecedorService>();
+            services.AddTransient<IFornecedorService, FornecedorService>();
             //services.AddTransient<ILocalService, LocalService>();
             //services.AddTransient<IMaterialService, MaterialService>();
             //services.AddTransient<IMaterialenradaService, MaterialentradaService>();
@@ -55,6 +55,7 @@ namespace CatalogarPatrimonioWEB
             //services.AddTransient<ITiposervicoService, TiposervicoService>();
             //services.AddTransient<ITransferenciaService, TransferenciaService>();
             //services.AddTransient<ITransferenciamaterialService, TransferenciamaterialService>();
+
             services.AddAutoMapper(typeof(Startup).Assembly);
         }
 

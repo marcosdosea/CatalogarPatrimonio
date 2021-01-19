@@ -104,3 +104,11 @@ C:\Users\DELL\Documents\Projetos\CatalogarPatrimonioNovo\CatalogarPatrimonio\Cod
 C:\Users\DELL\Documents\Projetos\CatalogarPatrimonioNovo\CatalogarPatrimonio\Codigo\CatalogarPatrimonioWEB\CatalogarPatrimonioWEB\bin\Debug\net5.0\Service.dll
 C:\Users\DELL\Documents\Projetos\CatalogarPatrimonioNovo\CatalogarPatrimonio\Codigo\CatalogarPatrimonioWEB\CatalogarPatrimonioWEB\bin\Debug\net5.0\Core.pdb
 C:\Users\DELL\Documents\Projetos\CatalogarPatrimonioNovo\CatalogarPatrimonio\Codigo\CatalogarPatrimonioWEB\CatalogarPatrimonioWEB\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\junin\Desktop\CatalogarPatrimonio\Codigo\CatalogarPatrimonioWEB\CatalogarPatrimonioWEB\obj\Debug\net5.0\CatalogarPatrimonioWEB.csprojAssemblyReference.cache
+C:\Users\junin\Desktop\CatalogarPatrimonio\Codigo\CatalogarPatrimonioWEB\CatalogarPatrimonioWEB\obj\Debug\net5.0\CatalogarPatrimonioWEB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\junin\Desktop\CatalogarPatrimonio\Codigo\CatalogarPatrimonioWEB\CatalogarPatrimonioWEB\obj\Debug\net5.0\CatalogarPatrimonioWEB.AssemblyInfoInputs.cache
+C:\Users\junin\Desktop\CatalogarPatrimonio\Codigo\CatalogarPatrimonioWEB\CatalogarPatrimonioWEB\obj\Debug\net5.0\CatalogarPatrimonioWEB.AssemblyInfo.cs
+C:\Users\junin\Desktop\CatalogarPatrimonio\Codigo\CatalogarPatrimonioWEB\CatalogarPatrimonioWEB\obj\Debug\net5.0\CatalogarPatrimonioWEB.csproj.CoreCompileInputs.cache
+C:\Users\junin\Desktop\CatalogarPatrimonio\Codigo\CatalogarPatrimonioWEB\CatalogarPatrimonioWEB\obj\Debug\net5.0\CatalogarPatrimonioWEB.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\junin\Desktop\CatalogarPatrimonio\Codigo\CatalogarPatrimonioWEB\CatalogarPatrimonioWEB\obj\Debug\net5.0\CatalogarPatrimonioWEB.RazorAssemblyInfo.cache
+C:\Users\junin\Desktop\CatalogarPatrimonio\Codigo\CatalogarPatrimonioWEB\CatalogarPatrimonioWEB\obj\Debug\net5.0\CatalogarPatrimonioWEB.RazorAssemblyInfo.cs

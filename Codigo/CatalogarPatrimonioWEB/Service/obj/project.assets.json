@@ -6606,19 +6606,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Wagner Prata\\.nuget\\packages\\": {}
+    "C:\\Users\\junin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Wagner Prata\\Documents\\A UFS 2020.1\\ESII\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Service\\Service.csproj",
+      "projectUniqueName": "C:\\Users\\junin\\Desktop\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Service\\Service.csproj",
       "projectName": "Service",
-      "projectPath": "C:\\Users\\Wagner Prata\\Documents\\A UFS 2020.1\\ESII\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Service\\Service.csproj",
-      "packagesPath": "C:\\Users\\Wagner Prata\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Wagner Prata\\Documents\\A UFS 2020.1\\ESII\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Service\\obj\\",
+      "projectPath": "C:\\Users\\junin\\Desktop\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Service\\Service.csproj",
+      "packagesPath": "C:\\Users\\junin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\junin\\Desktop\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Service\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Wagner Prata\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\junin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6632,8 +6632,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Wagner Prata\\Documents\\A UFS 2020.1\\ESII\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Core\\Core.csproj": {
-              "projectPath": "C:\\Users\\Wagner Prata\\Documents\\A UFS 2020.1\\ESII\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Core\\Core.csproj"
+            "C:\\Users\\junin\\Desktop\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\junin\\Desktop\\CatalogarPatrimonio\\Codigo\\CatalogarPatrimonioWEB\\Core\\Core.csproj"
             }
           }
         }
@@ -6669,12 +6669,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[3.1.10, 3.1.10]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
