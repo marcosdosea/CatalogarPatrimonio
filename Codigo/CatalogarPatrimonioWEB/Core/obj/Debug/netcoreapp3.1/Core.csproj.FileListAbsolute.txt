@@ -1,0 +1,24 @@
+C:\Users\Wagner Prata\source\repos\CatalogarPatrimonio\Core\bin\Debug\netcoreapp3.1\Core.deps.json
+C:\Users\Wagner Prata\source\repos\CatalogarPatrimonio\Core\bin\Debug\netcoreapp3.1\Core.runtimeconfig.json
+C:\Users\Wagner Prata\source\repos\CatalogarPatrimonio\Core\bin\Debug\netcoreapp3.1\Core.runtimeconfig.dev.json
+C:\Users\Wagner Prata\source\repos\CatalogarPatrimonio\Core\bin\Debug\netcoreapp3.1\Core.dll
+C:\Users\Wagner Prata\source\repos\CatalogarPatrimonio\Core\bin\Debug\netcoreapp3.1\Core.pdb
+C:\Users\Wagner Prata\source\repos\CatalogarPatrimonio\Core\obj\Debug\netcoreapp3.1\Core.csprojAssemblyReference.cache
+C:\Users\Wagner Prata\source\repos\CatalogarPatrimonio\Core\obj\Debug\netcoreapp3.1\Core.AssemblyInfoInputs.cache
+C:\Users\Wagner Prata\source\repos\CatalogarPatrimonio\Core\obj\Debug\netcoreapp3.1\Core.AssemblyInfo.cs
+C:\Users\Wagner Prata\source\repos\CatalogarPatrimonio\Core\obj\Debug\netcoreapp3.1\Core.csproj.CoreCompileInputs.cache
+C:\Users\Wagner Prata\source\repos\CatalogarPatrimonio\Core\obj\Debug\netcoreapp3.1\Core.dll
+C:\Users\Wagner Prata\source\repos\CatalogarPatrimonio\Core\obj\Debug\netcoreapp3.1\Core.pdb
+C:\Users\Wagner Prata\source\repos\CatalogarPatrimonio\Core\obj\Debug\netcoreapp3.1\Core.genruntimeconfig.cache
+C:\Users\DELL\Documents\Projetos\CatalogarPatrimonioNovo\CatalogarPatrimonio\Codigo\CatalogarPatrimonioWEB\Core\obj\Debug\netcoreapp3.1\Core.csprojAssemblyReference.cache
+C:\Users\DELL\Documents\Projetos\CatalogarPatrimonioNovo\CatalogarPatrimonio\Codigo\CatalogarPatrimonioWEB\Core\obj\Debug\netcoreapp3.1\Core.AssemblyInfoInputs.cache
+C:\Users\DELL\Documents\Projetos\CatalogarPatrimonioNovo\CatalogarPatrimonio\Codigo\CatalogarPatrimonioWEB\Core\obj\Debug\netcoreapp3.1\Core.AssemblyInfo.cs
+C:\Users\DELL\Documents\Projetos\CatalogarPatrimonioNovo\CatalogarPatrimonio\Codigo\CatalogarPatrimonioWEB\Core\obj\Debug\netcoreapp3.1\Core.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Documents\Projetos\CatalogarPatrimonioNovo\CatalogarPatrimonio\Codigo\CatalogarPatrimonioWEB\Core\obj\Debug\netcoreapp3.1\Core.dll
+C:\Users\DELL\Documents\Projetos\CatalogarPatrimonioNovo\CatalogarPatrimonio\Codigo\CatalogarPatrimonioWEB\Core\obj\Debug\netcoreapp3.1\Core.pdb
+C:\Users\junin\Desktop\CatalogarPatrimonio\Codigo\CatalogarPatrimonioWEB\Core\obj\Debug\netcoreapp3.1\Core.csprojAssemblyReference.cache
+C:\Users\junin\Desktop\CatalogarPatrimonio\Codigo\CatalogarPatrimonioWEB\Core\obj\Debug\netcoreapp3.1\Core.AssemblyInfoInputs.cache
+C:\Users\junin\Desktop\CatalogarPatrimonio\Codigo\CatalogarPatrimonioWEB\Core\obj\Debug\netcoreapp3.1\Core.AssemblyInfo.cs
+C:\Users\junin\Desktop\CatalogarPatrimonio\Codigo\CatalogarPatrimonioWEB\Core\obj\Debug\netcoreapp3.1\Core.csproj.CoreCompileInputs.cache
+C:\Users\junin\Desktop\CatalogarPatrimonio\Codigo\CatalogarPatrimonioWEB\Core\obj\Debug\netcoreapp3.1\Core.dll
+C:\Users\junin\Desktop\CatalogarPatrimonio\Codigo\CatalogarPatrimonioWEB\Core\obj\Debug\netcoreapp3.1\Core.pdb
