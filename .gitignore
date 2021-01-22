@@ -1,9 +1,10 @@
-/Codigo/CatalogaPatrimonio/CatalogarPatrimonioWeb/bin
-/Codigo/CatalogaPatrimonio/CatalogarPatrimonioWeb/obj
-/Codigo/CatalogaPatrimonio/.vs/
+/Codigo/CatalogarPatrimonioWEB/CatalogarPatrimonioWeb/bin
+/Codigo/CatalogarPatrimonioWEB/CatalogarPatrimonioWeb/obj
+/Codigo/CatalogarPatrimonioWEB/.vs/
 /.vs/
+/.vscode/
 /AnaliseProjeto/ModeloRelacional.mwb.bak
-/Codigo/CatalogaPatrimonio/Core/bin
-/Codigo/CatalogaPatrimonio/Core/obj
-/Codigo/CatalogaPatrimonio/Service/bin
-/Codigo/CatalogaPatrimonio/Service/obj
+/Codigo/CatalogarPatrimonioWEB/Core/bin
+/Codigo/CatalogarPatrimonioWEB/Core/obj
+/Codigo/CatalogarPatrimonioWEB/Service/bin
+/Codigo/CatalogarPatrimonioWEB/Service/obj
