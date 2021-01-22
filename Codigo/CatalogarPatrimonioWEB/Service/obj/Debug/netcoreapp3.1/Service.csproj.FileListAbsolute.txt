@@ -1,8 +1,0 @@
-C:\Users\DELL\Documents\Projetos\CatalogarPatrimonioNovo\CatalogarPatrimonio\Codigo\CatalogarPatrimonioWEB\Service\obj\Debug\netcoreapp3.1\Service.csprojAssemblyReference.cache
-C:\Users\DELL\Documents\Projetos\CatalogarPatrimonioNovo\CatalogarPatrimonio\Codigo\CatalogarPatrimonioWEB\Service\obj\Debug\netcoreapp3.1\Service.AssemblyInfoInputs.cache
-C:\Users\DELL\Documents\Projetos\CatalogarPatrimonioNovo\CatalogarPatrimonio\Codigo\CatalogarPatrimonioWEB\Service\obj\Debug\netcoreapp3.1\Service.AssemblyInfo.cs
-C:\Users\DELL\Documents\Projetos\CatalogarPatrimonioNovo\CatalogarPatrimonio\Codigo\CatalogarPatrimonioWEB\Service\obj\Debug\netcoreapp3.1\Service.csproj.CoreCompileInputs.cache
-C:\Users\junin\Desktop\CatalogarPatrimonio\Codigo\CatalogarPatrimonioWEB\Service\obj\Debug\netcoreapp3.1\Service.csprojAssemblyReference.cache
-C:\Users\junin\Desktop\CatalogarPatrimonio\Codigo\CatalogarPatrimonioWEB\Service\obj\Debug\netcoreapp3.1\Service.AssemblyInfoInputs.cache
-C:\Users\junin\Desktop\CatalogarPatrimonio\Codigo\CatalogarPatrimonioWEB\Service\obj\Debug\netcoreapp3.1\Service.AssemblyInfo.cs
-C:\Users\junin\Desktop\CatalogarPatrimonio\Codigo\CatalogarPatrimonioWEB\Service\obj\Debug\netcoreapp3.1\Service.csproj.CoreCompileInputs.cache
