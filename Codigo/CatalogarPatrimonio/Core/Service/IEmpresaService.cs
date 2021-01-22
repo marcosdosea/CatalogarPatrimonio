@@ -7,11 +7,11 @@ namespace Core.Service
 {
     public interface IEmpresaService
     {
-        public void Editar(EmpresaService empresaservice);
-        public int Inserir(EmpresaService empresaservice);
-        public void Remover(int idEmpresaservico);
-        public EmpresaService Obter(int idEmpresa);
-        public IEnumerable<EmpresaService> ObterPorNome(string mensagem);
-        public IEnumerable<EmpresaService> ObterTodos();
+        public void Editar(Empresa empresa);
+        public int Inserir(Empresa empresa);
+        public void Remover(int idEmpresa);
+        public Empresa Obter(int idEmpresa);
+        public IEnumerable<Empresa> ObterPorNome(string mensagem);
+        public IEnumerable<Empresa> ObterTodos();
     }
 }

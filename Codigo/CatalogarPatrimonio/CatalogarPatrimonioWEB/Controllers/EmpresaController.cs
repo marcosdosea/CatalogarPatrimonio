@@ -10,11 +10,11 @@ namespace CatalogarPatrimonioWEB.Controllers
 {
     public class EmpresaController : Controller
     {
-        IEmpresa _empresa;
+        IEmpresaService _empresaService;
         IMapper _mapper;
 
         // private readonly IEmpresa empresa;
-        public EmpresaController(IEmpresa empresa, IMapper mapper)
+        public EmpresaController(IEmpresaService empresaService, IMapper mapper)
         {
             _empresaService = empresaService;
             _mapper = mapper;
@@ -23,7 +23,7 @@ namespace CatalogarPatrimonioWEB.Controllers
         // GET: EmpresaController
         public ActionResult Index()
         {
-            var listaEmpresa = _empresa.ObterTodos();
+            var listaEmpresa = _empresaService.ObterTodos();
             var listaEmpresaModel = _mapper.Map<List<EmpresaModel>>(listaEmpresa);
             return View(listaEmpresaModel);
         }
@@ -31,7 +31,7 @@ namespace CatalogarPatrimonioWEB.Controllers
         // GET: EmpresaController/Details/5
         public ActionResult Details(int id)
         {
-            Empresa empresa = _empresa.Obter(id);
+            Empresa empresa = _empresaService.Obter(id);
             EmpresaModel empresaModel = _mapper.Map<EmpresaModel>(empresa);
             return View(empresaModel);
         }
@@ -51,7 +51,7 @@ namespace CatalogarPatrimonioWEB.Controllers
             if (ModelState.IsValid)
             {
                 var empresa = _mapper.Map<Empresa>(empresaModel);
-                _empresa.Inserir(empresa);
+                _empresaService.Inserir(empresa);
             }
             return RedirectToAction(nameof(Index));
         }
@@ -59,7 +59,7 @@ namespace CatalogarPatrimonioWEB.Controllers
         // GET: EmpresaController/Edit/5
         public ActionResult Edit(int id)
         {
-            Empresa empresa = _empresa.Obter(id);
+            Empresa empresa = _empresaService.Obter(id);
             EmpresaModel empresaModel = _mapper.Map<EmpresaModel>(empresa);
             return View(empresaModel);
         }
@@ -72,7 +72,7 @@ namespace CatalogarPatrimonioWEB.Controllers
             if (ModelState.IsValid)
             {
                 var empresa = _mapper.Map<Empresa>(empresaModel);
-                _empresa.Editar(empresa);
+                _empresaService.Editar(empresa);
             }
             return RedirectToAction(nameof(Index));
         }
@@ -80,7 +80,7 @@ namespace CatalogarPatrimonioWEB.Controllers
         // GET: EmpresaController/Delete/5
         public ActionResult Delete(int id)
         {
-            Empresa empresa = _empresa.Obter(id);
+            Empresa empresa = _empresaService.Obter(id);
             EmpresaModel empresaModel = _mapper.Map<EmpresaModel>(empresa);
             return View(empresaModel);
         }
@@ -92,7 +92,7 @@ namespace CatalogarPatrimonioWEB.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, EmpresaModel empresa)
         {
-            _empresa.Remover(id);
+            _empresaService.Remover(id);
             return RedirectToAction(nameof(Index));
         }
     }

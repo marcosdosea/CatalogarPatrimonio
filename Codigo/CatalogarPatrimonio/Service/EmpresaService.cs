@@ -17,23 +17,23 @@ namespace Service
             _context = context;
         }
 
-        public int Inserir(EmpresaService empresaservice)
+        public int Inserir(Empresa empresa)
         {
-            _context.Add(empresaservice);
+            _context.Add(empresa);
             _context.SaveChanges();
-            return empresaservice.Id;
+            return empresa.Id;
         }
 
-        public void Editar(EmpresaService empresaservice)
+        public void Editar(Empresa empresa)
         {
-            _context.Update(empresaservice);
+            _context.Update(empresa);
             _context.SaveChanges();
         }
 
-        public void Remover(int idEmpresaservice)
+        public void Remover(int idEmpresa)
         {
-            var _empresaservice = _context.Dialogoservico.Find(idEmpresaservice);
-            _context.Dialogoservico.Remove(_empresaservice);
+            var _empresa = _context.Dialogoservico.Find(idEmpresa);
+            _context.Dialogoservico.Remove(_empresa);
             _context.SaveChanges();
         }
 
@@ -42,31 +42,31 @@ namespace Service
             return _context.Empresa.Count();
         }
 
-        private IQueryable<EmpresaService> GetQuery()
+        private IQueryable<Empresa> GetQuery()
         {
-            IQueryable<EmpresaService> tb_empresaservice = _context.Empresa;
-            var query = from empresaservice in tb_empresaservice
-                        select empresaservice;
+            IQueryable<Empresa> tb_empresa = _context.Empresa;
+            var query = from empresa in tb_empresa
+                        select empresa;
             return query;
         }
 
-        public IEnumerable<EmpresaService> ObterPorNome(string mensagem)
+        public IEnumerable<Empresa> ObterPorNome(string nome)
         {
-            IEnumerable<EmpresaService> empresa = GetQuery()
-                .Where(empresaModel => empresaModel.Mensagem.
-                StartsWith(mensagem));
+            IEnumerable<Empresa> empresa = GetQuery()
+                .Where(empresaModel => empresaModel.Nome.
+                StartsWith(nome));
             // seria melhor idpessoa?
             return empresa;
         }
 
-        public IEnumerable<EmpresaService> ObterTodos()
+        public IEnumerable<Empresa> ObterTodos()
         {
             return GetQuery();
         }
 
-        public EmpresaService Obter(int idEmpresa)
+        public Empresa Obter(int idEmpresa)
         {
-            IEnumerable<EmpresaService> empresa = GetQuery().Where(empresaModel => empresaModel.Id.Equals(idEmpresa));
+            IEnumerable<Empresa> empresa = GetQuery().Where(empresaModel => empresaModel.Id.Equals(idEmpresa));
 
             return empresa.ElementAtOrDefault(0);
         }

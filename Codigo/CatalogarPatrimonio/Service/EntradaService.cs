@@ -17,23 +17,23 @@ namespace Service
             _context = context;
         }
 
-        public int Inserir(EntradaService EntradaService)
+        public int Inserir(Entrada entrada)
         {
-            _context.Add(EntradaService);
+            _context.Add(entrada);
             _context.SaveChanges();
-            return EntradaService.Id;
+            return entrada.Id;
         }
 
-        public void Editar(EntradaService EntradaService)
+        public void Editar(Entrada entrada)
         {
-            _context.Update(EntradaService);
+            _context.Update(entrada);
             _context.SaveChanges();
         }
 
-        public void Remover(int idEntradaService)
+        public void Remover(int idEntrada)
         {
-            var _EntradaService = _context.Dialogoservico.Find(idEntradaService);
-            _context.Dialogoservico.Remove(_EntradaService);
+            var _entrada = _context.Dialogoservico.Find(idEntrada);
+            _context.Dialogoservico.Remove(_entrada);
             _context.SaveChanges();
         }
 
@@ -42,24 +42,24 @@ namespace Service
             return _context.Entrada.Count();
         }
 
-        private IQueryable<EntradaService> GetQuery()
+        private IQueryable<Entrada> GetQuery()
         {
-            IQueryable<EntradaService> tb_EntradaService = _context.Entrada;
+            IQueryable<Entrada> tb_EntradaService = _context.Entrada;
             var query = from EntradaService in tb_EntradaService
                         select EntradaService;
             return query;
         }
 
-        public IEnumerable<EntradaService> ObterTodos()
+        public IEnumerable<Entrada> ObterTodos()
         {
             return GetQuery();
         }
 
-        public EntradaService Obter(int idEntrada)
+        public Entrada Obter(int idEntrada)
         {
-            IEnumerable<EntradaService> Entrada = GetQuery().Where(EntradaModel => EntradaModel.Id.Equals(idEntrada));
+            IEnumerable<Entrada> entrada = GetQuery().Where(EntradaModel => EntradaModel.Id.Equals(idEntrada));
 
-            return Entrada.ElementAtOrDefault(0);
+            return entrada.ElementAtOrDefault(0);
         }
     }
 }

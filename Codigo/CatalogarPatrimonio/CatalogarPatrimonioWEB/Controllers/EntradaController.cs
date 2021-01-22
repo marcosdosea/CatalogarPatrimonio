@@ -10,11 +10,11 @@ namespace CatalogarPatrimonioWEB.Controllers
 {
     public class EntradaController : Controller
     {
-        IEntrada _entrada;
+        IEntradaService _entradaService;
         IMapper _mapper;
 
         // private readonly IEntrada entrada;
-        public EntradaController(IEntrada entrada, IMapper mapper)
+        public EntradaController(IEntradaService entradaService, IMapper mapper)
         {
             _entradaService = entradaService;
             _mapper = mapper;
@@ -23,7 +23,7 @@ namespace CatalogarPatrimonioWEB.Controllers
         // GET: EntradaController
         public ActionResult Index()
         {
-            var listaentrada = _entrada.ObterTodos();
+            var listaentrada = _entradaService.ObterTodos();
             var listaentradaModel = _mapper.Map<List<EntradaModel>>(listaentrada);
             return View(listaentradaModel);
         }
@@ -31,7 +31,7 @@ namespace CatalogarPatrimonioWEB.Controllers
         // GET: EntradaController/Details/5
         public ActionResult Details(int id)
         {
-            Entrada entrada = _entrada.Obter(id);
+            Entrada entrada = _entradaService.Obter(id);
             EntradaModel entradaModel = _mapper.Map<EntradaModel>(entrada);
             return View(entradaModel);
         }
@@ -51,7 +51,7 @@ namespace CatalogarPatrimonioWEB.Controllers
             if (ModelState.IsValid)
             {
                 var entrada = _mapper.Map<Entrada>(entradaModel);
-                _entrada.Inserir(entrada);
+                _entradaService.Inserir(entrada);
             }
             return RedirectToAction(nameof(Index));
         }
@@ -59,7 +59,7 @@ namespace CatalogarPatrimonioWEB.Controllers
         // GET: EntradaController/Edit/5
         public ActionResult Edit(int id)
         {
-            Entrada entrada = _entrada.Obter(id);
+            Entrada entrada = _entradaService.Obter(id);
             EntradaModel entradaModel = _mapper.Map<EntradaModel>(entrada);
             return View(entradaModel);
         }
@@ -72,7 +72,7 @@ namespace CatalogarPatrimonioWEB.Controllers
             if (ModelState.IsValid)
             {
                 var entrada = _mapper.Map<Entrada>(entradaModel);
-                _entrada.Editar(entrada);
+                _entradaService.Editar(entrada);
             }
             return RedirectToAction(nameof(Index));
         }
@@ -80,7 +80,7 @@ namespace CatalogarPatrimonioWEB.Controllers
         // GET: EntradaController/Delete/5
         public ActionResult Delete(int id)
         {
-            Entrada entrada = _entrada.Obter(id);
+            Entrada entrada = _entradaService.Obter(id);
             EntradaModel entradaModel = _mapper.Map<EntradaModel>(entrada);
             return View(entradaModel);
         }
@@ -92,7 +92,7 @@ namespace CatalogarPatrimonioWEB.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id, EntradaModel entrada)
         {
-            _entrada.Remover(id);
+            _entradaService.Remover(id);
             return RedirectToAction(nameof(Index));
         }
     }
