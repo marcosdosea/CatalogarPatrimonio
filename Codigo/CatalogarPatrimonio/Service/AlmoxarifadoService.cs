@@ -1,10 +1,8 @@
-﻿using Core;
-using Core.DTO;
-using Core.Service;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using Core;
+using Core.Service;
+using Core.DTO;
 
 namespace Service
 {
@@ -45,8 +43,8 @@ namespace Service
         private IQueryable<Almoxarifado> GetQuery()
         {
             IQueryable<Almoxarifado> tb_almoxarifado = _context.Almoxarifado;
-            var query = from almoxarifado in tb_almoxarifado
-                        select almoxarifado;
+            var query = from Almoxarifado in tb_almoxarifado
+                        select Almoxarifado;
             return query;
         }
 

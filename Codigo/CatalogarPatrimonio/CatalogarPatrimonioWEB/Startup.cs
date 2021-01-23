@@ -31,7 +31,7 @@ namespace CatalogarPatrimonioWEB
             services.AddControllersWithViews();
             services.AddDbContext<CatalogarPatrimonioContext>(options =>
                 options.UseMySQL(
-                    Configuration.GetConnectionString("BibliotecaConnection")));
+                    Configuration.GetConnectionString("CatalogarPatrimonioConnection")));
 
             services.AddTransient<IAlmoxarifadoService, AlmoxarifadoService>();
             services.AddTransient<IDialogoservicoService, DialogoserviceService>();
