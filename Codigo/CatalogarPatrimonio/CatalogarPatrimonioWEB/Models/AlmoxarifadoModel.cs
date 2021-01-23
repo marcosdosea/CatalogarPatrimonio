@@ -8,9 +8,9 @@ namespace CatalogarPatrimonioWEB.Models
 {
     public class AlmoxarifadoModel
     {
-		[Display(Name = "IdAlmoxarifado")]
-		[Key]
-		[Required(ErrorMessage = "Id do almoxarifado é obrigatório")]
+		// [Display(Name = "IdAlmoxarifado")]
+		// [Key]
+		// [Required(ErrorMessage = "Id do almoxarifado é obrigatório")]
 		public int IdAlmoxarifado { get; set; }
 		[Required]
 		[Display(Name = "Nome")]

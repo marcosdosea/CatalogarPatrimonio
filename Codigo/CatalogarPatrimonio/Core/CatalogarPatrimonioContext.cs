@@ -52,7 +52,7 @@ namespace Core
         {
             modelBuilder.Entity<Almoxarifado>(entity =>
             {
-                entity.ToTable("almoxarifado");
+                entity.ToTable("Almoxarifado");
 
                 entity.HasIndex(e => e.IdEmpresa)
                     .HasName("fk_tb_almoxarifado_empresa_idx");
@@ -156,7 +156,7 @@ namespace Core
 
             modelBuilder.Entity<Empresa>(entity =>
             {
-                entity.ToTable("empresa");
+                entity.ToTable("Empresa");
 
                 entity.Property(e => e.Id)
                     .HasColumnName("id")
