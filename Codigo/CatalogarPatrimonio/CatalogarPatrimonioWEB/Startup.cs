@@ -45,7 +45,7 @@ namespace CatalogarPatrimonioWEB
             //services.AddTransient<IMaterialService, MaterialService>();
             //services.AddTransient<IMaterialenradaService, MaterialentradaService>();
             //services.AddTransient<IPatrimonioService, PatrimonioService>();
-            //services.AddTransient<IPessoaService, PessoaService>();
+            services.AddTransient<IPessoaService, PessoaService>();
             //services.AddTransient<IPredioService, PredioService>();
             //services.AddTransient<IServicoService, ServicoService>();
             //services.AddTransient<IServicomaterialService, ServicomaterialService>();

@@ -80,7 +80,7 @@ namespace Core
 
             modelBuilder.Entity<DialogoservicoService>(entity =>
             {
-                entity.ToTable("dialogoservico");
+                entity.ToTable("DialogoServico");
 
                 entity.HasIndex(e => e.IdPessoa)
                     .HasName("fk_dialogoServico_pessoa1_idx");
@@ -486,7 +486,7 @@ namespace Core
 
             modelBuilder.Entity<Pessoa>(entity =>
             {
-                entity.ToTable("pessoa");
+                entity.ToTable("Pessoa");
 
                 entity.HasIndex(e => e.Cpf)
                     .HasName("CPF_UNIQUE")
