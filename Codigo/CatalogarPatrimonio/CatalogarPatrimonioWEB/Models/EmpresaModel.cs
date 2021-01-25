@@ -11,7 +11,7 @@ namespace CatalogarPatrimonioWEB.Models
 		[Display(Name = "IdEmpresa")]
 		[Key]
 		[Required(ErrorMessage = "Id da Empresa é obrigatório")]
-		public int IdEmpresa { get; set; }
+		public int Id { get; set; }
 		[Required]
 		[Display(Name = "Nome")]
 		[StringLength(45, MinimumLength = 5)]

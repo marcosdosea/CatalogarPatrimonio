@@ -1,4 +1,4 @@
-@model IEnumerable<CatalogarPatrimonioWEB.Models.EmpresaModel>
+@model IEnumerable<CatalogarPatrimonioWEB.Models.PessoaModel>
 
 @{
     ViewData["Title"] = "Index";
@@ -13,7 +13,10 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Nome)
+                @Html.DisplayNameFor(model => model.nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.email)
             </th>
             <th></th>
         </tr>
@@ -22,7 +25,10 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Nome)
+                @Html.DisplayFor(modelItem => item.nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new {  id = item.Id }) |
