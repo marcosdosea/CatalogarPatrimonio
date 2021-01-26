@@ -1,0 +1,341 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CatalogarPatrimonioWeb</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- Favicons -->
+    <link href="~/assets/img/Icone-catalogar.jpg" rel="icon">
+    <link href="~/assets/img/Icone-catalogar2.jpg" rel="apple-touch-icon">
+
+    <!-- IonIcons -->
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/css/adminlte.min.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="~/lib/fontawesome-free/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+</head>
+
+<!--
+	BODY TAG OPTIONS:
+	=================
+	Apply one or more of the following classes to to the body tag
+	to get the desired effect
+	|---------------------------------------------------------|
+	|LAYOUT OPTIONS | sidebar-collapse                        |
+	|               | sidebar-mini                            |
+	|---------------------------------------------------------|
+	-->
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="" class="nav-link">Início</a>
+                </li>
+            </ul>
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item dropdown"></li>
+                <li class="nav-item dropdown ">
+                    <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="true">
+                        <i class="far fa-bell"></i>
+                        <span class="badge badge-warning navbar-badge">2</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right ">
+                        <span class="dropdown-item dropdown-header">2 Notificações</span>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <i class="fas fa-envelope mr-2"></i> 2 novas mensagens
+                            <span class="float-right text-muted text-sm">3 mins</span>
+                        </a>
+
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item dropdown-footer">Veja Todas as Notificações</a>
+                    </div>
+                </li>
+                @* <li class="nav-item">
+                    <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#"><i
+                    class="fas fa-th-large"></i></a>
+                    </li> *@
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="#" class="brand-link">
+                <img src="~/assets/img/logo/logo.png" alt="logo do catalogar patrimonio" class="brand-text elevation-1"
+                    style="width: 100%;">
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user panel (optional) -->
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    @* <div class="image">
+                        <img src="../../dist/img/user3-128x128.jpg" class="img-circle elevation-2" alt="User Image">
+                        </div> *@
+                    <div class="info">
+                        <a href="#" class="d-block">Gestor</a>
+                        <a>Daniel Santos</a>
+                    </div>
+                </div>
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+                    with font-awesome or any other icon font library -->
+                        <li class="nav-item">
+                            <a href="atenderSolicitacoes.html" class="nav-link active">
+                                <i class="fas fa-concierge-bell"></i>
+                                <p>
+                                    Atender Solicitações
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+                    with font-awesome or any other icon font library -->
+                        <li class="nav-item">
+                            <a href="solicitarServico.html" class="nav-link active">
+                                <i class="fas fa-tasks"></i>
+                                <p>
+                                    Solicitar Serviço
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+                        with font-awesome or any other icon font library -->
+                        <li class="nav-item">
+                            <a href="listaPessoa.html" class="nav-link active">
+                                <i class="fas fa-user"></i>
+                                <p>
+                                    Lista de Pessoas
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+                        with font-awesome or any other icon font library -->
+                        <li class="nav-item">
+                            <a href="listaTransferencias.html" class="nav-link active">
+                                <i class="fas fa-exchange-alt"></i>
+                                <p>
+                                    Transferir Material
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+                        with font-awesome or any other icon font library -->
+                        <li class="nav-item">
+                            <a href="listaEntradaMaterial.html" class="nav-link active">
+                                <i class="fas fa-box"></i>
+                                <p>
+                                    Entrada de Material
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+                            with font-awesome or any other icon font library -->
+                        <li class="nav-item">
+                            <a href="listaEstoque.html" class="nav-link active">
+                                <i class="fas fa-warehouse"></i>
+                                <p>
+                                    Lista de Almoxarifados
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+
+
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+                    with font-awesome or any other icon font library -->
+                        <li class="nav-item">
+                            <a href="consultarHistoricoPatrimonio.html" class="nav-link active">
+                                <i class="fas fa-history"></i>
+                                <p>
+                                    Histórico de Patrimônio
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
+                        <li class="nav-item">
+                            <a href="listaPatrimonios.html" class="nav-link active">
+                                <i class="fas fa-globe"></i>
+                                <p>
+                                    Patrimônios
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+                    with font-awesome or any other icon font library -->
+                        <li class="nav-item">
+                            <a href="estoque.html" class="nav-link active">
+                                <i class="fas fa-boxes"></i>
+                                <p>
+                                    Estoque
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+                    with font-awesome or any other icon font library -->
+                        <li class="nav-item">
+                            <a href="materialHome.html" class="nav-link active">
+                                <i class="fas fa-box-open"></i>
+                                <p>
+                                    Material
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+                    with font-awesome or any other icon font library -->
+                        <li class="nav-item">
+                            <a href="listaFornecedor.html" class="nav-link active">
+                                <i class="fas fa-arrow-right"></i>
+                                <p>
+                                    Fornecedor
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+                    with font-awesome or any other icon font library -->
+                        <li class="nav-item">
+                            <a href="listaPredios.html" class="nav-link active">
+                                <i class="fas fa-building"></i>
+                                <p>
+                                    Prédios
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+                    with font-awesome or any other icon font library -->
+                        <li class="nav-item">
+                            <a href="listaLocal.html" class="nav-link active">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <p>
+                                    Locais
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+                        with font-awesome or any other icon font library -->
+                        <li class="nav-item">
+                            <a href="listaServicos.html" class="nav-link active">
+                                <i class="fas fa-tools"></i>
+                                <p>
+                                    Tipo de Serviço
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
+                        <li class="nav-item">
+                            <a href="listaTipoPatrimonio.html" class="nav-link active">
+                                <i class="fas fa-atlas"></i>
+                                <p>
+                                    Tipo do Patrimônio
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
+                        <!-- Add icons to the links using the .nav-icon class
+                    with font-awesome or any other icon font library -->
+                        <li class="nav-item">
+                            <a href="../../indexGestor.html" class="nav-link active">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <p>
+                                    Sair
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <div class="content-wrapper">
+            <div class="container">
+                <main role="main">
+                    @RenderBody()
+                </main>
+            </div>
+        </div>
+
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            &copy; @DateTime.Now.Year - CatalogarPatrimonioWeb - <a asp-area="" asp-controller="Home"
+                asp-action="Privacy">Privacy</a>
+        </footer>
+    </div>
+
+    <!-- REQUIRED SCRIPTS -->
+    <!-- jQuery -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE -->
+    <script src="~/js/adminlte.js"></script>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>
