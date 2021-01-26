@@ -16,7 +16,7 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="~/css/adminlte.min.css">
     <!-- Font Awesome Icons -->
-        <link rel="stylesheet" href="~/lib/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="~/lib/fontawesome-free/css/all.min.css">
 
     <!-- Google Fonts -->
     <link
@@ -36,7 +36,7 @@
 	-->
 
 <body class="hold-transition sidebar-mini">
-    <header>
+    <div class="wrapper">
         <!-- Navbar -->
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
             <!-- Left navbar links -->
@@ -94,7 +94,7 @@
                         </div> *@
                     <div class="info">
                         <a href="#" class="d-block">Gestor</a>
-                        <a>Gestor</a>
+                        <a>Daniel Santos</a>
                     </div>
                 </div>
 
@@ -310,21 +310,21 @@
             </div>
             <!-- /.sidebar -->
         </aside>
-    </header>
 
-    <div class="container wrapper">
-        <main role="main">
-            @RenderBody()
-        </main>
-    </div>
+        <div class="content-wrapper">
+            <div class="container">
+                <main role="main">
+                    @RenderBody()
+                </main>
+            </div>
+        </div>
 
-    <!-- Main Footer -->
-    <footer class="main-footer">
-        <div class="container">
+        <!-- Main Footer -->
+        <footer class="main-footer">
             &copy; @DateTime.Now.Year - CatalogarPatrimonioWeb - <a asp-area="" asp-controller="Home"
                 asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
+        </footer>
+    </div>
 
     <!-- REQUIRED SCRIPTS -->
     <!-- jQuery -->
@@ -333,7 +333,7 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE -->
     <script src="~/js/adminlte.js"></script>
-    
+
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
