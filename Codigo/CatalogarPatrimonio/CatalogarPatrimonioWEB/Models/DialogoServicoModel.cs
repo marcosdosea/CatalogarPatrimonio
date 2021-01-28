@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CatalogarPatrimonioWEB.Models
 {
-    public class DialogoservicoModel
+    public class DialogoServicoModel
     {
 		[Display(Name = "IdDialogoservico")]
 		[Key]
