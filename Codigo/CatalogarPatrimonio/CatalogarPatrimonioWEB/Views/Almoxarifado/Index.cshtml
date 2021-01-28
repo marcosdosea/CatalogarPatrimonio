@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Index";
+    Layout = "_LayoutInside";
 }
 
 <h1>Index</h1>
@@ -14,6 +15,9 @@
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdEmpresa)
             </th>
             <th></th>
         </tr>

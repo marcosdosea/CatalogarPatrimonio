@@ -15,10 +15,10 @@ namespace CatalogarPatrimonioWEB.Models
 		[Required]
 		[Display(Name = "Nome")]
 		[StringLength(45, MinimumLength = 5)]
-		
+
 		public string Nome { get; set; }
 		[Display(Name = "Local")]
-		public string IdEmpresa { get; set; }
+		public int IdEmpresa { get; set; }
 	
 	}
 }
