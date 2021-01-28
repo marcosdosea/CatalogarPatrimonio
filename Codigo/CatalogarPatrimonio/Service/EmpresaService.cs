@@ -32,8 +32,8 @@ namespace Service
 
         public void Remover(int idEmpresa)
         {
-            var _empresa = _context.Dialogoservico.Find(idEmpresa);
-            _context.Dialogoservico.Remove(_empresa);
+            var _empresa = _context.DialogoServico.Find(idEmpresa);
+            _context.DialogoServico.Remove(_empresa);
             _context.SaveChanges();
         }
 
