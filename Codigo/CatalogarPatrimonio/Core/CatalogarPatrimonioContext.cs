@@ -16,12 +16,12 @@ namespace Core
         }
 
         public virtual DbSet<Almoxarifado> Almoxarifado { get; set; }
-        public virtual DbSet<DialogoServico> DialogoServico { get; set; }
+        public virtual DbSet<Dialogoservico> Dialogoservico { get; set; }
         public virtual DbSet<Disponibilidade> Disponibilidade { get; set; }
         public virtual DbSet<Empresa> Empresa { get; set; }
         public virtual DbSet<Entrada> Entrada { get; set; }
-        public virtual DbSet<EntradaMaterial> EntradaMaterial { get; set; }
-        public virtual DbSet<EstoqueMaterial> EstoqueMaterial { get; set; }
+        public virtual DbSet<Entradamaterial> Entradamaterial { get; set; }
+        public virtual DbSet<Estoquematerial> Estoquematerial { get; set; }
         public virtual DbSet<Fornecedor> Fornecedor { get; set; }
         public virtual DbSet<Local> Local { get; set; }
         public virtual DbSet<Material> Material { get; set; }
@@ -29,18 +29,20 @@ namespace Core
         public virtual DbSet<Pessoa> Pessoa { get; set; }
         public virtual DbSet<Predio> Predio { get; set; }
         public virtual DbSet<Servico> Servico { get; set; }
-        public virtual DbSet<ServicoMaterial> ServicoMaterial { get; set; }
-        public virtual DbSet<StatusServico> StatusServico { get; set; }
-        public virtual DbSet<TipoMaterial> TipoMaterial { get; set; }
-        public virtual DbSet<TipoPatrimonio> TipoPatrimonio { get; set; }
-        public virtual DbSet<TipoServico> TipoServico { get; set; }
+        public virtual DbSet<Servicomaterial> Servicomaterial { get; set; }
+        public virtual DbSet<Statusservico> Statusservico { get; set; }
+        public virtual DbSet<Tipomaterial> Tipomaterial { get; set; }
+        public virtual DbSet<Tipopatrimonio> Tipopatrimonio { get; set; }
+        public virtual DbSet<Tiposervico> Tiposervico { get; set; }
         public virtual DbSet<Transferencia> Transferencia { get; set; }
-        public virtual DbSet<TransferenciaMaterial> TransferenciaMaterial { get; set; }
+        public virtual DbSet<Transferenciamaterial> Transferenciamaterial { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Almoxarifado>(entity =>
             {
+                entity.ToTable("almoxarifado");
+
                 entity.HasIndex(e => e.IdEmpresa)
                     .HasName("fk_tb_almoxarifado_empresa_idx");
 
@@ -65,8 +67,10 @@ namespace Core
                     .HasConstraintName("fk_tb_almoxarifado_empresa");
             });
 
-            modelBuilder.Entity<DialogoServico>(entity =>
+            modelBuilder.Entity<Dialogoservico>(entity =>
             {
+                entity.ToTable("dialogoservico");
+
                 entity.HasIndex(e => e.IdPessoa)
                     .HasName("fk_dialogoServico_pessoa1_idx");
 
@@ -96,13 +100,13 @@ namespace Core
                     .HasDefaultValueSql("'NULL'");
 
                 entity.HasOne(d => d.IdPessoaNavigation)
-                    .WithMany(p => p.DialogoServico)
+                    .WithMany(p => p.Dialogoservico)
                     .HasForeignKey(d => d.IdPessoa)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("fk_dialogoServico_pessoa1");
 
                 entity.HasOne(d => d.IdServicoNavigation)
-                    .WithMany(p => p.DialogoServico)
+                    .WithMany(p => p.Dialogoservico)
                     .HasForeignKey(d => d.IdServico)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("fk_dialogoServico_servico1");
@@ -110,6 +114,8 @@ namespace Core
 
             modelBuilder.Entity<Disponibilidade>(entity =>
             {
+                entity.ToTable("disponibilidade");
+
                 entity.HasIndex(e => e.IdLocal)
                     .HasName("fk_Disponibilidade_Local1_idx");
 
@@ -139,6 +145,8 @@ namespace Core
 
             modelBuilder.Entity<Empresa>(entity =>
             {
+                entity.ToTable("empresa");
+
                 entity.Property(e => e.Id)
                     .HasColumnName("id")
                     .HasColumnType("int(11)");
@@ -152,6 +160,8 @@ namespace Core
 
             modelBuilder.Entity<Entrada>(entity =>
             {
+                entity.ToTable("entrada");
+
                 entity.HasIndex(e => e.IdFornecedor)
                     .HasName("fk_entradaMaterial_fornecedor1_idx");
 
@@ -176,10 +186,12 @@ namespace Core
                     .HasConstraintName("fk_entradaMaterial_fornecedor1");
             });
 
-            modelBuilder.Entity<EntradaMaterial>(entity =>
+            modelBuilder.Entity<Entradamaterial>(entity =>
             {
                 entity.HasKey(e => new { e.IdMaterial, e.IdEntrada })
                     .HasName("PRIMARY");
+
+                entity.ToTable("entradamaterial");
 
                 entity.HasIndex(e => e.IdEntrada)
                     .HasName("fk_material_has_entrada_entrada1_idx");
@@ -210,22 +222,24 @@ namespace Core
                     .HasDefaultValueSql("'NULL'");
 
                 entity.HasOne(d => d.IdEntradaNavigation)
-                    .WithMany(p => p.EntradaMaterial)
+                    .WithMany(p => p.Entradamaterial)
                     .HasForeignKey(d => d.IdEntrada)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("fk_material_has_entrada_entrada1");
 
                 entity.HasOne(d => d.IdMaterialNavigation)
-                    .WithMany(p => p.EntradaMaterial)
+                    .WithMany(p => p.Entradamaterial)
                     .HasForeignKey(d => d.IdMaterial)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("fk_material_has_entrada_material1");
             });
 
-            modelBuilder.Entity<EstoqueMaterial>(entity =>
+            modelBuilder.Entity<Estoquematerial>(entity =>
             {
                 entity.HasKey(e => new { e.IdMaterial, e.IdAlmoxarifado })
                     .HasName("PRIMARY");
+
+                entity.ToTable("estoquematerial");
 
                 entity.HasIndex(e => e.IdAlmoxarifado)
                     .HasName("fk_material_has_almoxarifado_almoxarifado1_idx");
@@ -246,13 +260,13 @@ namespace Core
                     .HasColumnType("int(11)");
 
                 entity.HasOne(d => d.IdAlmoxarifadoNavigation)
-                    .WithMany(p => p.EstoqueMaterial)
+                    .WithMany(p => p.Estoquematerial)
                     .HasForeignKey(d => d.IdAlmoxarifado)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("fk_material_has_almoxarifado_almoxarifado1");
 
                 entity.HasOne(d => d.IdMaterialNavigation)
-                    .WithMany(p => p.EstoqueMaterial)
+                    .WithMany(p => p.Estoquematerial)
                     .HasForeignKey(d => d.IdMaterial)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("fk_material_has_almoxarifado_material1");
@@ -260,6 +274,8 @@ namespace Core
 
             modelBuilder.Entity<Fornecedor>(entity =>
             {
+                entity.ToTable("fornecedor");
+
                 entity.Property(e => e.Id)
                     .HasColumnName("id")
                     .HasColumnType("int(11)");
@@ -297,6 +313,8 @@ namespace Core
 
             modelBuilder.Entity<Local>(entity =>
             {
+                entity.ToTable("local");
+
                 entity.HasIndex(e => e.IdPredio)
                     .HasName("fk_Local_Predio1_idx");
 
@@ -323,6 +341,8 @@ namespace Core
 
             modelBuilder.Entity<Material>(entity =>
             {
+                entity.ToTable("material");
+
                 entity.HasIndex(e => e.IdTipoMaterial)
                     .HasName("fk_material_tipoMaterial1_idx");
 
@@ -364,6 +384,8 @@ namespace Core
 
             modelBuilder.Entity<Patrimonio>(entity =>
             {
+                entity.ToTable("patrimonio");
+
                 entity.HasIndex(e => e.IdLocal)
                     .HasName("fk_Patrimonio_Local1_idx");
 
@@ -419,6 +441,8 @@ namespace Core
 
             modelBuilder.Entity<Pessoa>(entity =>
             {
+                entity.ToTable("pessoa");
+
                 entity.HasIndex(e => e.Cpf)
                     .HasName("CPF_UNIQUE")
                     .IsUnique();
@@ -499,6 +523,8 @@ namespace Core
 
             modelBuilder.Entity<Predio>(entity =>
             {
+                entity.ToTable("predio");
+
                 entity.HasIndex(e => e.IdEmpresa)
                     .HasName("fk_local_empresa1_idx");
 
@@ -545,6 +571,8 @@ namespace Core
 
             modelBuilder.Entity<Servico>(entity =>
             {
+                entity.ToTable("servico");
+
                 entity.HasIndex(e => e.IdAlmoxarife)
                     .HasName("fk_servico_pessoa1_idx");
 
@@ -654,10 +682,12 @@ namespace Core
                     .HasConstraintName("fk_tb_ordemServico_tipoServico");
             });
 
-            modelBuilder.Entity<ServicoMaterial>(entity =>
+            modelBuilder.Entity<Servicomaterial>(entity =>
             {
                 entity.HasKey(e => new { e.IdMaterial, e.IdServico })
                     .HasName("PRIMARY");
+
+                entity.ToTable("servicomaterial");
 
                 entity.HasIndex(e => e.IdMaterial)
                     .HasName("fk_material_has_Servico_material1_idx");
@@ -685,26 +715,28 @@ namespace Core
                     .HasColumnType("int(11)");
 
                 entity.HasOne(d => d.IdMaterialNavigation)
-                    .WithMany(p => p.ServicoMaterial)
+                    .WithMany(p => p.Servicomaterial)
                     .HasForeignKey(d => d.IdMaterial)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("fk_material_has_Servico_material1");
 
                 entity.HasOne(d => d.IdPatrimonioNavigation)
-                    .WithMany(p => p.ServicoMaterial)
+                    .WithMany(p => p.Servicomaterial)
                     .HasForeignKey(d => d.IdPatrimonio)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("fk_servicoMaterial_patrimonio1");
 
                 entity.HasOne(d => d.IdServicoNavigation)
-                    .WithMany(p => p.ServicoMaterial)
+                    .WithMany(p => p.Servicomaterial)
                     .HasForeignKey(d => d.IdServico)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("fk_material_has_Servico_Servico1");
             });
 
-            modelBuilder.Entity<StatusServico>(entity =>
+            modelBuilder.Entity<Statusservico>(entity =>
             {
+                entity.ToTable("statusservico");
+
                 entity.Property(e => e.Id)
                     .HasColumnName("id")
                     .HasColumnType("int(11)");
@@ -716,8 +748,10 @@ namespace Core
                     .HasDefaultValueSql("'NULL'");
             });
 
-            modelBuilder.Entity<TipoMaterial>(entity =>
+            modelBuilder.Entity<Tipomaterial>(entity =>
             {
+                entity.ToTable("tipomaterial");
+
                 entity.Property(e => e.Id)
                     .HasColumnName("id")
                     .HasColumnType("int(11)");
@@ -729,8 +763,10 @@ namespace Core
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TipoPatrimonio>(entity =>
+            modelBuilder.Entity<Tipopatrimonio>(entity =>
             {
+                entity.ToTable("tipopatrimonio");
+
                 entity.Property(e => e.Id)
                     .HasColumnName("id")
                     .HasColumnType("int(11)");
@@ -742,8 +778,10 @@ namespace Core
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TipoServico>(entity =>
+            modelBuilder.Entity<Tiposervico>(entity =>
             {
+                entity.ToTable("tiposervico");
+
                 entity.Property(e => e.Id)
                     .HasColumnName("id")
                     .HasColumnType("int(11)");
@@ -757,6 +795,8 @@ namespace Core
 
             modelBuilder.Entity<Transferencia>(entity =>
             {
+                entity.ToTable("transferencia");
+
                 entity.HasIndex(e => e.IdAlmoxarifadoDestino)
                     .HasName("fk_transferirMaterial_almoxarifado2_idx");
 
@@ -793,10 +833,12 @@ namespace Core
                     .HasConstraintName("fk_transferirMaterial_almoxarifado1");
             });
 
-            modelBuilder.Entity<TransferenciaMaterial>(entity =>
+            modelBuilder.Entity<Transferenciamaterial>(entity =>
             {
                 entity.HasKey(e => new { e.IdMaterial, e.IdTransferencia })
                     .HasName("PRIMARY");
+
+                entity.ToTable("transferenciamaterial");
 
                 entity.HasIndex(e => e.IdMaterial)
                     .HasName("fk_Material_has_Transferencia_Material1_idx");
@@ -818,13 +860,13 @@ namespace Core
                     .HasDefaultValueSql("'NULL'");
 
                 entity.HasOne(d => d.IdMaterialNavigation)
-                    .WithMany(p => p.TransferenciaMaterial)
+                    .WithMany(p => p.Transferenciamaterial)
                     .HasForeignKey(d => d.IdMaterial)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("fk_Material_has_Transferencia_Material1");
 
                 entity.HasOne(d => d.IdTransferenciaNavigation)
-                    .WithMany(p => p.TransferenciaMaterial)
+                    .WithMany(p => p.Transferenciamaterial)
                     .HasForeignKey(d => d.IdTransferencia)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("fk_Material_has_Transferencia_Transferencia1");

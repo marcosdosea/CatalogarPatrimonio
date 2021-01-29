@@ -5,13 +5,13 @@ using Core.DTO;
 
 namespace Core.Service
 {
-    public interface IDialogoServicoService
+    public interface IDialogoservicoService
     {
-        public void Editar(DialogoServico dialogoServico);
-        public int Inserir(DialogoServico dialogoServico);
-        public void Remover(int idDialogoServico);
-        public DialogoServico Obter(int idDialogoServico);
-        public IEnumerable<DialogoServico> ObterPorNome(string mensagem);
-        public IEnumerable<DialogoServico> ObterTodos();
+        public void Editar(Dialogoservico dialogoServico);
+        public int Inserir(Dialogoservico dialogoServico);
+        public void Remover(int idDialogoservico);
+        public Dialogoservico Obter(int idDialogoServico);
+        public IEnumerable<Dialogoservico> ObterPorNome(string mensagem);
+        public IEnumerable<Dialogoservico> ObterTodos();
     }
 }

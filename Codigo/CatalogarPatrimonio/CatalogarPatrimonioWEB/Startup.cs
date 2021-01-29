@@ -34,7 +34,7 @@ namespace CatalogarPatrimonioWEB
                     Configuration.GetConnectionString("CatalogarPatrimonioConnection")));
 
             services.AddTransient<IAlmoxarifadoService, AlmoxarifadoService>();
-            services.AddTransient<IDialogoServicoService, DialogoServicoService>();
+            services.AddTransient<IDialogoservicoService, DialogoservicoService>();
             //services.AddTransient<IDisponibilidadeService, DisponibilidadeService>();
             services.AddTransient<IEmpresaService, EmpresaService>();
             services.AddTransient<IEntradaService, EntradaService>();

@@ -8,67 +8,67 @@ using System.Text;
 
 namespace Service
 {
-    public class DialogoServicoService :IDialogoServicoService
+    public class DialogoservicoService :IDialogoservicoService
     {
         private readonly CatalogarPatrimonioContext _context;
 
-        public DialogoServicoService(CatalogarPatrimonioContext context)
+        public DialogoservicoService(CatalogarPatrimonioContext context)
         {
             _context = context;
         }
 
-        public int Inserir(DialogoServico dialogoservico)
+        public int Inserir(Dialogoservico dialogoServico)
         {
-            _context.Add(dialogoservico);
+            _context.Add(dialogoServico);
             _context.SaveChanges();
-            return dialogoservico.Id;
+            return dialogoServico.Id;
         }
 
-        public void Editar(DialogoServico dialogoservico)
+        public void Editar(Dialogoservico dialogoServico)
         {
-            _context.Update(dialogoservico);
+            _context.Update(dialogoServico);
             _context.SaveChanges();
         }
 
         public void Remover(int idDialogoservico)
         {
-            var _dialogoservico = _context.DialogoServico.Find(idDialogoservico);
-            _context.DialogoServico.Remove(_dialogoservico);
+            var _dialogoServico = _context.Dialogoservico.Find(idDialogoservico);
+            _context.Dialogoservico.Remove(_dialogoServico);
             _context.SaveChanges();
         }
 
         public int GetNumeroDialogo()
         {
-            return _context.DialogoServico.Count();
+            return _context.Dialogoservico.Count();
         }
 
-        private IQueryable<DialogoServico> GetQuery()
+        private IQueryable<Dialogoservico> GetQuery()
         {
-            IQueryable<DialogoServico> tb_dialogoservico = _context.DialogoServico;
-            var query = from dialogoservico in tb_dialogoservico
-                        select dialogoservico;
+            IQueryable<Dialogoservico> tb_dialogoServico = _context.Dialogoservico;
+            var query = from dialogoServico in tb_dialogoServico
+                        select dialogoServico;
             return query;
         }
 
-        public IEnumerable<DialogoServico> ObterPorNome(string mensagem)
+        public IEnumerable<Dialogoservico> ObterPorNome(string mensagem)
         {
-            IEnumerable<DialogoServico> dialogoservico = GetQuery()
-                .Where(dialogoservicoModel => dialogoservicoModel.Mensagem.
+            IEnumerable<Dialogoservico> dialogoServico = GetQuery()
+                .Where(dialogoServicoModel => dialogoServicoModel.Mensagem.
                 StartsWith(mensagem));
             // seria melhor idpessoa?
-            return dialogoservico;
+            return dialogoServico;
         }
 
-        public IEnumerable<DialogoServico> ObterTodos()
+        public IEnumerable<Dialogoservico> ObterTodos()
         {
             return GetQuery();
         }
 
-        public DialogoServico Obter(int idDialogoservico)
+        public Dialogoservico Obter(int idDialogoservico)
         {
-            IEnumerable<DialogoServico> dialogoservico = GetQuery().Where(dialogoservicoModel => dialogoservicoModel.Id.Equals(idDialogoservico));
+            IEnumerable<Dialogoservico> dialogoServico = GetQuery().Where(dialogoServicoModel => dialogoServicoModel.Id.Equals(idDialogoservico));
 
-            return dialogoservico.ElementAtOrDefault(0);
+            return dialogoServico.ElementAtOrDefault(0);
         }
     }
 }

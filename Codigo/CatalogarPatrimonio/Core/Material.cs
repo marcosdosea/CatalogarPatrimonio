@@ -7,10 +7,10 @@ namespace Core
     {
         public Material()
         {
-            EntradaMaterial = new HashSet<EntradaMaterial>();
-            EstoqueMaterial = new HashSet<EstoqueMaterial>();
-            ServicoMaterial = new HashSet<ServicoMaterial>();
-            TransferenciaMaterial = new HashSet<TransferenciaMaterial>();
+            Entradamaterial = new HashSet<Entradamaterial>();
+            Estoquematerial = new HashSet<Estoquematerial>();
+            Servicomaterial = new HashSet<Servicomaterial>();
+            Transferenciamaterial = new HashSet<Transferenciamaterial>();
         }
 
         public int Id { get; set; }
@@ -20,10 +20,10 @@ namespace Core
         public byte? DeveVincularMaterial { get; set; }
         public decimal? Valor { get; set; }
 
-        public virtual TipoMaterial IdTipoMaterialNavigation { get; set; }
-        public virtual ICollection<EntradaMaterial> EntradaMaterial { get; set; }
-        public virtual ICollection<EstoqueMaterial> EstoqueMaterial { get; set; }
-        public virtual ICollection<ServicoMaterial> ServicoMaterial { get; set; }
-        public virtual ICollection<TransferenciaMaterial> TransferenciaMaterial { get; set; }
+        public virtual Tipomaterial IdTipoMaterialNavigation { get; set; }
+        public virtual ICollection<Entradamaterial> Entradamaterial { get; set; }
+        public virtual ICollection<Estoquematerial> Estoquematerial { get; set; }
+        public virtual ICollection<Servicomaterial> Servicomaterial { get; set; }
+        public virtual ICollection<Transferenciamaterial> Transferenciamaterial { get; set; }
     }
 }

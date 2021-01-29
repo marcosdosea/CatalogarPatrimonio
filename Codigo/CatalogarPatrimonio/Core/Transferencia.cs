@@ -7,7 +7,7 @@ namespace Core
     {
         public Transferencia()
         {
-            TransferenciaMaterial = new HashSet<TransferenciaMaterial>();
+            Transferenciamaterial = new HashSet<Transferenciamaterial>();
         }
 
         public int Id { get; set; }
@@ -17,6 +17,6 @@ namespace Core
 
         public virtual Almoxarifado IdAlmoxarifadoDestinoNavigation { get; set; }
         public virtual Almoxarifado IdAlmoxarifadoOrigemNavigation { get; set; }
-        public virtual ICollection<TransferenciaMaterial> TransferenciaMaterial { get; set; }
+        public virtual ICollection<Transferenciamaterial> Transferenciamaterial { get; set; }
     }
 }
