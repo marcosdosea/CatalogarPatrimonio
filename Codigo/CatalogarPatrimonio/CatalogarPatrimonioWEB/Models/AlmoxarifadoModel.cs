@@ -11,10 +11,14 @@ namespace CatalogarPatrimonioWEB.Models
 		// [Display(Name = "IdAlmoxarifado")]
 		// [Key]
 		// [Required(ErrorMessage = "Id do almoxarifado é obrigatório")]
-		public int IdAlmoxarifado { get; set; }
+		public int Id { get; set; }
 		[Required]
 		[Display(Name = "Nome")]
 		[StringLength(45, MinimumLength = 5)]
+
 		public string Nome { get; set; }
+		[Display(Name = "Local")]
+		public int IdEmpresa { get; set; }
+	
 	}
 }
