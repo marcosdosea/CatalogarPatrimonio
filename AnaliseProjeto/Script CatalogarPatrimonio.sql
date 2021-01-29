@@ -1,5 +1,5 @@
 -- MySQL Workbench Synchronization
--- Generated: 2020-12-28 20:23
+-- Generated: 2021-01-28 21:30
 -- Model: New Model
 -- Version: 1.0
 -- Project: Name of the project
@@ -9,7 +9,9 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
-CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`Pessoa` (
+CREATE SCHEMA IF NOT EXISTS `catalogarpatrimonio` DEFAULT CHARACTER SET utf8 ;
+
+CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`pessoa` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   `dataNascimento` DATE NULL DEFAULT NULL,
@@ -27,20 +29,20 @@ CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`Pessoa` (
   INDEX `fk_tb_pessoa_empresa_idx` (`idEmpresa` ASC),
   CONSTRAINT `fk_tb_pessoa_empresa`
     FOREIGN KEY (`idEmpresa`)
-    REFERENCES `catalogarpatrimonio`.`Empresa` (`id`)
+    REFERENCES `catalogarpatrimonio`.`empresa` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
-CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`Empresa` (
+CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`empresa` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
-CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`Almoxarifado` (
+CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`almoxarifado` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   `idEmpresa` INT(11) NULL DEFAULT NULL,
@@ -48,13 +50,13 @@ CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`Almoxarifado` (
   INDEX `fk_tb_almoxarifado_empresa_idx` (`idEmpresa` ASC),
   CONSTRAINT `fk_tb_almoxarifado_empresa`
     FOREIGN KEY (`idEmpresa`)
-    REFERENCES `catalogarpatrimonio`.`Empresa` (`id`)
+    REFERENCES `catalogarpatrimonio`.`empresa` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
-CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`Servico` (
+CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`servico` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `dataSolicitacao` DATE NOT NULL,
   `descricao` VARCHAR(1000) NULL DEFAULT NULL,
@@ -76,38 +78,38 @@ CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`Servico` (
   INDEX `fk_Servico_Local1_idx` (`idLocal` ASC),
   CONSTRAINT `fk_tb_ordemServico_solicitante`
     FOREIGN KEY (`idSolicitante`)
-    REFERENCES `catalogarpatrimonio`.`Pessoa` (`id`)
+    REFERENCES `catalogarpatrimonio`.`pessoa` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_tb_ordemServico_tipoServico`
     FOREIGN KEY (`idTipoServico`)
-    REFERENCES `catalogarpatrimonio`.`TipoServico` (`id`)
+    REFERENCES `catalogarpatrimonio`.`tiposervico` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_servico_statusServico1`
     FOREIGN KEY (`idStatusServico`)
-    REFERENCES `catalogarpatrimonio`.`StatusServico` (`id`)
+    REFERENCES `catalogarpatrimonio`.`statusservico` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_servico_pessoa1`
     FOREIGN KEY (`idAlmoxarife`)
-    REFERENCES `catalogarpatrimonio`.`Pessoa` (`id`)
+    REFERENCES `catalogarpatrimonio`.`pessoa` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_servico_pessoa2`
     FOREIGN KEY (`idTecnico`)
-    REFERENCES `catalogarpatrimonio`.`Pessoa` (`id`)
+    REFERENCES `catalogarpatrimonio`.`pessoa` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Servico_Local1`
     FOREIGN KEY (`idLocal`)
-    REFERENCES `catalogarpatrimonio`.`Local` (`id`)
+    REFERENCES `catalogarpatrimonio`.`local` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
-CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`Patrimonio` (
+CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`patrimonio` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   `valor` DECIMAL NULL DEFAULT NULL,
@@ -120,26 +122,27 @@ CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`Patrimonio` (
   INDEX `fk_Patrimonio_Local1_idx` (`idLocal` ASC),
   CONSTRAINT `fk_patrimonio_tipoPatrimonio1`
     FOREIGN KEY (`idTipoPatrimonio`)
-    REFERENCES `catalogarpatrimonio`.`TipoPatrimonio` (`id`)
+    REFERENCES `catalogarpatrimonio`.`tipopatrimonio` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Patrimonio_Local1`
     FOREIGN KEY (`idLocal`)
-    REFERENCES `catalogarpatrimonio`.`Local` (`id`)
+    REFERENCES `catalogarpatrimonio`.`local` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
-CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`TipoServico` (
+CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`tiposervico` (
   `id` INT(11) NOT NULL,
   `nome` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
-CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`Predio` (
+CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`predio` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(45) NULL DEFAULT NULL,
   `latitude` DOUBLE NULL DEFAULT NULL,
   `longitude` DOUBLE NULL DEFAULT NULL,
   `estado` VARCHAR(45) NOT NULL,
@@ -149,20 +152,20 @@ CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`Predio` (
   INDEX `fk_local_empresa1_idx` (`idEmpresa` ASC),
   CONSTRAINT `fk_local_empresa1`
     FOREIGN KEY (`idEmpresa`)
-    REFERENCES `catalogarpatrimonio`.`Empresa` (`id`)
+    REFERENCES `catalogarpatrimonio`.`empresa` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
-CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`TipoPatrimonio` (
+CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`tipopatrimonio` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
-CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`Material` (
+CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`material` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   `idTipoMaterial` INT(11) NOT NULL,
@@ -173,13 +176,13 @@ CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`Material` (
   INDEX `fk_material_tipoMaterial1_idx` (`idTipoMaterial` ASC),
   CONSTRAINT `fk_material_tipoMaterial1`
     FOREIGN KEY (`idTipoMaterial`)
-    REFERENCES `catalogarpatrimonio`.`TipoMaterial` (`id`)
+    REFERENCES `catalogarpatrimonio`.`tipomaterial` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
-CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`Fornecedor` (
+CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`fornecedor` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   `categoria` VARCHAR(45) NOT NULL,
@@ -190,7 +193,7 @@ CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`Fornecedor` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
-CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`Entrada` (
+CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`entrada` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `notaFiscal` DOUBLE NOT NULL,
   `dataEntrada` DATE NOT NULL,
@@ -199,39 +202,20 @@ CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`Entrada` (
   INDEX `fk_entradaMaterial_fornecedor1_idx` (`idFornecedor` ASC),
   CONSTRAINT `fk_entradaMaterial_fornecedor1`
     FOREIGN KEY (`idFornecedor`)
-    REFERENCES `catalogarpatrimonio`.`Fornecedor` (`id`)
+    REFERENCES `catalogarpatrimonio`.`fornecedor` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
-CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`TipoMaterial` (
+CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`tipomaterial` (
   `id` INT(11) NOT NULL,
   `nome` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
-CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`materialEntrada` (
-  `idMaterial` INT(11) NOT NULL,
-  `idEntrada` INT(11) NOT NULL,
-  PRIMARY KEY (`idMaterial`, `idEntrada`),
-  INDEX `fk_material_has_entradaMaterial_entradaMaterial1_idx` (`idEntrada` ASC),
-  INDEX `fk_material_has_entradaMaterial_material1_idx` (`idMaterial` ASC),
-  CONSTRAINT `fk_material_has_entradaMaterial_material1`
-    FOREIGN KEY (`idMaterial`)
-    REFERENCES `catalogarpatrimonio`.`Material` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_material_has_entradaMaterial_entradaMaterial1`
-    FOREIGN KEY (`idEntrada`)
-    REFERENCES `catalogarpatrimonio`.`Entrada` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8;
-
-CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`EstoqueMaterial` (
+CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`estoquematerial` (
   `idMaterial` INT(11) NOT NULL,
   `idAlmoxarifado` INT(11) NOT NULL,
   `quantidade` INT(11) NOT NULL,
@@ -240,18 +224,18 @@ CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`EstoqueMaterial` (
   INDEX `fk_material_has_almoxarifado_material1_idx` (`idMaterial` ASC),
   CONSTRAINT `fk_material_has_almoxarifado_material1`
     FOREIGN KEY (`idMaterial`)
-    REFERENCES `catalogarpatrimonio`.`Material` (`id`)
+    REFERENCES `catalogarpatrimonio`.`material` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_material_has_almoxarifado_almoxarifado1`
     FOREIGN KEY (`idAlmoxarifado`)
-    REFERENCES `catalogarpatrimonio`.`Almoxarifado` (`id`)
+    REFERENCES `catalogarpatrimonio`.`almoxarifado` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
-CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`Transferencia` (
+CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`transferencia` (
   `id` INT(11) NOT NULL,
   `idAlmoxarifadoOrigem` INT(11) NOT NULL,
   `idAlmoxarifadoDestino` INT(11) NOT NULL,
@@ -261,18 +245,18 @@ CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`Transferencia` (
   INDEX `fk_transferirMaterial_almoxarifado2_idx` (`idAlmoxarifadoDestino` ASC),
   CONSTRAINT `fk_transferirMaterial_almoxarifado1`
     FOREIGN KEY (`idAlmoxarifadoOrigem`)
-    REFERENCES `catalogarpatrimonio`.`Almoxarifado` (`id`)
+    REFERENCES `catalogarpatrimonio`.`almoxarifado` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_transferirMaterial_almoxarifado2`
     FOREIGN KEY (`idAlmoxarifadoDestino`)
-    REFERENCES `catalogarpatrimonio`.`Almoxarifado` (`id`)
+    REFERENCES `catalogarpatrimonio`.`almoxarifado` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
-CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`EntradaMaterial` (
+CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`entradamaterial` (
   `idMaterial` INT(11) NOT NULL,
   `idEntrada` INT(11) NOT NULL,
   `quantidade` INT(11) NULL DEFAULT NULL,
@@ -283,18 +267,18 @@ CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`EntradaMaterial` (
   INDEX `fk_material_has_entrada_material1_idx` (`idMaterial` ASC),
   CONSTRAINT `fk_material_has_entrada_material1`
     FOREIGN KEY (`idMaterial`)
-    REFERENCES `catalogarpatrimonio`.`Material` (`id`)
+    REFERENCES `catalogarpatrimonio`.`material` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_material_has_entrada_entrada1`
     FOREIGN KEY (`idEntrada`)
-    REFERENCES `catalogarpatrimonio`.`Entrada` (`id`)
+    REFERENCES `catalogarpatrimonio`.`entrada` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
-CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`ServicoMaterial` (
+CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`servicomaterial` (
   `idMaterial` INT(11) NOT NULL,
   `idServico` INT(11) NOT NULL,
   `quantidade` INT(11) NOT NULL,
@@ -305,30 +289,30 @@ CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`ServicoMaterial` (
   INDEX `fk_servicoMaterial_patrimonio1_idx` (`idPatrimonio` ASC),
   CONSTRAINT `fk_material_has_Servico_material1`
     FOREIGN KEY (`idMaterial`)
-    REFERENCES `catalogarpatrimonio`.`Material` (`id`)
+    REFERENCES `catalogarpatrimonio`.`material` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_material_has_Servico_Servico1`
     FOREIGN KEY (`idServico`)
-    REFERENCES `catalogarpatrimonio`.`Servico` (`id`)
+    REFERENCES `catalogarpatrimonio`.`servico` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_servicoMaterial_patrimonio1`
     FOREIGN KEY (`idPatrimonio`)
-    REFERENCES `catalogarpatrimonio`.`Patrimonio` (`id`)
+    REFERENCES `catalogarpatrimonio`.`patrimonio` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
-CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`StatusServico` (
+CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`statusservico` (
   `id` INT(11) NOT NULL,
   `descricao` VARCHAR(45) NULL DEFAULT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
-CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`DialogoServico` (
+CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`dialogoservico` (
   `id` INT(11) NOT NULL,
   `dataHora` DATETIME NULL DEFAULT NULL,
   `mensagem` VARCHAR(1000) NULL DEFAULT NULL,
@@ -339,18 +323,18 @@ CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`DialogoServico` (
   INDEX `fk_dialogoServico_pessoa1_idx` (`idPessoa` ASC),
   CONSTRAINT `fk_dialogoServico_servico1`
     FOREIGN KEY (`idServico`)
-    REFERENCES `catalogarpatrimonio`.`Servico` (`id`)
+    REFERENCES `catalogarpatrimonio`.`servico` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_dialogoServico_pessoa1`
     FOREIGN KEY (`idPessoa`)
-    REFERENCES `catalogarpatrimonio`.`Pessoa` (`id`)
+    REFERENCES `catalogarpatrimonio`.`pessoa` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
-CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`TransferenciaMaterial` (
+CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`transferenciamaterial` (
   `idMaterial` INT(11) NOT NULL,
   `idTransferencia` INT(11) NOT NULL,
   `quantidade` INT(11) NULL DEFAULT NULL,
@@ -359,18 +343,18 @@ CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`TransferenciaMaterial` (
   INDEX `fk_Material_has_Transferencia_Material1_idx` (`idMaterial` ASC),
   CONSTRAINT `fk_Material_has_Transferencia_Material1`
     FOREIGN KEY (`idMaterial`)
-    REFERENCES `catalogarpatrimonio`.`Material` (`id`)
+    REFERENCES `catalogarpatrimonio`.`material` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Material_has_Transferencia_Transferencia1`
     FOREIGN KEY (`idTransferencia`)
-    REFERENCES `catalogarpatrimonio`.`Transferencia` (`id`)
+    REFERENCES `catalogarpatrimonio`.`transferencia` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
-CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`Local` (
+CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`local` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NULL DEFAULT NULL,
   `idPredio` INT(11) NOT NULL,
@@ -378,13 +362,13 @@ CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`Local` (
   INDEX `fk_Local_Predio1_idx` (`idPredio` ASC),
   CONSTRAINT `fk_Local_Predio1`
     FOREIGN KEY (`idPredio`)
-    REFERENCES `catalogarpatrimonio`.`Predio` (`id`)
+    REFERENCES `catalogarpatrimonio`.`predio` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
-CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`Disponibilidade` (
+CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`disponibilidade` (
   `id` INT(11) NOT NULL,
   `dia` DATE NULL DEFAULT NULL,
   `hora` DATETIME NULL DEFAULT NULL,
@@ -393,7 +377,7 @@ CREATE TABLE IF NOT EXISTS `catalogarpatrimonio`.`Disponibilidade` (
   INDEX `fk_Disponibilidade_Local1_idx` (`idLocal` ASC),
   CONSTRAINT `fk_Disponibilidade_Local1`
     FOREIGN KEY (`idLocal`)
-    REFERENCES `catalogarpatrimonio`.`Predio` (`id`)
+    REFERENCES `catalogarpatrimonio`.`predio` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
