@@ -6,6 +6,9 @@ namespace CatalogarPatrimonioWEB.Mappers
 {
     public class LocalProfile : Profile
     {
-        CreateMap<LocalModel, Local>().ReverseMap();
+        public LocalProfile() 
+        {
+            CreateMap<LocalModel, Local>().ReverseMap();
+        }
     }
 }

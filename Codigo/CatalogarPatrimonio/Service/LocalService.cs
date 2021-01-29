@@ -1,15 +1,14 @@
-﻿using System;
+﻿using Core;
+using Core.DTO;
+using Core.Service;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using Core;
-using Core.DTO;
-using Core.Service;
 
 namespace Service
 {
-    class LocalService : ILocalService
+    public class LocalService : ILocalService
     {
         private readonly CatalogarPatrimonioContext _context;
 
@@ -38,7 +37,7 @@ namespace Service
             _context.SaveChanges();
         }
 
-        public int GetNumeroLocais()
+        public int GetNumeroLocals()
         {
             return _context.Local.Count();
         }
@@ -46,8 +45,8 @@ namespace Service
         private IQueryable<Local> GetQuery()
         {
             IQueryable<Local> tb_local = _context.Local;
-            var query = from Local in tb_local
-                        select Local;
+            var query = from local in tb_local
+                        select local;
             return query;
         }
 
@@ -83,42 +82,5 @@ namespace Service
 
             return locais.ElementAtOrDefault(0);
         }
-
-        void ILocalService.Editar(Local local)
-        {
-            throw new NotImplementedException();
-        }
-
-        int ILocalService.Inserir(Local local)
-        {
-            throw new NotImplementedException();
-        }
-
-        void ILocalService.Remover(int idLocal)
-        {
-            throw new NotImplementedException();
-        }
-
-        Local ILocalService.Obter(int idLocal)
-        {
-            throw new NotImplementedException();
-        }
-
-        IEnumerable<Local> ILocalService.ObterPorNome(string nome)
-        {
-            throw new NotImplementedException();
-        }
-
-        IEnumerable<Local> ILocalService.ObterTodos()
-        {
-            throw new NotImplementedException();
-        }
-
-        IEnumerable<LocalDTO> ILocalService.ObterPorNomeOrdenadoDescending(string nome)
-        {
-            throw new NotImplementedException();
-        }
     }
-
 }
-
