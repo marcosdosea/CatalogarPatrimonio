@@ -7,7 +7,7 @@ namespace Core
     {
         public Patrimonio()
         {
-            ServicoMaterial = new HashSet<ServicoMaterial>();
+            Servicomaterial = new HashSet<Servicomaterial>();
         }
 
         public int Id { get; set; }
@@ -19,7 +19,7 @@ namespace Core
         public int IdLocal { get; set; }
 
         public virtual Local IdLocalNavigation { get; set; }
-        public virtual TipoPatrimonio IdTipoPatrimonioNavigation { get; set; }
-        public virtual ICollection<ServicoMaterial> ServicoMaterial { get; set; }
+        public virtual Tipopatrimonio IdTipoPatrimonioNavigation { get; set; }
+        public virtual ICollection<Servicomaterial> Servicomaterial { get; set; }
     }
 }

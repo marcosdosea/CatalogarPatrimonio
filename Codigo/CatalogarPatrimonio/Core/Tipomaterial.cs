@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace Core
 {
-    public partial class TipoMaterial
+    public partial class Tipomaterial
     {
-        public TipoMaterial()
+        public Tipomaterial()
         {
             Material = new HashSet<Material>();
         }

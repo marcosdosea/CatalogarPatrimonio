@@ -10,30 +10,30 @@ namespace CatalogarPatrimonioWEB.Controllers
 {
     public class DialogoservicoController : Controller
     {
-        IDialogoServicoService _dialogoServicoService;
+        IDialogoservicoService _dialogoservicoService;
         IMapper _mapper;
 
         // private readonly IAlmoxarifadoService almoxarifadoService;
 
-        public DialogoservicoController(IDialogoServicoService dialogoServicoService, IMapper mapper)
+        public DialogoservicoController(IDialogoservicoService dialogoServicoService, IMapper mapper)
         {
-            _dialogoServicoService = dialogoServicoService;
+            _dialogoservicoService = dialogoServicoService;
             _mapper = mapper;
         }
 
 		// GET: DialogoservicoController
 		public ActionResult Index()
 		{
-			var listaDialogoServico = _dialogoServicoService.ObterTodos();
-			var listaDialogoServicoModel = _mapper.Map<List<DialogoServicoModel>>(listaDialogoServico);
-			return View(listaDialogoServicoModel);
+			var listaDialogoservico = _dialogoservicoService.ObterTodos();
+			var listaDialogoservicoModel = _mapper.Map<List<DialogoservicoModel>>(listaDialogoservico);
+			return View(listaDialogoservicoModel);
 		}
 
 		// GET: DialogoservicoController/Details/5
 		public ActionResult Details(int id)
 		{
-			DialogoServico dialogoServico = _dialogoServicoService.Obter(id);
-			DialogoServicoModel dialogoServicoModel = _mapper.Map<DialogoServicoModel>(dialogoServico);
+			Dialogoservico dialogoServico = _dialogoservicoService.Obter(id);
+			DialogoservicoModel dialogoServicoModel = _mapper.Map<DialogoservicoModel>(dialogoServico);
 			return View(dialogoServicoModel);
 		}
 
@@ -46,12 +46,12 @@ namespace CatalogarPatrimonioWEB.Controllers
 		// POST: DialogoservicoController/Create
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public ActionResult Create(DialogoServicoModel dialogoServicoModel)
+		public ActionResult Create(DialogoservicoModel dialogoServicoModel)
 		{
 			if (ModelState.IsValid)
 			{
-				var dialogoservico = _mapper.Map<DialogoServico>(dialogoServicoModel);
-				_dialogoServicoService.Inserir(dialogoservico);
+				var dialogoservico = _mapper.Map<Dialogoservico>(dialogoServicoModel);
+				_dialogoservicoService.Inserir(dialogoservico);
 			}
 			return RedirectToAction(nameof(Index));
 		}
@@ -59,20 +59,20 @@ namespace CatalogarPatrimonioWEB.Controllers
 		// GET: DialogoservicoController/Edit/5
 		public ActionResult Edit(int id)
 		{
-			DialogoServico dialogoservico = _dialogoServicoService.Obter(id);
-			DialogoServicoModel dialogoservicoModel = _mapper.Map<DialogoServicoModel>(dialogoservico);
+			Dialogoservico dialogoservico = _dialogoservicoService.Obter(id);
+			DialogoservicoModel dialogoservicoModel = _mapper.Map<DialogoservicoModel>(dialogoservico);
 			return View(dialogoservicoModel);
 		}
 
 		// POST: DialogoservicoController/Edit/5
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public ActionResult Edit(int id, DialogoServicoModel dialogoServicoModel)
+		public ActionResult Edit(int id, DialogoservicoModel dialogoServicoModel)
 		{
 			if (ModelState.IsValid)
 			{
-				var dialogoservico = _mapper.Map<DialogoServico>(dialogoServicoModel);
-				_dialogoServicoService.Editar(dialogoservico);
+				var dialogoservico = _mapper.Map<Dialogoservico>(dialogoServicoModel);
+				_dialogoservicoService.Editar(dialogoservico);
 			}
 			return RedirectToAction(nameof(Index));
 		}
@@ -80,17 +80,17 @@ namespace CatalogarPatrimonioWEB.Controllers
 		// GET: DialogoservicoController/Delete/5
 		public ActionResult Delete(int id)
 		{
-			DialogoServico dialogoservico = _dialogoServicoService.Obter(id);
-			DialogoServicoModel dialogoservicoModel = _mapper.Map<DialogoServicoModel>(dialogoservico);
+			Dialogoservico dialogoservico = _dialogoservicoService.Obter(id);
+			DialogoservicoModel dialogoservicoModel = _mapper.Map<DialogoservicoModel>(dialogoservico);
 			return View(dialogoservicoModel);
 		}
 
 		// POST: DialogoservicoController/Delete/5
 		[HttpPost]
 		[ValidateAntiForgeryToken]
-		public ActionResult Delete(int id, DialogoServicoModel almoxarifado)
+		public ActionResult Delete(int id, DialogoservicoModel almoxarifado)
 		{
-			_dialogoServicoService.Remover(id);
+			_dialogoservicoService.Remover(id);
 			return RedirectToAction(nameof(Index));
 		}
 	}
