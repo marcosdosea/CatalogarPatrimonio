@@ -8,17 +8,12 @@ namespace CatalogarPatrimonioWEB.Models
 {
     public class AlmoxarifadoModel
     {
-<<<<<<< HEAD
-		// [Display(Name = "IdAlmoxarifado")]
-		// [Key]
-		// [Required(ErrorMessage = "Id do almoxarifado é obrigatório")]
-		public int Id { get; set; }
-=======
+
 		[Display(Name = "IdAlmoxarifado")]
 		[Key]
 		[Required(ErrorMessage = "Id do almoxarifado é obrigatório")]
-		public int IdAlmoxarifado { get; set; }
->>>>>>> 0d45788 (Criando Crud manter local)
+		public int Id { get; set; }
+
 		[Required]
 		[Display(Name = "Nome")]
 		[StringLength(45, MinimumLength = 5)]
