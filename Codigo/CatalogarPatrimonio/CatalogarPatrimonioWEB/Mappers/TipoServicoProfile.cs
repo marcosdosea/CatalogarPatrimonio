@@ -4,11 +4,11 @@ using Core;
 
 namespace CatalogarPatrimonioWEB.Mappers
 {
-    public class PessoaProfile : Profile 
+    public class TipoServicoProfile : Profile 
     {
-        public PessoaProfile()
+        public TipoServicoProfile()
         {
-            CreateMap<PessoaModel, Pessoa>().ReverseMap();
+            CreateMap<TipoServicoModel,TipoServico>().ReverseMap();
         }
     }
 }

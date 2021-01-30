@@ -9,91 +9,91 @@ using System;
 
 namespace CatalogarPatrimonioWEB.Controllers
 {
-    public class PessoaController : Controller
+    public class TipoServicoController : Controller
     {
-        IPessoaService _pessoaService;
+        ITipoServicoService _tiposervicoService;
         IMapper _mapper;
 
         // private readonly IEmpresa empresa;
-        public PessoaController(IPessoaService pessoaService, IMapper mapper)
+        public TipoServicoController(ITipoServicoService tiposervicoService, IMapper mapper)
         {
-            _pessoaService = pessoaService;
+            _tiposervicoService = tiposervicoService;
             _mapper = mapper;
         }
 
-        // GET: PessoaController
+        // GET: TipoServicoController
         public ActionResult Index()
         {
-            var listaPessoa = _pessoaService.ObterTodos();
-            var listaPessoaModel = _mapper.Map<List<PessoaModel>>(listaPessoa);
-            return View(listaPessoaModel);
+            var listaTipoServico = _tiposervicoService.ObterTodos();
+            var listaTipoServicoModel = _mapper.Map<List<PessoaModel>>(listaTipoServico);
+            return View(listaTipoServicoModel);
         }
 
-        // GET: PessoaController/Details/5
+        // GET: TipoServicoController/Details/5
         public ActionResult Details(int id)
         {
-            Pessoa pessoa = _pessoaService.Obter(id);
-            PessoaModel pessoaModel = _mapper.Map<PessoaModel>(pessoa);
-            return View(pessoaModel);
+            TipoServico tiposervico = _tiposervicoService.Obter(id);
+            TipoServicoModel tiposervicoModel = _mapper.Map<TipoServicoModel>(tiposervico);
+            return View(tiposervicoModel);
         }
 
-        // GET: PessoaController/Create
+        // GET: TipoServicoController/Create
         public ActionResult Create()
         {
             return View();
         }
 
 
-        // POST: PessoaController/Create
+        // POST: TipoServicoController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(PessoaModel pessoaModel)
+        public ActionResult Create(TipoServicoModel tiposervicoModel)
         {
             if (ModelState.IsValid)
             {
-                var pessoa = _mapper.Map<Pessoa>(pessoaModel);
-                _pessoaService.Inserir(pessoa);
+                var tiposervico = _mapper.Map<TipoServico>(tiposervicoModel);
+                _tiposervicoService.Inserir(tiposervico);
             }
             return RedirectToAction(nameof(Index));
         }
 
-        // GET: PessoaController/Edit/5
+        // GET: TipoServicoController/Edit/5
         public ActionResult Edit(int id)
         {
-            Pessoa pessoa = _pessoaService.Obter(id);
-            PessoaModel pessoaModel = _mapper.Map<PessoaModel>(pessoa);
-            return View(pessoaModel);
+            TipoServico tiposervico = _tiposervicoService.Obter(id);
+            TipoServicoModel tiposervicoModel = _mapper.Map<TipoServicoModel>(tiposervico);
+            return View(tiposervicoModel);
         }
 
-        // POST: PessoaController/Edit/5
+        // POST: TipoServicoController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, PessoaModel pessoaModel)
+        public ActionResult Edit(int id, TipoServicoModel tiposervicoModel)
         {
             if (ModelState.IsValid)
             {
-                var pessoa = _mapper.Map<Pessoa>(pessoaModel);
-                _pessoaService.Editar(pessoa);
+                var tiposervico = _mapper.Map<TipoServico>(tiposervicoModel);
+                _tiposervicoService.Editar(tiposervico);
             }
             return RedirectToAction(nameof(Index));
         }
 
-        // GET: PessoaController/Delete/5
+        // GET: TipoServicoController/Delete/5
         public ActionResult Delete(int id)
         {
-            Pessoa pessoa = _pessoaService.Obter(id);
-            PessoaModel pessoaModel = _mapper.Map<PessoaModel>(pessoa);
-            return View(pessoaModel);
+            TipoServico tiposervico = _tiposervicoService.Obter(id);
+            TipoServicoModel tiposervicoModel = _mapper.Map<TipoServicoModel>(tiposervico);
+            return View(tiposervicoModel);
         }
 
 
 
-        // POST: PessoaController/Delete/5
+        // POST: TipoServicoController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, PessoaModel pessoa)
+        public ActionResult Delete(int id, TipoServicoModel tiposervico)
         {
-            _pessoaService.Remover(id);
+            _tiposervicoService.Remover(id);
             return RedirectToAction(nameof(Index));
         }
     }
