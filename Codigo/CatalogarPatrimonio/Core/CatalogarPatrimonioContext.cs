@@ -16,7 +16,7 @@ namespace Core
         }
 
         public virtual DbSet<Almoxarifado> Almoxarifado { get; set; }
-        public virtual DbSet<Dialogoservico> Dialogoservico { get; set; }
+        public virtual DbSet<DialogoServico> Dialogoservico { get; set; }
         public virtual DbSet<Disponibilidade> Disponibilidade { get; set; }
         public virtual DbSet<Empresa> Empresa { get; set; }
         public virtual DbSet<Entrada> Entrada { get; set; }
@@ -29,7 +29,7 @@ namespace Core
         public virtual DbSet<Pessoa> Pessoa { get; set; }
         public virtual DbSet<Predio> Predio { get; set; }
         public virtual DbSet<Servico> Servico { get; set; }
-        public virtual DbSet<Servicomaterial> Servicomaterial { get; set; }
+        public virtual DbSet<ServicoMaterial> Servicomaterial { get; set; }
         public virtual DbSet<Statusservico> Statusservico { get; set; }
         public virtual DbSet<Tipomaterial> Tipomaterial { get; set; }
         public virtual DbSet<Tipopatrimonio> Tipopatrimonio { get; set; }
@@ -67,7 +67,7 @@ namespace Core
                     .HasConstraintName("fk_tb_almoxarifado_empresa");
             });
 
-            modelBuilder.Entity<Dialogoservico>(entity =>
+            modelBuilder.Entity<DialogoServico>(entity =>
             {
                 entity.ToTable("dialogoservico");
 
@@ -100,7 +100,7 @@ namespace Core
                     .HasDefaultValueSql("'NULL'");
 
                 entity.HasOne(d => d.IdPessoaNavigation)
-                    .WithMany(p => p.Dialogoservico)
+                    .WithMany(p => p.DialogoServico)
                     .HasForeignKey(d => d.IdPessoa)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("fk_dialogoServico_pessoa1");
@@ -682,7 +682,7 @@ namespace Core
                     .HasConstraintName("fk_tb_ordemServico_tipoServico");
             });
 
-            modelBuilder.Entity<Servicomaterial>(entity =>
+            modelBuilder.Entity<ServicoMaterial>(entity =>
             {
                 entity.HasKey(e => new { e.IdMaterial, e.IdServico })
                     .HasName("PRIMARY");
