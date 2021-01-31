@@ -33,7 +33,7 @@ namespace Core
         public virtual DbSet<Statusservico> Statusservico { get; set; }
         public virtual DbSet<Tipomaterial> Tipomaterial { get; set; }
         public virtual DbSet<Tipopatrimonio> Tipopatrimonio { get; set; }
-        public virtual DbSet<Tiposervico> Tiposervico { get; set; }
+        public virtual DbSet<TipoServico> TipoServico { get; set; }
         public virtual DbSet<Transferencia> Transferencia { get; set; }
         public virtual DbSet<Transferenciamaterial> Transferenciamaterial { get; set; }
 
@@ -778,7 +778,7 @@ namespace Core
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<Tiposervico>(entity =>
+            modelBuilder.Entity<TipoServico>(entity =>
             {
                 entity.ToTable("tiposervico");
 
