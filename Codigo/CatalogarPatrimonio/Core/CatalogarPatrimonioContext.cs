@@ -817,7 +817,7 @@ namespace Core
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<Tiposervico>(entity =>
+            modelBuilder.Entity<TipoServico>(entity =>
             {
                 entity.ToTable("tiposervico");
 

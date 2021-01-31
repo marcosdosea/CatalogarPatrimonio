@@ -32,7 +32,7 @@ namespace Service
 
         public void Remover(int idTipoServico)
         {
-            var tiposervico = _context.Pessoa.Find(idTipoServico);
+            var _tiposervico = _context.TipoServico.Find(idTipoServico);
             _context.TipoServico.Remove(_tiposervico);
             _context.SaveChanges();
         }

@@ -29,7 +29,7 @@ namespace Core
         public virtual Pessoa IdSolicitanteNavigation { get; set; }
         public virtual Statusservico IdStatusServicoNavigation { get; set; }
         public virtual Pessoa IdTecnicoNavigation { get; set; }
-        public virtual Tiposervico IdTipoServicoNavigation { get; set; }
+        public virtual TipoServico IdTipoServicoNavigation { get; set; }
         public virtual ICollection<DialogoservicoService> Dialogoservico { get; set; }
         public virtual ICollection<Servicomaterial> Servicomaterial { get; set; }
     }

@@ -25,7 +25,7 @@ namespace CatalogarPatrimonioWEB.Controllers
         public ActionResult Index()
         {
             var listaTipoServico = _tiposervicoService.ObterTodos();
-            var listaTipoServicoModel = _mapper.Map<List<PessoaModel>>(listaTipoServico);
+            var listaTipoServicoModel = _mapper.Map<List<TipoServicoModel>>(listaTipoServico);
             return View(listaTipoServicoModel);
         }
 
