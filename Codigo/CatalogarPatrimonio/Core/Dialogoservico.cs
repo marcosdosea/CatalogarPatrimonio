@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Core
 {
-    public partial class DialogoservicoService
+    public partial class Dialogoservico
     {
         public int Id { get; set; }
         public DateTime? DataHora { get; set; }

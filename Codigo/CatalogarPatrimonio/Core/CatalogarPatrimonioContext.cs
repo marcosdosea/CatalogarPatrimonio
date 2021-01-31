@@ -16,7 +16,7 @@ namespace Core
         }
 
         public virtual DbSet<Almoxarifado> Almoxarifado { get; set; }
-        public virtual DbSet<DialogoservicoService> Dialogoservico { get; set; }
+        public virtual DbSet<Dialogoservico> Dialogoservico { get; set; }
         public virtual DbSet<Disponibilidade> Disponibilidade { get; set; }
         public virtual DbSet<Empresa> Empresa { get; set; }
         public virtual DbSet<Entrada> Entrada { get; set; }
@@ -25,7 +25,6 @@ namespace Core
         public virtual DbSet<Fornecedor> Fornecedor { get; set; }
         public virtual DbSet<Local> Local { get; set; }
         public virtual DbSet<Material> Material { get; set; }
-        public virtual DbSet<Materialentrada> Materialentrada { get; set; }
         public virtual DbSet<Patrimonio> Patrimonio { get; set; }
         public virtual DbSet<Pessoa> Pessoa { get; set; }
         public virtual DbSet<Predio> Predio { get; set; }
@@ -38,21 +37,11 @@ namespace Core
         public virtual DbSet<Transferencia> Transferencia { get; set; }
         public virtual DbSet<Transferenciamaterial> Transferenciamaterial { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-           /* if (!optionsBuilder.IsConfigured)
-            {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseMySQL("server=localhost;port=3306;user=root;password=123456;database=CatalogarPatrimonio");
-            }
-           */
-        }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Almoxarifado>(entity =>
             {
-                entity.ToTable("Almoxarifado");
+                entity.ToTable("almoxarifado");
 
                 entity.HasIndex(e => e.IdEmpresa)
                     .HasName("fk_tb_almoxarifado_empresa_idx");
@@ -78,9 +67,9 @@ namespace Core
                     .HasConstraintName("fk_tb_almoxarifado_empresa");
             });
 
-            modelBuilder.Entity<DialogoservicoService>(entity =>
+            modelBuilder.Entity<Dialogoservico>(entity =>
             {
-                entity.ToTable("DialogoServico");
+                entity.ToTable("dialogoservico");
 
                 entity.HasIndex(e => e.IdPessoa)
                     .HasName("fk_dialogoServico_pessoa1_idx");
@@ -156,7 +145,7 @@ namespace Core
 
             modelBuilder.Entity<Empresa>(entity =>
             {
-                entity.ToTable("Empresa");
+                entity.ToTable("empresa");
 
                 entity.Property(e => e.Id)
                     .HasColumnName("id")
@@ -393,40 +382,6 @@ namespace Core
                     .HasConstraintName("fk_material_tipoMaterial1");
             });
 
-            modelBuilder.Entity<Materialentrada>(entity =>
-            {
-                entity.HasKey(e => new { e.IdMaterial, e.IdEntrada })
-                    .HasName("PRIMARY");
-
-                entity.ToTable("materialentrada");
-
-                entity.HasIndex(e => e.IdEntrada)
-                    .HasName("fk_material_has_entradaMaterial_entradaMaterial1_idx");
-
-                entity.HasIndex(e => e.IdMaterial)
-                    .HasName("fk_material_has_entradaMaterial_material1_idx");
-
-                entity.Property(e => e.IdMaterial)
-                    .HasColumnName("idMaterial")
-                    .HasColumnType("int(11)");
-
-                entity.Property(e => e.IdEntrada)
-                    .HasColumnName("idEntrada")
-                    .HasColumnType("int(11)");
-
-                entity.HasOne(d => d.IdEntradaNavigation)
-                    .WithMany(p => p.Materialentrada)
-                    .HasForeignKey(d => d.IdEntrada)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("fk_material_has_entradaMaterial_entradaMaterial1");
-
-                entity.HasOne(d => d.IdMaterialNavigation)
-                    .WithMany(p => p.Materialentrada)
-                    .HasForeignKey(d => d.IdMaterial)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("fk_material_has_entradaMaterial_material1");
-            });
-
             modelBuilder.Entity<Patrimonio>(entity =>
             {
                 entity.ToTable("patrimonio");
@@ -486,7 +441,7 @@ namespace Core
 
             modelBuilder.Entity<Pessoa>(entity =>
             {
-                entity.ToTable("Pessoa");
+                entity.ToTable("pessoa");
 
                 entity.HasIndex(e => e.Cpf)
                     .HasName("CPF_UNIQUE")
@@ -599,6 +554,12 @@ namespace Core
 
                 entity.Property(e => e.Longitude)
                     .HasColumnName("longitude")
+                    .HasDefaultValueSql("'NULL'");
+
+                entity.Property(e => e.Nome)
+                    .HasColumnName("nome")
+                    .HasMaxLength(45)
+                    .IsUnicode(false)
                     .HasDefaultValueSql("'NULL'");
 
                 entity.HasOne(d => d.IdEmpresaNavigation)

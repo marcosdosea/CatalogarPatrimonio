@@ -8,7 +8,6 @@ namespace Core
         public Entrada()
         {
             Entradamaterial = new HashSet<Entradamaterial>();
-            Materialentrada = new HashSet<Materialentrada>();
         }
 
         public int Id { get; set; }
@@ -18,6 +17,5 @@ namespace Core
 
         public virtual Fornecedor IdFornecedorNavigation { get; set; }
         public virtual ICollection<Entradamaterial> Entradamaterial { get; set; }
-        public virtual ICollection<Materialentrada> Materialentrada { get; set; }
     }
 }

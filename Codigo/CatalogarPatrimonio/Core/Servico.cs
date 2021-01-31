@@ -7,7 +7,7 @@ namespace Core
     {
         public Servico()
         {
-            Dialogoservico = new HashSet<DialogoservicoService>();
+            Dialogoservico = new HashSet<Dialogoservico>();
             Servicomaterial = new HashSet<Servicomaterial>();
         }
 
