@@ -5,11 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Core.DTO;
-
+using Core.Service;
 
 namespace Service
 {
-    public class MaterialService
+    public class MaterialService : IMaterialService
     {
         private readonly CatalogarPatrimonioContext _context;
 
