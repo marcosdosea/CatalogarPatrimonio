@@ -17,14 +17,14 @@ namespace Service
             _context = context;
         }
 
-        public int Inserir(Fornecedor fornecedor)
+        public int Inserir(Core.Fornecedor fornecedor)
         {
             _context.Add(fornecedor);
             _context.SaveChanges();
             return fornecedor.Id;
         }
 
-        public void Editar(Fornecedor fornecedor)
+        public void Editar(Core.Fornecedor fornecedor)
         {
             _context.Update(fornecedor);
             _context.SaveChanges();
@@ -42,17 +42,17 @@ namespace Service
             return _context.Fornecedor.Count();
         }
 
-        private IQueryable<Fornecedor> GetQuery()
+        private IQueryable<Core.Fornecedor> GetQuery()
         {
-            IQueryable<Fornecedor> tb_fornecedor = _context.Fornecedor;
+            IQueryable<Core.Fornecedor> tb_fornecedor = _context.Fornecedor;
             var query = from fornecedor in tb_fornecedor
                         select fornecedor;
             return query;
         }
 
-        public IEnumerable<Fornecedor> ObterPorNome(string nome)
+        public IEnumerable<Core.Fornecedor> ObterPorNome(string nome)
         {
-            IEnumerable<Fornecedor> fornecedors = GetQuery()
+            IEnumerable<Core.Fornecedor> fornecedors = GetQuery()
                 .Where(fornecedorModel => fornecedorModel.Nome.
                 StartsWith(nome));
             return fornecedors;
@@ -60,7 +60,7 @@ namespace Service
 
         public IEnumerable<FornecedorDTO> ObterPorNomeOrdenadoDescending(string nome)
         {
-            IQueryable<Fornecedor> tb_fornecedor = _context.Fornecedor;
+            IQueryable<Core.Fornecedor> tb_fornecedor = _context.Fornecedor;
             var query = from fornecedor in tb_fornecedor
                         where nome.StartsWith(nome)
                         orderby fornecedor.Nome descending
@@ -71,14 +71,14 @@ namespace Service
             return query;
         }
 
-        public IEnumerable<Fornecedor> ObterTodos()
+        public IEnumerable<Core.Fornecedor> ObterTodos()
         {
             return GetQuery();
         }
 
-        public Fornecedor Obter(int idFornecedor)
+        public Core.Fornecedor Obter(int idFornecedor)
         {
-            IEnumerable<Fornecedor> fornecedors = GetQuery().Where(fornecedorModel => fornecedorModel.Id.Equals(idFornecedor));
+            IEnumerable<Core.Fornecedor> fornecedors = GetQuery().Where(fornecedorModel => fornecedorModel.Id.Equals(idFornecedor));
 
             return fornecedors.ElementAtOrDefault(0);
         }
