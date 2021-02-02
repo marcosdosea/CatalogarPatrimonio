@@ -9,91 +9,91 @@ using System;
 
 namespace CatalogarPatrimonioWEB.Controllers
 {
-    public class PessoaController : Controller
+    public class EntradamaterialController : Controller
     {
-        IPessoaService _pessoaService;
+        IEntradamaterialService _entradamaterialService;
         IMapper _mapper;
 
-        // private readonly IEmpresa empresa;
-        public PessoaController(IPessoaService pessoaService, IMapper mapper)
+        // private readonly IEntradamaterial entradamaterial;
+        public EntradamaterialController(IEntradamaterialService entradamaterialService, IMapper mapper)
         {
-            _pessoaService = pessoaService;
+            _entradamaterialService = entradamaterialService;
             _mapper = mapper;
         }
 
-        // GET: PessoaController
+        // GET: EntradamaterialController
         public ActionResult Index()
         {
-            var listaPessoa = _pessoaService.ObterTodos();
-            var listaPessoaModel = _mapper.Map<List<PessoaModel>>(listaPessoa);
-            return View(listaPessoaModel);
+            var listaEntradamaterial = _entradamaterialService.ObterTodos();
+            var listaentradamaterialModel = _mapper.Map<List<EntradamaterialModel>>(listaEntradamaterial);
+            return View(listaentradamaterialModel);
         }
 
-        // GET: PessoaController/Details/5
+        // GET: EntradamaterialController/Details/5
         public ActionResult Details(int id)
         {
-            Pessoa pessoa = _pessoaService.Obter(id);
-            PessoaModel pessoaModel = _mapper.Map<PessoaModel>(pessoa);
-            return View(pessoaModel);
+            Entradamaterial entradamaterial = _entradamaterialService.Obter(id);
+            EntradamaterialModel entradamaterialModel = _mapper.Map<EntradamaterialModel>(entradamaterial);
+            return View(entradamaterialModel);
         }
 
-        // GET: PessoaController/Create
+        // GET: EntradamaterialController/Create
         public ActionResult Create()
         {
             return View();
         }
 
 
-        // POST: PessoaController/Create
+        // POST: EntradamaterialController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(PessoaModel pessoaModel)
+        public ActionResult Create(EntradamaterialModel entradamaterialModel)
         {
             if (ModelState.IsValid)
             {
-                var pessoa = _mapper.Map<Pessoa>(pessoaModel);
-                _pessoaService.Inserir(pessoa);
+                var entradamaterial = _mapper.Map<Entradamaterial>(entradamaterialModel);
+                _entradamaterialService.Inserir(entradamaterial);
             }
             return RedirectToAction(nameof(Index));
         }
 
-        // GET: PessoaController/Edit/5
+        // GET: EntradamaterialController/Edit/5
         public ActionResult Edit(int id)
         {
-            Pessoa pessoa = _pessoaService.Obter(id);
-            PessoaModel pessoaModel = _mapper.Map<PessoaModel>(pessoa);
-            return View(pessoaModel);
+            Entradamaterial entradamaterial = _entradamaterialService.Obter(id);
+            EntradamaterialModel entradamaterialModel = _mapper.Map<EntradamaterialModel>(entradamaterial);
+            return View(entradamaterialModel);
         }
 
-        // POST: PessoaController/Edit/5
+        // POST: EntradamaterialController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, PessoaModel pessoaModel)
+        public ActionResult Edit(int id, EntradamaterialModel entradamaterialModel)
         {
             if (ModelState.IsValid)
             {
-                var pessoa = _mapper.Map<Pessoa>(pessoaModel);
-                _pessoaService.Editar(pessoa);
+                var entradamaterial = _mapper.Map<Entradamaterial>(entradamaterialModel);
+                _entradamaterialService.Editar(entradamaterial);
             }
             return RedirectToAction(nameof(Index));
         }
 
-        // GET: PessoaController/Delete/5
+        // GET: EntradamaterialController/Delete/5
         public ActionResult Delete(int id)
         {
-            Pessoa pessoa = _pessoaService.Obter(id);
-            PessoaModel pessoaModel = _mapper.Map<PessoaModel>(pessoa);
-            return View(pessoaModel);
+            Entradamaterial entradamaterial = _entradamaterialService.Obter(id);
+            EntradamaterialModel entradamaterialModel = _mapper.Map<EntradamaterialModel>(entradamaterial);
+            return View(entradamaterialModel);
         }
 
 
 
-        // POST: PessoaController/Delete/5
+        // POST: EntradamaterialController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, PessoaModel pessoa)
+        public ActionResult Delete(int id, EntradamaterialModel entradamaterial)
         {
-            _pessoaService.Remover(id);
+            _entradamaterialService.Remover(id);
             return RedirectToAction(nameof(Index));
         }
     }

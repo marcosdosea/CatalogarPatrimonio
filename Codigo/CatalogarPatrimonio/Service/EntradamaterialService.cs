@@ -8,79 +8,79 @@ using System.Text;
 
 namespace Service
 {
-    public class PessoaService : IPessoaService
+    public class EntradamaterialService : IEntradamaterialService
     {
         private readonly CatalogarPatrimonioContext _context;
 
-        public PessoaService(CatalogarPatrimonioContext context)
+        public EntradamaterialService(CatalogarPatrimonioContext context)
         {
             _context = context;
         }
 
-        public int Inserir(Pessoa pessoa)
+        public int Inserir(Entradamaterial entradamaterial)
         {
-            _context.Add(pessoa);
+            _context.Add(entradamaterial);
             _context.SaveChanges();
-            return pessoa.Id;
+            return entradamaterial.Id;
         }
 
-        public void Editar(Pessoa pessoa)
+        public void Editar(Entradamaterial entradamaterial)
         {
-            _context.Update(pessoa);
-            _context.SaveChanges();
-        }
-
-        public void Remover(int idPessoa)
-        {
-            var _pessoa = _context.Pessoa.Find(idPessoa);
-            _context.Pessoa.Remove(_pessoa);
+            _context.Update(entradamaterial);
             _context.SaveChanges();
         }
 
-        public int GetNumeroPessoas()
+        public void Remover(int idEntradamaterial)
         {
-            return _context.Pessoa.Count();
+            var _entradamaterial = _context.Entradamaterial.Find(idEntradamaterial);
+            _context.Entradamaterial.Remove(_entradamaterial);
+            _context.SaveChanges();
         }
 
-        private IQueryable<Pessoa> GetQuery()
+        public int GetNumeroEntradamaterial()
         {
-            IQueryable<Pessoa> tb_pessoa = _context.Pessoa;
-            var query = from pessoa in tb_pessoa
-                        select pessoa;
+            return _context.Entradamaterial.Count();
+        }
+
+        private IQueryable<Entradamaterial> GetQuery()
+        {
+            IQueryable<Entradamaterial> tb_entradamaterial = _context.Entradamaterial;
+            var query = from entradamaterial in tb_entradamaterial
+                        select entradamaterial;
             return query;
         }
 
-        public IEnumerable<Pessoa> ObterPorNome(string nome)
+        public IEnumerable<Entradamaterial> ObterPorNome(string nome)
         {
-            IEnumerable<Pessoa> pessoas = GetQuery()
-                .Where(pessoaModel => pessoaModel.Nome.
+            IEnumerable<Entradamaterial> entradamaterial = GetQuery()
+                .Where(entradamaterialModel => entradamaterialModel.Nome.
                 StartsWith(nome));
-            return pessoas;
+            return entradamaterial;
         }
 
-        public IEnumerable<PessoaDTO> ObterPorNomeOrdenadoDescending(string nome)
+        public IEnumerable<EntradamaterialDTO> ObterPorNomeOrdenadoDescending(string nome)
         {
-            IQueryable<Pessoa> tb_pessoa = _context.Pessoa;
-            var query = from pessoa in tb_pessoa
+            IQueryable<Entradamaterial> tb_entradamaterial = _context.Entradamaterial;
+            var query = from entradamaterial in tb_entradamaterial
                         where nome.StartsWith(nome)
-                        orderby pessoa.Nome descending
-                        select new PessoaDTO
+                        orderby entradamaterial.Nome descending
+                        select new EntradamaterialDTO
                         {
-                            nome = pessoa.Nome
+                            nome = entradamaterial.Nome
                         };
             return query;
         }
 
-        public IEnumerable<Pessoa> ObterTodos()
+        public IEnumerable<Entradamaterial> ObterTodos()
         {
             return GetQuery();
         }
 
-        public Pessoa Obter(int idPessoa)
+        public Entradamaterial Obter(int idEntradamaterial)
         {
-            IEnumerable<Pessoa> pessoas = GetQuery().Where(pessoaModel => pessoaModel.Id.Equals(idPessoa));
+            IEnumerable<Entradamaterial> entradamaterial = GetQuery().Where(entradamaterialModel => entradamaterialModel.Id.Equals(idEntradamaterial));
 
-            return pessoas.ElementAtOrDefault(0);
+            return entradamaterial.ElementAtOrDefault(0);
         }
     }
 }
