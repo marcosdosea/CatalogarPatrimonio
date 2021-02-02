@@ -33,6 +33,7 @@ namespace CatalogarPatrimonioWEB
                 options.UseMySQL(
                     Configuration.GetConnectionString("CatalogarPatrimonioConnection")));
 
+            services.AddTransient<IAdicionarGestorService, AdicionarGestorService>();
             services.AddTransient<IAlmoxarifadoService, AlmoxarifadoService>();
             services.AddTransient<IDialogoservicoService, DialogoservicoService>();
             //services.AddTransient<IDisponibilidadeService, DisponibilidadeService>();
