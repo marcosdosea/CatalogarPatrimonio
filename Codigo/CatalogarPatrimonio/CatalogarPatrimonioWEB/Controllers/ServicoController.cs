@@ -90,7 +90,7 @@ namespace CatalogarPatrimonioWEB.Controllers
         public ActionResult Delete(int id, ServicoModel servico)
         {
             _servicoService.Remover(id);
-            return RedirectToAction(nameof(Index))
+            return RedirectToAction(nameof(Index));
         }
     }
 }

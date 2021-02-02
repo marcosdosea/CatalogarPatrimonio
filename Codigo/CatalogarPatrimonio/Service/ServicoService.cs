@@ -50,7 +50,7 @@ namespace Service
                 StartsWith(descricao));
             return servicos;
         }
-        public IEnumerable<ServicoDTO> ObterPorDataOrdenadorDescending(string descricao)
+        public IEnumerable<ServicoDTO> ObterPorDataOrdenadoDescending(string descricao)
         {
             IQueryable<Servico> tb_servico = _context.Servico;
             var query = from servico in tb_servico
@@ -70,6 +70,16 @@ namespace Service
         {
             IEnumerable<Servico> servicos = GetQuery().Where(servicoModel => servicoModel.Id.Equals(idServico));
             return servicos.ElementAtOrDefault(0);
+        }
+
+        Almoxarifado IServicoService.Obter(int idServico)
+        {
+            throw new NotImplementedException();
+        }
+
+        IEnumerable<Servico> IServicoService.ObterPorDataOrdenadoDescending(string nome)
+        {
+            throw new NotImplementedException();
         }
     }
 }

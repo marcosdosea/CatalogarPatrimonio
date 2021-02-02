@@ -12,7 +12,7 @@ namespace CatalogarPatrimonioWEB.Models
         public int Id { get; set; }
 
         [Required]
-        [Display(TipoServico = "Tipo de Serviço")]
+        [Display(Descricao = "Tipo de Serviço")]
         [StringLength(45, MinimumLength = 5)]
         public string tipoServico { get; set; }
 
