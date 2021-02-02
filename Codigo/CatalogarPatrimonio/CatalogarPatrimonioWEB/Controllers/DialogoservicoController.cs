@@ -8,23 +8,23 @@ using Core.Service;
 
 namespace CatalogarPatrimonioWEB.Controllers
 {
-    public class DialogoServicoController : Controller
+    public class DialogoservicoController : Controller
     {
-        IDialogoServicoService _dialogoServicoService;
+        IDialogoservicoService _dialogoservicoService;
         IMapper _mapper;
 
         // private readonly IAlmoxarifadoService almoxarifadoService;
 
-        public DialogoServicoController(IDialogoServicoService dialogoServicoService, IMapper mapper)
+        public DialogoservicoController(IDialogoservicoService dialogoServicoService, IMapper mapper)
         {
-            _dialogoServicoService = dialogoServicoService;
+            _dialogoservicoService = dialogoServicoService;
             _mapper = mapper;
         }
 
 		// GET: DialogoservicoController
 		public ActionResult Index()
 		{
-			var listaDialogoservico = _dialogoServicoService.ObterTodos();
+			var listaDialogoservico = _dialogoservicoService.ObterTodos();
 			var listaDialogoservicoModel = _mapper.Map<List<DialogoservicoModel>>(listaDialogoservico);
 			return View(listaDialogoservicoModel);
 		}
@@ -32,7 +32,7 @@ namespace CatalogarPatrimonioWEB.Controllers
 		// GET: DialogoservicoController/Details/5
 		public ActionResult Details(int id)
 		{
-			DialogoServico dialogoServico = _dialogoServicoService.Obter(id);
+			Dialogoservico dialogoServico = _dialogoservicoService.Obter(id);
 			DialogoservicoModel dialogoServicoModel = _mapper.Map<DialogoservicoModel>(dialogoServico);
 			return View(dialogoServicoModel);
 		}
@@ -50,8 +50,8 @@ namespace CatalogarPatrimonioWEB.Controllers
 		{
 			if (ModelState.IsValid)
 			{
-				var dialogoservico = _mapper.Map<DialogoServico>(dialogoServicoModel);
-				_dialogoServicoService.Inserir(dialogoservico);
+				var dialogoservico = _mapper.Map<Dialogoservico>(dialogoServicoModel);
+				_dialogoservicoService.Inserir(dialogoservico);
 			}
 			return RedirectToAction(nameof(Index));
 		}
@@ -59,7 +59,7 @@ namespace CatalogarPatrimonioWEB.Controllers
 		// GET: DialogoservicoController/Edit/5
 		public ActionResult Edit(int id)
 		{
-			DialogoServico dialogoservico = _dialogoServicoService.Obter(id);
+			Dialogoservico dialogoservico = _dialogoservicoService.Obter(id);
 			DialogoservicoModel dialogoservicoModel = _mapper.Map<DialogoservicoModel>(dialogoservico);
 			return View(dialogoservicoModel);
 		}
@@ -71,8 +71,8 @@ namespace CatalogarPatrimonioWEB.Controllers
 		{
 			if (ModelState.IsValid)
 			{
-				var dialogoservico = _mapper.Map<DialogoServico>(dialogoServicoModel);
-				_dialogoServicoService.Editar(dialogoservico);
+				var dialogoservico = _mapper.Map<Dialogoservico>(dialogoServicoModel);
+				_dialogoservicoService.Editar(dialogoservico);
 			}
 			return RedirectToAction(nameof(Index));
 		}
@@ -80,7 +80,7 @@ namespace CatalogarPatrimonioWEB.Controllers
 		// GET: DialogoservicoController/Delete/5
 		public ActionResult Delete(int id)
 		{
-			DialogoServico dialogoservico = _dialogoServicoService.Obter(id);
+			Dialogoservico dialogoservico = _dialogoservicoService.Obter(id);
 			DialogoservicoModel dialogoservicoModel = _mapper.Map<DialogoservicoModel>(dialogoservico);
 			return View(dialogoservicoModel);
 		}
@@ -90,7 +90,7 @@ namespace CatalogarPatrimonioWEB.Controllers
 		[ValidateAntiForgeryToken]
 		public ActionResult Delete(int id, DialogoservicoModel almoxarifado)
 		{
-			_dialogoServicoService.Remover(id);
+			_dialogoservicoService.Remover(id);
 			return RedirectToAction(nameof(Index));
 		}
 	}

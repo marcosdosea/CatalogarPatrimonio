@@ -8,7 +8,7 @@ namespace CatalogarPatrimonioWEB.Mappers
     {
         public DialogoservicoProfile()
         {
-            CreateMap<DialogoservicoModel, DialogoServico>().ReverseMap();
+            CreateMap<DialogoservicoModel, Dialogoservico>().ReverseMap();
         }
     }
 }

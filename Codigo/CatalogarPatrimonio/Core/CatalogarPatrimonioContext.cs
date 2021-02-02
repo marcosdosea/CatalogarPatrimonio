@@ -16,7 +16,7 @@ namespace Core
         }
 
         public virtual DbSet<Almoxarifado> Almoxarifado { get; set; }
-        public virtual DbSet<DialogoServico> Dialogoservico { get; set; }
+        public virtual DbSet<Dialogoservico> Dialogoservico { get; set; }
         public virtual DbSet<Disponibilidade> Disponibilidade { get; set; }
         public virtual DbSet<Empresa> Empresa { get; set; }
         public virtual DbSet<Entrada> Entrada { get; set; }
@@ -67,7 +67,7 @@ namespace Core
                     .HasConstraintName("fk_tb_almoxarifado_empresa");
             });
 
-            modelBuilder.Entity<DialogoServico>(entity =>
+            modelBuilder.Entity<Dialogoservico>(entity =>
             {
                 entity.ToTable("dialogoservico");
 
@@ -100,7 +100,7 @@ namespace Core
                     .HasDefaultValueSql("'NULL'");
 
                 entity.HasOne(d => d.IdPessoaNavigation)
-                    .WithMany(p => p.DialogoServico)
+                    .WithMany(p => p.Dialogoservico)
                     .HasForeignKey(d => d.IdPessoa)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("fk_dialogoServico_pessoa1");
