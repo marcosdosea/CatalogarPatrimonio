@@ -43,22 +43,22 @@ namespace Service
                         select servico;
             return query;
         }
-        public IEnumerable<Servico> ObterPorData(string data)
+        public IEnumerable<Servico> ObterPorData(string descricao)
         {
             IEnumerable<Servico> servicos = GetQuery()
-                .Where(servicoModel => servicoModel.DataSolicitacao.
-                StartsWith(data));
+                .Where(servicoModel => servicoModel.Descricao.
+                StartsWith(descricao));
             return servicos;
         }
-        public IEnumerable<ServicoDTO> ObterPorDataOrdenadorDescending(string nome)
+        public IEnumerable<ServicoDTO> ObterPorDataOrdenadorDescending(string descricao)
         {
             IQueryable<Servico> tb_servico = _context.Servico;
             var query = from servico in tb_servico
-                        where data.StartsWith(data)
+                        where descricao.StartsWith(descricao)
                         orderby servico.DataSolicitacao descending
                         select new ServicoDTO
                         {
-                            data = servico.DataSolicitacao
+                            Descricao = servico.Descricao
                         };
             return query;
         }
