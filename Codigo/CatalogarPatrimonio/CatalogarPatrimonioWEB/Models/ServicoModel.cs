@@ -1,16 +1,26 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace Core.DTO
+
+namespace CatalogarPatrimonioWEB.Models
 {
-    public class ServicoDTO
+    public class ServicoModel
     {
+        [Key]
         public int Id { get; set; }
+
+        [Display(Name = "Data da Solicitação")]
         public DateTime DataSolicitacao { get; set; }
+
+        [Display(Name = "Descrição")]
         public string Descricao { get; set; }
         public int IdSolicitante { get; set; }
         public int IdTipoServico { get; set; }
+
+        [Display(Name = "Observação")]
         public string Observacao { get; set; }
         public DateTime? DataAutorizacao { get; set; }
         public DateTime? DataConclusao { get; set; }
