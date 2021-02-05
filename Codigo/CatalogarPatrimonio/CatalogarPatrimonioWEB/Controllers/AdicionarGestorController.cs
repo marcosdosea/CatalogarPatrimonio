@@ -21,8 +21,8 @@ namespace CatalogarPatrimonioWEB.Controllers
         // GET: AdicionarGestorController/Details/5
         public ActionResult Details(int id)
         {
-            Gestor gestor = _gestorService.Obter(id);
-            AdicionarGestorModel gestorModel = _mapper.Map<AdicionarGestorModel>(gestor);
+            Pessoa pessoa = _gestorService.Obter(id);
+            AdicionarGestorModel gestorModel = _mapper.Map<AdicionarGestorModel>(pessoa);
             return View(gestorModel);
         }
 
@@ -39,7 +39,7 @@ namespace CatalogarPatrimonioWEB.Controllers
         {
             if (ModelState.IsValid)
             {
-                var gestor = _mapper.Map<Gestor>(adicionarGestorModel);
+                var gestor = _mapper.Map<Pessoa>(adicionarGestorModel);
                 _gestorService.Inserir(gestor);
             }
             return RedirectToAction(nameof(Index));

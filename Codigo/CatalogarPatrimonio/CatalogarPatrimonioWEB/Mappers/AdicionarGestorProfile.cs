@@ -8,7 +8,7 @@ namespace CatalogarPatrimonioWEB.Mappers
     {   
         public AdicionarGestorProfile()
         {
-            CreateMap<AdicionarGestorModel, Gestor>().ReverseMap();
+            CreateMap<AdicionarGestorModel, Pessoa>().ReverseMap();
         }
     }
 }
