@@ -21,7 +21,7 @@ namespace Service
         {
             _context.Add(entradamaterial);
             _context.SaveChanges();
-            return entradamaterial.Id;
+            return entradamaterial.IdEntrada;
         }
 
         public void Editar(Entradamaterial entradamaterial)
@@ -32,8 +32,8 @@ namespace Service
 
         public void Remover(int idEntradamaterial)
         {
-            var _entradamaterial = _context.Entradamaterial.Find(idEntradamaterial);
-            _context.Entradamaterial.Remove(_entradamaterial);
+            var _entradamaterial = _context.Dialogoservico.Find(idEntradamaterial);
+            _context.Dialogoservico.Remove(_entradamaterial);
             _context.SaveChanges();
         }
 
@@ -50,27 +50,6 @@ namespace Service
             return query;
         }
 
-        public IEnumerable<Entradamaterial> ObterPorNome(string nome)
-        {
-            IEnumerable<Entradamaterial> entradamaterial = GetQuery()
-                .Where(entradamaterialModel => entradamaterialModel.Nome.
-                StartsWith(nome));
-            return entradamaterial;
-        }
-
-        public IEnumerable<EntradamaterialDTO> ObterPorNomeOrdenadoDescending(string nome)
-        {
-            IQueryable<Entradamaterial> tb_entradamaterial = _context.Entradamaterial;
-            var query = from entradamaterial in tb_entradamaterial
-                        where nome.StartsWith(nome)
-                        orderby entradamaterial.Nome descending
-                        select new EntradamaterialDTO
-                        {
-                            nome = entradamaterial.Nome
-                        };
-            return query;
-        }
-
         public IEnumerable<Entradamaterial> ObterTodos()
         {
             return GetQuery();
@@ -78,7 +57,7 @@ namespace Service
 
         public Entradamaterial Obter(int idEntradamaterial)
         {
-            IEnumerable<Entradamaterial> entradamaterial = GetQuery().Where(entradamaterialModel => entradamaterialModel.Id.Equals(idEntradamaterial));
+            IEnumerable<Entradamaterial> entradamaterial = GetQuery().Where(entradamaterialModel => entradamaterialModel.IdMaterial.Equals(idEntradamaterial));
 
             return entradamaterial.ElementAtOrDefault(0);
         }
