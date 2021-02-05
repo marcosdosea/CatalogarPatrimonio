@@ -10,7 +10,7 @@ namespace Core.Service
         void Editar(Servico servico);
         int Inserir(Servico servico);
         void Remover(int idServico);
-        public Almoxarifado Obter(int idServico);
+        public Servico Obter(int idServico);
         IEnumerable<Servico> ObterPorDataOrdenadoDescending(string nome);
         IEnumerable<Servico> ObterTodos();
     }

@@ -1,4 +1,4 @@
-﻿@model CatalogarPatrimonioWEB.Models.EmpresaModel
+﻿@model CatalogarPatrimonioWEB.Models.ServicoModel
 
 @{ 
     ViewData["Title"] = "Edit";
@@ -14,9 +14,19 @@
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Nome" class="control-label"></label>
-                <input asp-for="Nome" class="form-control" />
-                <span asp-validation-for="Nome" class="text-danger"></span>
+                <label asp-for="IdTipoServico" class="control-label"></label>
+                <input asp-for="IdTipoServico" class="form-control" />
+                <span asp-validation-for="IdTipoServico" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdLocal" class="control-label"></label>
+                <input asp-for="IdLocal" class="form-control" />
+                <span asp-validation-for="IdLocal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Descricao" class="control-label"></label>
+                <input asp-for="Descricao" class="form-control" />
+                <span asp-validation-for="Descricao" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input typr="submit" value="Save" class="btn btn-primary" />

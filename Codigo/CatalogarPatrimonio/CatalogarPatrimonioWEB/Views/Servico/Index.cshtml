@@ -15,8 +15,18 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Nome)
+                @Html.DisplayNameFor(model => model.DataSolicitacao)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataAutorizacao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataConclusao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+
             <th></th>
         </tr>
     </thead>
@@ -25,12 +35,21 @@
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Nome)
+                    @Html.DisplayFor(modelItem => item.DataSolicitacao)
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new string {  id = item.Id}) |
-                    @Html.ActionLink("Details", "Details", new string { id = item.Id}) |
-                    @Html.ActionLink("Delete", "Delete", new string { id = item.Id})
+                    @Html.DisplayFor(modelItem => item.DataAutorizacao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataConclusao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descricao)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new {  id = item.Id}) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id}) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id})
                 </td>
             </tr>
         }

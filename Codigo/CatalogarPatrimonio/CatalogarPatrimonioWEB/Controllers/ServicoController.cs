@@ -23,8 +23,8 @@ namespace CatalogarPatrimonioWEB.Controllers
         // GET: ServicoController
         public ActionResult Index()
         {
-            var listaPessoa = _servicoService.ObterTodos();
-            var listaServicoModel = _mapper.Map<List<ServicoModel>>(ListServico);
+            var listaServico = _servicoService.ObterTodos();
+            var listaServicoModel = _mapper.Map<List<ServicoModel>>(listaServico);
             return View(listaServicoModel);
         }
 
@@ -79,7 +79,7 @@ namespace CatalogarPatrimonioWEB.Controllers
         // GET: ServicoController/Delete/5
         public ActionResult Delete(int id)
         {
-            ServicoController servico = _servicoService.Obter(id);
+            Servico servico = _servicoService.Obter(id);
             ServicoModel servicoModel = _mapper.Map<ServicoModel>(servico);
             return View(servicoModel);
         }
