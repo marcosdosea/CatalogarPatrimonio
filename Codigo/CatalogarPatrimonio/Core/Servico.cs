@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using Core.Service;
+using Core.DTO;
+using Core;
 
 namespace Core
 {
