@@ -8,7 +8,7 @@ namespace Core
         public Servico()
         {
             Dialogoservico = new HashSet<Dialogoservico>();
-            Servicomaterial = new HashSet<Servicomaterial>();
+            Servicomaterial = new HashSet<ServicoMaterial>();
         }
 
         public int Id { get; set; }
@@ -31,6 +31,6 @@ namespace Core
         public virtual Pessoa IdTecnicoNavigation { get; set; }
         public virtual TipoServico IdTipoServicoNavigation { get; set; }
         public virtual ICollection<Dialogoservico> Dialogoservico { get; set; }
-        public virtual ICollection<Servicomaterial> Servicomaterial { get; set; }
+        public virtual ICollection<ServicoMaterial> Servicomaterial { get; set; }
     }
 }

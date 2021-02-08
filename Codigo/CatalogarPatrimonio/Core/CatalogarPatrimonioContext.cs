@@ -29,7 +29,7 @@ namespace Core
         public virtual DbSet<Pessoa> Pessoa { get; set; }
         public virtual DbSet<Predio> Predio { get; set; }
         public virtual DbSet<Servico> Servico { get; set; }
-        public virtual DbSet<Servicomaterial> Servicomaterial { get; set; }
+        public virtual DbSet<ServicoMaterial> Servicomaterial { get; set; }
         public virtual DbSet<Statusservico> Statusservico { get; set; }
         public virtual DbSet<Tipomaterial> Tipomaterial { get; set; }
         public virtual DbSet<Tipopatrimonio> Tipopatrimonio { get; set; }
@@ -682,7 +682,7 @@ namespace Core
                     .HasConstraintName("fk_tb_ordemServico_tipoServico");
             });
 
-            modelBuilder.Entity<Servicomaterial>(entity =>
+            modelBuilder.Entity<ServicoMaterial>(entity =>
             {
                 entity.HasKey(e => new { e.IdMaterial, e.IdServico })
                     .HasName("PRIMARY");

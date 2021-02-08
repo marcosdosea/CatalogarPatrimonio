@@ -8,7 +8,7 @@ using System.Text;
 
 namespace Service
 {
-    public class DialogoservicoService :IDialogoservicoService
+    public class DialogoservicoService : IDialogoservicoService
     {
         private readonly CatalogarPatrimonioContext _context;
 
@@ -30,9 +30,9 @@ namespace Service
             _context.SaveChanges();
         }
 
-        public void Remover(int idDialogoservico)
+        public void Remover(int idDialogoServico)
         {
-            var _dialogoServico = _context.Dialogoservico.Find(idDialogoservico);
+            var _dialogoServico = _context.Dialogoservico.Find(idDialogoServico);
             _context.Dialogoservico.Remove(_dialogoServico);
             _context.SaveChanges();
         }
@@ -64,9 +64,9 @@ namespace Service
             return GetQuery();
         }
 
-        public Dialogoservico Obter(int idDialogoservico)
+        public Dialogoservico Obter(int idDialogoServico)
         {
-            IEnumerable<Dialogoservico> dialogoServico = GetQuery().Where(dialogoServicoModel => dialogoServicoModel.Id.Equals(idDialogoservico));
+            IEnumerable<Dialogoservico> dialogoServico = GetQuery().Where(dialogoServicoModel => dialogoServicoModel.Id.Equals(idDialogoServico));
 
             return dialogoServico.ElementAtOrDefault(0);
         }
