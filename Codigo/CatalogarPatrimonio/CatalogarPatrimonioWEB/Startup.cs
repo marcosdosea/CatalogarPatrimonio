@@ -52,7 +52,7 @@ namespace CatalogarPatrimonioWEB
             //services.AddTransient<IServicomaterialService, ServicomaterialService>();
             //services.AddTransient<IStatusservicoService, StatusservicoService>();
             //services.AddTransient<ITipomaterialService, TipomaterialService>();
-            //services.AddTransient<ITipopatrimonioService, TipopatrimonioService > ();
+            services.AddTransient<ITipopatrimonioService, TipopatrimonioService > ();
             services.AddTransient<ITipoServicoService, TipoServicoService>();
             //services.AddTransient<ITransferenciaService, TransferenciaService>();
             //services.AddTransient<ITransferenciamaterialService, TransferenciamaterialService>();
