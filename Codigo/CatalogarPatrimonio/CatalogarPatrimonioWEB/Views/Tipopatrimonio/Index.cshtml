@@ -1,7 +1,7 @@
 @model IEnumerable<CatalogarPatrimonioWEB.Models.TipopatrimonioModel>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Início Tipo Patrimônio";
     Layout = "_LayoutInside";
 }
 
@@ -10,54 +10,78 @@
 <p>
     <a class="btn btn-primary" asp-action="Create">Novo Tipo de Patrimônio</a>
 </p>
-<table id="tipopatrimonio" class="table table-bordered table-striped dataTable">
-    <thead>
-        <tr>
-            <th>
+
+<div id="tipoPatrimonio_wrapper" class="dataTables_wrapper dt-bootstrap4">
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <div class="dataTables_length" id="tipoPatrimonio_length">
+                <label>Mostrar elementos
+                    <select name="tipoPatrimonio_length" aria-controls="tipoPatrimonio" class="custom-select custom-select-sm form-control form-control-sm">
+                        <option value="10">10</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <div id="tipoPatrimonio_filter" class="dataTables_filter">
+                <label>Procurar:
+                    <input type="search" class="form-control form-control-sm" placeholder="" aria-controls="tipoPatrimonio">
+                </label>
+            </div>
+        </div>
+    </div>
+    <table id="tipopatrimonio" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="tipoPatrimonio_info">
+        <thead>
+            <tr role="row">
+                <th class="sorting_desc" tabindex="0" aria-controls="tipoPatrimonio" rowspan="1" colspan="1" aria-label="Código Tipo Patrimonio: ative para ordenar" aria-sort="descending">
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.ActionLink("", "Edit", new {  id = item.Id }, new { @class = "fas fa-edit"})
+                    @Html.ActionLink("", "Details", new {  id = item.Id }, new { @class = "fas fa-eye"})
+                    @Html.ActionLink("", "Delete", new { id = item.Id }, new { @class = "fas fa-trash-alt"})
+                </td>
+            </tr>
+    }
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>
                 @Html.DisplayNameFor(model => model.Id)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nome)
-            </th>
-            <th>Ação</th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.ActionLink("", "Edit", new {  id = item.Id }, new { @class = "fas fa-edit"})
-                @Html.ActionLink("", "Details", new {  id = item.Id }, new { @class = "fas fa-eye"})
-                @Html.ActionLink("", "Delete", new { id = item.Id }, new { @class = "fas fa-trash-alt"})
-            </td>
-        </tr>
-}
-    </tbody>
-    <tfoot>
-        <tr>
-            <th>
-            @Html.DisplayNameFor(model => model.Id)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nome)
-            </th>
-            <th>Ação</th>
-        </tr>
-    </tfoot>
-</table>
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </th>
+                <th>Ação</th>
+            </tr>
+        </tfoot>
+    </table>
+</div>
 @section scripts {
 
 <script type="text/javascript">
 
-    $(document).ready(function() {
-        $('#tipopatrimonio').DataTable();
-    } );
+    $(function () {
+        $("#tipoPatrimonio").DataTable();
+    });
 
 </script>
 

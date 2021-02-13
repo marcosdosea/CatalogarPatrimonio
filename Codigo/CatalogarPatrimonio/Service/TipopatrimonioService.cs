@@ -32,8 +32,8 @@ namespace Service
 
         public void Remover(int idTipopatrimonio)
         {
-            var _tipoPatrimonio = _context.Dialogoservico.Find(idTipopatrimonio);
-            _context.Dialogoservico.Remove(_tipoPatrimonio);
+            var _tipoPatrimonio = _context.Tipopatrimonio.Find(idTipopatrimonio);
+            _context.Tipopatrimonio.Remove(_tipoPatrimonio);
             _context.SaveChanges();
         }
 

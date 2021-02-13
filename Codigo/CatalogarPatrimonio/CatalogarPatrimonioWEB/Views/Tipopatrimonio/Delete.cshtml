@@ -1,15 +1,15 @@
-@model CatalogarPatrimonioWEB.Models.EmpresaModel
+@model CatalogarPatrimonioWEB.Models.TipopatrimonioModel
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Remover Tipo Patrimônio";
     Layout = "_LayoutInside";
 }
 
-<h1>Delete</h1>
+<h1>Remover</h1>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Você tem certeza que deseja remover?</h3>
 <div>
-    <h4>EmpresaModel</h4>
+    <h4>Tipo Patrimônio</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -27,7 +27,7 @@
     </dl>
     
     <form asp-action="Delete">
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+        <input type="submit" value="Remover" class="btn btn-danger" /> |
+        <a asp-action="Index">Voltar</a>
     </form>
 </div>
