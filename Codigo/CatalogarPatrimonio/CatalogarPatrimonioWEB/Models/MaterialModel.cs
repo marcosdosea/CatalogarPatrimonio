@@ -8,7 +8,7 @@ namespace CatalogarPatrimonioWEB.Models
 {
 	public class MaterialModel
 	{
-		[Display(Name = "Codigo")]
+		[Display(Name = "Código")]
 		[Key]
 		[Required(ErrorMessage = "Id do material é obrigatório")]
 		public int Id { get; set; }
