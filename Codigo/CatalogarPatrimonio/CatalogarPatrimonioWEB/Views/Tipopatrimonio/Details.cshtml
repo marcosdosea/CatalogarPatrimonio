@@ -1,0 +1,37 @@
+@model CatalogarPatrimonioWEB.Models.TipopatrimonioModel
+
+@{
+    ViewData["Title"] = "Detalhes Tipo Patrimônio";
+    Layout = "_LayoutInside";
+}
+
+<h1>Detalhes</h1>
+
+<div>
+    <h4>Tipo de Patrimônio: <b>@Html.DisplayFor(model => model.Nome)</b> </h4>
+    <hr />
+    <div class = "col-md-8">    
+        <div class="card">
+            <div class="card-body">
+                <dl class="row">
+                    <dt class = "col-sm-2 list-group-item list-group-item-primary">
+                        @Html.DisplayNameFor(model => model.Id)
+                    </dt>
+                    <dd class = "col-sm-10 list-group-item">
+                        @Html.DisplayFor(model => model.Id)
+                    </dd>
+                    <dt class = "col-sm-2 list-group-item list-group-item-primary">
+                        @Html.DisplayNameFor(model => model.Nome)
+                    </dt>
+                    <dd class = "col-sm-10 list-group-item">
+                        @Html.DisplayFor(model => model.Nome)
+                    </dd>
+                </dl>
+            </div>
+            <div class="card-footer">
+                @Html.ActionLink("Editar", "Edit", new { id = Model.Id }, new { @class = "btn btn-primary" })
+                <a class="btn btn-primary" asp-action="Index">Voltar</a>
+            </div>
+        </div>
+    </div>
+</div>

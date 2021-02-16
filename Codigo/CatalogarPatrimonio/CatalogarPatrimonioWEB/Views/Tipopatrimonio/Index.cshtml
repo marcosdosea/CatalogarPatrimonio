@@ -1,0 +1,76 @@
+@model IEnumerable<CatalogarPatrimonioWEB.Models.TipopatrimonioModel>
+
+@{
+    ViewData["Title"] = "Início Tipo Patrimônio";
+    Layout = "_LayoutInside";
+}
+
+<h1>Lista dos Tipos de Patrimônios</h1>
+
+<p>
+    <a class="btn btn-primary" asp-action="Create">Novo Tipo de Patrimônio</a>
+</p>
+<div class="card">
+    <div class="card-body">
+        <table id="tipopatrimonio" class="table table-bordered table-striped dataTable" role="grid">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Id)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Nome)
+                    </th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+        @foreach (var item in Model) {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    <td>
+                        @Html.ActionLink("", "Edit", new {  id = item.Id }, new { @class = "fas fa-edit"})
+                        @Html.ActionLink("", "Details", new {  id = item.Id }, new { @class = "fas fa-eye"})
+                        @Html.ActionLink("", "Delete", new { id = item.Id }, new { @class = "fas fa-trash-alt"})
+                    </td>
+                </tr>
+        }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>
+                    @Html.DisplayNameFor(model => model.Id)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Nome)
+                    </th>
+                    <th>Ação</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+@section Scripts {
+
+<script type="text/javascript">
+
+    $(document).ready( function () {
+        $('#tipopatrimonio').DataTable({
+            language: {
+                url: '/DataTables/plugins/pt_br.json'
+            },
+            columnDefs: [{
+                targets: 2,
+                orderable: false
+            }]
+        });
+    } );
+
+</script>
+
+}
