@@ -12,7 +12,8 @@ namespace CatalogarPatrimonioWEB.Controllers
     {
 		IMaterialService _materialService;
 		IMapper _mapper;
-
+		ITipomaterialService _tipomaterialService;
+ 
 		// private readonly IMaterialService materialService;
 
 		public MaterialController(IMaterialService materialService, IMapper mapper)
