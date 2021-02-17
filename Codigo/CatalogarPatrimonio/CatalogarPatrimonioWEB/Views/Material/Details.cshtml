@@ -1,11 +1,11 @@
 @model CatalogarPatrimonioWEB.Models.MaterialModel
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalhes do material";
     Layout = "_LayoutInside";
 }
 
-<h1>Material</h1>
+<h1>Detalhes do material</h1>
 
 <div>
     <h4>Detalhes do Material</h4>
@@ -50,6 +50,6 @@
     </dl>
 </div>
 <div>
-    @Html.ActionLink("Editar", "Edit", new { id = Model.Id })
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
     <a asp-action="Index">Voltar</a>
 </div>
