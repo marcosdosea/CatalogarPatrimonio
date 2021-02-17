@@ -1,69 +1,86 @@
 @model IEnumerable<CatalogarPatrimonioWEB.Models.MaterialModel>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Início Material";
     Layout = "_LayoutInside";
 }
 
-
-<h1>Material</h1>
+<h1>Lista de Materiais</h1>
 
 <p>
-    <a asp-action="Create">Novo Material</a>
+    <a class="btn btn-primary" asp-action="Create">Novo Material</a>
 </p>
-<h3>Lista de Materiais</h3>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Id)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IdTipoMaterial)
-            </th>
-            <th>
-                A��o
-            </th>
-            @*<th>
-                    @Html.DisplayNameFor(model => model.StatusSolicitacao)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.DeveVincularMaterial)
-                </th>*@
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Id)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Nome)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.IdTipoMaterial)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.StatusSolicitacao)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DeveVincularMaterial)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Valor)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+<div class="card">
+    <div class="card-body">
+        <table id="material" class="table table-bordered table-striped dataTable" role="grid">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Id)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Nome)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.IdTipoMaterial)
+                    </th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Id)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nome)
+                        </td>
+                        <th>
+                            @Html.DisplayNameFor(modelItem => item.IdTipoMaterial)
+                        </th>
+                        <td>
+                            @Html.ActionLink("", "Edit", new { id = item.Id }, new { @class = "fas fa-edit" })
+                            @Html.ActionLink("", "Details", new { id = item.Id }, new { @class = "fas fa-eye" })
+                            @Html.ActionLink("", "Delete", new { id = item.Id }, new { @class = "fas fa-trash-alt" })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>
+                        Código
+                    </th>
+                    <th>
+                        Nome
+                    </th>
+                    <th>
+                        Categoria
+                    </th>
+                    <th>Ação</th>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>
+@section Scripts {
+
+<script type="text/javascript">
+
+    $(document).ready( function () {
+        $('#tipopatrimonio').DataTable({
+            language: {
+                url: '/DataTables/plugins/pt_br.json'
+            },
+            columnDefs: [{
+                targets: 3,
+                orderable: false
+            }]
+        });
+    } ); 
+
+</script>
+
+}

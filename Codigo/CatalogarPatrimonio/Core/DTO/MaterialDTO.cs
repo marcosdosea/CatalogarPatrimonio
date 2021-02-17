@@ -8,9 +8,9 @@ namespace Core.DTO
     {
         public int Id { get; set; }
         public string Nome { get; set; }
+        public string Categoria { get; set; }
         public decimal? Valor { get; set; }
-        public int IdTipoMAterial { get; set; }
-        public int DeveVincularMaterial { get; set; }
-        public int StatusSolicitacao { get; set; }
+        public byte? DeveVincularMaterial { get; set; }
+        public byte? StatusSolicitacao { get; set; }
     }
 }
