@@ -1,13 +1,12 @@
 @model CatalogarPatrimonioWEB.Models.MaterialModel
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Cadastrar Novo Material";
     Layout = "_LayoutInside";
 }
 
-<h1>Material</h1>
+<h1>Cadastrar Novo Material</h1>
 
-<h4>Cadastrar novo Material</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -24,24 +23,21 @@
                 <span asp-validation-for="DeveVincularMaterial" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Valor" class="control-label"></label>
-                <input asp-for="Valor" class="form-control" />
-                <span asp-validation-for="Valor" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <label asp-for="IdTipoMaterial" class="control-label"></label>
                 <input asp-for="IdTipoMaterial" class="form-control" />
                 <span asp-validation-for="IdTipoMaterial" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Cadastrar Material" class="btn btn-primary" />
+                <label asp-for="Valor" class="control-label"></label>
+                <input asp-for="Valor" class="form-control" />
+                <span asp-validation-for="Valor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+                <a class="btn btn-primary" asp-action="Index">Cancelar</a>   
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Voltar</a>
 </div>
 
 @section Scripts {
