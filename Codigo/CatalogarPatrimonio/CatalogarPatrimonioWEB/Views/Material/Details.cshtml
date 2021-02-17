@@ -5,11 +5,10 @@
     Layout = "_LayoutInside";
 }
 
-<h1>Detalhes do material</h1>
+<h1>Detalhes</h1>
 
 <div>
-    <h4>Detalhes do Material</h4>
-    <hr />
+    <h4>Material: <b>@Html.DisplayFor(model => model.Nome)</b> </h4>
     <dl class="row">
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Id)
@@ -50,6 +49,6 @@
     </dl>
 </div>
 <div>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    <a asp-action="Index">Voltar</a>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id }, new { @class = "btn btn-primary" })
+    <a class="btn btn-primary" asp-action="Index">Cancelar</a>
 </div>
