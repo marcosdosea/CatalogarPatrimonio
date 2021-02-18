@@ -5,11 +5,13 @@
     Layout = "_LayoutInside";
 }
 
-<h1>Index</h1>
+
+<h1>Material</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Novo Material</a>
 </p>
+<h3>Lista de Materiais</h3>
 <table class="table">
     <thead>
         <tr>
@@ -19,36 +21,49 @@
             <th>
                 @Html.DisplayNameFor(model => model.Nome)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdTipoMaterial)
+            </th>
+            <th>
+                Ação
+            </th>
+            @*<th>
+                    @Html.DisplayNameFor(model => model.StatusSolicitacao)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DeveVincularMaterial)
+                </th>*@
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdTipoMaterial)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.StatusSolicitacao)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DeveVincularMaterial)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Valor)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdTipoMaterial)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StatusSolicitacao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DeveVincularMaterial)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Valor)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
