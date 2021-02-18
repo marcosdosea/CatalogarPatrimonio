@@ -55,7 +55,6 @@ namespace Service
             IEnumerable<Predio> predio = GetQuery()
                 .Where(predioModel => predioModel.Nome.
                 StartsWith(nome));
-            // seria melhor idpessoa?
             return predio;
         }
 

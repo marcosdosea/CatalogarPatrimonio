@@ -18,7 +18,7 @@ namespace CatalogarPatrimonioWEB.Models
 		[StringLength(45, MinimumLength = 5)]
 		public string Nome { get; set; }
 
-		[Display(Name = "IdPredio")]
+		[Display(Name = "Predio")]
 		[Required]
 		public int IdPredio { get; set; }
 	}
