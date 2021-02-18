@@ -78,6 +78,7 @@ namespace CatalogarPatrimonioWEB
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -85,6 +86,7 @@ namespace CatalogarPatrimonioWEB
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapRazorPages();
             });
         }
     }

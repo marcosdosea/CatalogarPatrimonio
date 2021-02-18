@@ -10,7 +10,10 @@
     <!-- Favicons -->
     <link href="assets/img/Icone-catalogar.jpg" rel="icon">
     <link href="assets/img/Icone-catalogar2.jpg" rel="apple-touch-icon">
-
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="~/lib/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/css/adminlte.min.css">
     <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
@@ -33,7 +36,9 @@
                     <li><a href="#portfolio">Portfólio</a></li>
                     <li><a href="#team">Equipe</a></li>
                     <li><a href="#contact">Contate-nós</a></li>
-                    <li><a href="#login">Acessar Sistema</a></li>
+                    <li>
+                        <partial name="_LoginPartial" />
+                    </li>
                 </ul>
             </nav><!-- .nav-menu -->
 
@@ -47,7 +52,8 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; @DateTime.Now.Year - CatalogarPatrimonioWeb - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; @DateTime.Now.Year - CatalogarPatrimonioWeb - <a asp-area="" asp-controller="Home"
+                asp-action="Privacy">Privacy</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
