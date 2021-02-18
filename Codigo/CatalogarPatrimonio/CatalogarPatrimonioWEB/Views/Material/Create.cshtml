@@ -5,16 +5,16 @@
     Layout = "_LayoutInside";
 }
 
-<h1>Novo Material</h1>
+<h1>Material</h1>
 
-<h4>Cadastro de Material</h4>
+<h4>Cadastrar novo Material</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Nome" class="control-label">Nome</label>
+                <label asp-for="Nome" class="control-label"></label>
                 <input asp-for="Nome" class="form-control" />
                 <span asp-validation-for="Nome" class="text-danger"></span>
             </div>
@@ -34,17 +34,29 @@
                 <span asp-validation-for="DeveVincularMaterial" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Valor" class="control-label">Valor</label>
+                <label asp-for="Valor" class="control-label"></label>
                 <input asp-for="Valor" class="form-control" />
                 <span asp-validation-for="Valor" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <label asp-for="IdTipoMaterial" class="control-label"></label>
+                <input asp-for="IdTipoMaterial" class="form-control" />
+                <span asp-validation-for="IdTipoMaterial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Cadastrar Material" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
+<<<<<<< HEAD
+=======
+<div>
+    <a asp-action="Index">Voltar</a>
+</div>
+
+>>>>>>> 56e506d (Resolvendo issue 190)
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
