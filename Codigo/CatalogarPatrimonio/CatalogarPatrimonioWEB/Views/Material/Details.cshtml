@@ -5,10 +5,10 @@
     Layout = "_LayoutInside";
 }
 
-<h1>Details</h1>
+<h1>Material</h1>
 
 <div>
-    <h4>MaterialModel</h4>
+    <h4>Detalhes do Material</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
@@ -46,11 +46,10 @@
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Valor)
-        </dd>isplayFor(model => model.nome)
         </dd>
     </dl>
 </div>
 <div>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    <a asp-action="Index">Back to List</a>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id })
+    <a asp-action="Index">Voltar</a>
 </div>

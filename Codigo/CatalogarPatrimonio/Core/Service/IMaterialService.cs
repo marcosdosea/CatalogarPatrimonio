@@ -12,7 +12,7 @@ namespace Core.Service
         void Remover(int idMaterial);
         public Material Obter(int idMaterial);
         IEnumerable<Material> ObterPorNome(string nome);
-        IEnumerable<Material> ObterTodos();
+        IEnumerable<MaterialDTO> ObterTodos();
         IEnumerable<MaterialDTO> ObterPorNomeOrdenadoDescending(string nome);
     }
 }

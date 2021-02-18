@@ -367,7 +367,7 @@ namespace Core
                     .HasMaxLength(45)
                     .IsUnicode(false);
 
-                entity.Property(e => e.StatusSolicitação)
+                entity.Property(e => e.StatusSolicitacao)
                     .HasColumnName("statusSolicitação")
                     .HasColumnType("tinyint(4)")
                     .HasDefaultValueSql("'NULL'");

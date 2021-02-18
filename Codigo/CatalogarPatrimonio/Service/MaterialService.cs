@@ -38,7 +38,7 @@ namespace Service
             _context.SaveChanges();
         }
 
-        public int GetNumeroMaterials()
+        public int GetNumeroMateriais()
         {
             return _context.Material.Count();
         }
@@ -53,10 +53,10 @@ namespace Service
 
         public IEnumerable<Material> ObterPorNome(string nome)
         {
-            IEnumerable<Material> materials = GetQuery()
+            IEnumerable<Material> materiais = GetQuery()
                 .Where(materialModel => materialModel.Nome.
                 StartsWith(nome));
-            return materials;
+            return materiais;
         }
 
         public IEnumerable<MaterialDTO> ObterPorNomeOrdenadoDescending(string nome)
@@ -72,16 +72,27 @@ namespace Service
             return query;
         }
 
-        public IEnumerable<Material> ObterTodos()
+        public IEnumerable<MaterialDTO> ObterTodos()
         {
-            return GetQuery();
+            IQueryable<Material> materiais = _context.Material;
+            var query = from material in materiais
+                select new MaterialDTO
+                {
+                    Id = material.Id,
+                    Nome = material.Nome,
+                    Categoria = material.IdTipoMaterialNavigation.Nome,
+                    Valor = material.Valor,
+                    DeveVincularMaterial = material.DeveVincularMaterial,
+                    StatusSolicitacao = material.StatusSolicitacao
+                };
+            return query;
         }
 
         public Material Obter(int idMaterial)
         {
-            IEnumerable<Material> materials = GetQuery().Where(materialModel => materialModel.Id.Equals(idMaterial));
+            IEnumerable<Material> materiais = GetQuery().Where(materialModel => materialModel.Id.Equals(idMaterial));
 
-            return materials.ElementAtOrDefault(0);
+            return materiais.ElementAtOrDefault(0);
         }
     }
 }
