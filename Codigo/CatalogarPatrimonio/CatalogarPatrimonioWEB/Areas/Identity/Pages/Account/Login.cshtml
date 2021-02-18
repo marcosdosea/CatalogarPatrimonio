@@ -32,7 +32,7 @@
                     <div class="form-group">
                         <label asp-for="Input.Password"></label>
                         <div class="input-group">
-                            <input asp-for="Input.Password" class="form-control" placeholder="Digite sua senha" />
+                            <input id="password " asp-for="Input.Password" class="form-control" placeholder="Digite sua senha" />
                             <div class="input-group-append">
                                 <div class="input-group-text">                                
                                     <span class="fas fa-lock"></span>
@@ -40,6 +40,9 @@
                             </div>
                         </div>
                         <span asp-validation-for="Input.Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                       <input type="checkbox" id="showpass"> Mostrar senha</input><br>
                     </div>
                     <div class="form-group">
                         <div class="checkbox">
@@ -100,6 +103,14 @@
 </div>
 
 @section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {   
+            //CheckBox Show Password  
+            $('#showpass').click(function () {  
+                $('#password').attr('type', $(this).is(':checked') ? 'text' : 'password'); 
+            });  
+        });
+    </script>
     <partial name="_ValidationScriptsPartial" />
 }
 

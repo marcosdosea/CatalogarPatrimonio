@@ -46,20 +46,20 @@ namespace CatalogarPatrimonioWEB.Areas.Identity.Pages.Account
 
         public class InputModel
         {
-            [Required]
-            [EmailAddress]
-            [Display(Name = "Email")]
+            [DataType(DataType.EmailAddress, ErrorMessage = "Digite um email válido!")]
+            [Required(ErrorMessage = "Email não pode ser vazio!")]
             public string Email { get; set; }
 
-            [Required]
-            [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
-            [DataType(DataType.Password)]
+            [Required(ErrorMessage = "Senha não pode ser vazia!")]
+            [StringLength(100, ErrorMessage = "O {0} precisa ter ao menos {2} e no máximo {1} caracteres de tamanho.", MinimumLength = 6)]
+            [DataType(DataType.Password, ErrorMessage = "Digite uma senha válida!")]
             [Display(Name = "Senha")]
             public string Password { get; set; }
 
-            [DataType(DataType.Password)]
+            [Required(ErrorMessage = "Senha não pode ser vazia!")]
+            [DataType(DataType.Password, ErrorMessage = "Digite uma senha válida!")]
             [Display(Name = "Confirme a senha")]
-            [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+            [Compare("Password", ErrorMessage = "As senhas não correspondem!")]
             public string ConfirmPassword { get; set; }
         }
 
@@ -79,7 +79,7 @@ namespace CatalogarPatrimonioWEB.Areas.Identity.Pages.Account
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {
-                    _logger.LogInformation("User created a new account with password.");
+                    _logger.LogInformation("Você criou uma nova conta.");
 
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
                     code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
@@ -89,8 +89,8 @@ namespace CatalogarPatrimonioWEB.Areas.Identity.Pages.Account
                         values: new { area = "Identity", userId = user.Id, code = code, returnUrl = returnUrl },
                         protocol: Request.Scheme);
 
-                    await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
-                        $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
+                    await _emailSender.SendEmailAsync(Input.Email, "Confirme seu email",
+                        $"Por favor confirme sua conta <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicando aqui</a>.");
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {
