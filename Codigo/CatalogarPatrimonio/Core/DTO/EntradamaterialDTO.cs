@@ -8,5 +8,8 @@ namespace Core.DTO
     {
         public int IdMaterial { get; set; }
         public int? Quantidade { get; set; }
+        public int Entrada { get; set; }
+        public float? Valor { get; set; }
+        public int? QuantidadeUtilizada { get; set; }
     }
 }

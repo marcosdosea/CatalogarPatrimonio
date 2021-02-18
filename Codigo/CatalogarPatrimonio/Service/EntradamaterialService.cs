@@ -50,9 +50,20 @@ namespace Service
             return query;
         }
 
-        public IEnumerable<Entradamaterial> ObterTodos()
+        public IEnumerable<EntradamaterialDTO> ObterTodos()
         {
-            return GetQuery();
+            IQueryable<Entradamaterial> Entradamateriais = _context.Entradamaterial;
+            var query = from entradamaterial in Entradamateriais
+                select new EntradamaterialDTO
+                {
+                    IdMaterial = entradamaterial.IdMaterialNavigation.Id,
+                    Entrada = entradamaterial.IdEntradaNavigation.Id,
+                    Quantidade = entradamaterial.Quantidade,
+                    Valor = entradamaterial.Valor,
+                    QuantidadeUtilizada = entradamaterial.QuantidadeUtilizada
+
+                };
+            return query;
         }
 
         public Entradamaterial Obter(int idEntradamaterial)

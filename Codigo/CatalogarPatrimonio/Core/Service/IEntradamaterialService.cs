@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Core.DTO;
 
 namespace Core.Service
 {
@@ -10,6 +11,6 @@ namespace Core.Service
         int Inserir(Entradamaterial entradamaterial);
         void Remover(int idEntradamaterial);
         public Entradamaterial Obter(int idEntradamaterial);
-        IEnumerable<Entradamaterial> ObterTodos();
+        IEnumerable<EntradamaterialDTO> ObterTodos();
     }
 }
