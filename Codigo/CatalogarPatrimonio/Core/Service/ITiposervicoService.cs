@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Core.Service
 {
-    public interface ITipoServicoService
+    public interface ITiposervicoService
     {
         public void Editar(TipoServico tiposervico);
         public int Inserir(TipoServico tiposervico);
