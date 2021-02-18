@@ -30,7 +30,7 @@
                         </div>
                         <div class="form-group">
                             <label asp-for="IdTipoMaterial" class="control-label"></label>
-                            <input asp-for="IdTipoMaterial" class="form-control" />
+                            <input asp-for="IdTipoMaterial" asp-items="ViewBag.Categoria" class="form-control" />
                             <span asp-validation-for="IdTipoMaterial" class="text-danger"></span>
                         </div>
                         <div class="form-group">
