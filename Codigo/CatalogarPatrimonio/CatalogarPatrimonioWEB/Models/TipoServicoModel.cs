@@ -8,6 +8,7 @@ namespace CatalogarPatrimonioWEB.Models
 {
 	public class TiposervicoModel
 	{
+		[Display(Name = "Código")]
 		public int Id { get; set; }
 		[Required]
 
