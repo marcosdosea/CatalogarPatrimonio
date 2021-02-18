@@ -1,61 +1,59 @@
 @model CatalogarPatrimonioWEB.Models.EntradamaterialModel
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Cadastro de Entrada de Material";
     Layout = "_LayoutInside";
 }
 
-<h1>Create</h1>
+<h1>Nova Entrada de Material</h1>
 
-<h4>EntradamaterialModel</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <!--
-            <div class="form-group">
-                <label asp-for="nome" class="control-label"></label>
-                <input asp-for="nome" class="form-control" />
-                <span asp-validation-for="nome" class="text-danger"></span>
+    <div class="col-md-8">
+        <div class="card card-primary">
+            <div class="card-header">
+                <h4 class="card-title">Cadastro Entrada de Material</h4>
             </div>
-             -->
-            <div class="form-group">
-                <label asp-for="IdMaterial" class="control-label"></label>
-                <input asp-for="IdMaterial" class="form-control" />
-                <span asp-validation-for="IdMaterial" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IdEntrada" class="control-label"></label>
-                <input asp-for="IdEntrada" class="form-control" />
-                <span asp-validation-for="IdEntrada" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Quantidade" class="control-label"></label>
-                <input asp-for="Quantidade" class="form-control" />
-                <span asp-validation-for="Quantidade" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Valor" class="control-label"></label>
-                <input asp-for="Valor" class="form-control" />
-                <span asp-validation-for="Valor" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="QuantidadeUtilizada" class="control-label"></label>
-                <input asp-for="QuantidadeUtilizada" class="form-control" />
-                <span asp-validation-for="QuantidadeUtilizada" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+            <form asp-action="Create">
+                <div class="card-body">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="IdMaterial" class="control-label"></label>
+                        <input asp-for="IdMaterial" class="form-control" />
+                        <span asp-validation-for="IdMaterial" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="IdEntrada" class="control-label"></label>
+                        <input asp-for="IdEntrada" class="form-control" />
+                        <span asp-validation-for="IdEntrada" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Quantidade" class="control-label"></label>
+                        <input asp-for="Quantidade" class="form-control" />
+                        <span asp-validation-for="Quantidade" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Valor" class="control-label"></label>
+                        <input asp-for="Valor" class="form-control" />
+                        <span asp-validation-for="Valor" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="QuantidadeUtilizada" class="control-label"></label>
+                        <input asp-for="QuantidadeUtilizada" class="form-control" />
+                        <span asp-validation-for="QuantidadeUtilizada" class="text-danger"></span>
+                    </div>
+
+                </div>
+                <div class="card-footer">
+                    <div class="form-group">
+                        <input type="submit" value="Salvar" class="btn btn-primary" />
+                        <a class="btn btn-primary" asp-action="Index">Cancelar</a>   
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

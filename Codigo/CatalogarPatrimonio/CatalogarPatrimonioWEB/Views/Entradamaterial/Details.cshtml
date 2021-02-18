@@ -1,49 +1,55 @@
 @model CatalogarPatrimonioWEB.Models.EntradamaterialModel
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalhe da Entrada de Material";
     Layout = "_LayoutInside";
 }
 
 <h1>Details</h1>
 
 <div>
-    <h4>EntradamaterialModel</h4>
+    <h4>Entrada de Material: <b>@Html.DisplayFor(model => model.IdMaterial)</b> </h4>
     <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.IdMaterial)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.IdMaterial)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.IdEntrada)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.IdEntrada)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Quantidade)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Quantidade)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Valor)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Valor)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.QuantidadeUtilizada)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.QuantidadeUtilizada)
-        </dd>
-    </dl>
-</div>
-<div>
-    @Html.ActionLink("Edit", "Edit", new { idMaterial = Model.IdMaterial }) |
-    <a asp-action="Index">Back to List</a>
+    <div class = "col-md-8">    
+        <div class="card">
+            <div class="card-body">
+                <dl class="row">
+                    <dt class = "col-sm-2 list-group-item list-group-item-danger">
+                        @Html.DisplayNameFor(model => model.IdMaterial)
+                    </dt>
+                    <dd class = "col-sm-10 list-group-item">
+                        @Html.DisplayFor(model => model.IdMaterial)
+                    </dd>
+                    <dt class = "col-sm-2 list-group-item list-group-item-danger">
+                        @Html.DisplayNameFor(model => model.IdEntrada)
+                    </dt>
+                    <dd class = "col-sm-10 list-group-item">
+                        @Html.DisplayFor(model => model.IdEntrada)
+                    </dd>
+                    <dt class = "col-sm-2 list-group-item list-group-item-danger">
+                        @Html.DisplayNameFor(model => model.Quantidade)
+                    </dt>
+                    <dd class = "col-sm-10 list-group-item">
+                        @Html.DisplayFor(model => model.Quantidade)
+                    </dd>
+                    <dt class = "col-sm-2 list-group-item list-group-item-danger">
+                        @Html.DisplayNameFor(model => model.Valor)
+                    </dt>
+                    <dd class = "col-sm-10 list-group-item">
+                        @Html.DisplayFor(model => model.Valor)
+                    </dd>
+                    <dt class = "col-sm-2 list-group-item list-group-item-danger">
+                        @Html.DisplayNameFor(model => model.QuantidadeUtilizada)
+                    </dt>
+                    <dd class = "col-sm-10 list-group-item">
+                        @Html.DisplayFor(model => model.QuantidadeUtilizada)
+                    </dd>
+                </dl>
+            </div>
+            <div class="card-footer">
+                @Html.ActionLink("Editar", "Edit", new { id = Model.IdMaterial }, new { @class = "btn btn-primary" })
+                <a class="btn btn-primary" asp-action="Index">Voltar</a>
+            </div>
+        </div>
+    </div>
 </div>
