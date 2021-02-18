@@ -1,42 +1,90 @@
-@model IEnumerable<CatalogarPatrimonioWEB.Models.LocalModel>
+﻿@model IEnumerable<CatalogarPatrimonioWEB.Models.LocalModel>
 
-@{
+    @{
     ViewData["Title"] = "Index";
     Layout = "_LayoutInside";
-}
+    }
 
-<h1>Index</h1>
+    <h1>Lista de Locais</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IdPredio)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdPredio)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new {  id = item.Id }) |
-                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-            </td>
-        </tr>
+    <p>
+        <a class="btn btn-primary" asp-action="Create">Novo Local</a>
+    </p>
+    <div class="card">
+        <div class="card-body">
+            <table id="local" class="table table-bordered table-striped dataTable" role="grid">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Id)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Nome)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.IdPredio)
+                        </th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Id)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nome)
+                        </td>
+                        <th>
+                            @Html.DisplayNameFor(modelItem => item.IdPredio)
+                        </th>
+                        <td>
+                            @Html.ActionLink("", "Edit", new { id = item.Id }, new { @class = "fas fa-edit" })
+                            @Html.ActionLink("", "Details", new { id = item.Id }, new { @class = "fas fa-eye" })
+                            @Html.ActionLink("", "Delete", new { id = item.Id }, new { @class = "fas fa-trash-alt" })
+                        </td>
+                    </tr>
+                }
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>
+                            Estado
+                        </th>
+                        <th>
+                            Cidade
+                        </th>
+                        <th>
+                            Prédio
+                        </th>
+                        <th>
+                            Local
+                        </th>
+                        <th>
+                            Ação
+                        </th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+@section Scripts {
+
+        <script type="text/javascript">
+
+    $(document).ready( function () {
+        $('#local').DataTable({
+            language: {
+                url: '/DataTables/plugins/pt_br.json'
+            },
+            columnDefs: [{
+                targets: 3,
+                orderable: false
+            }]
+        });
+    } );
+
+        </script>
 }
-    </tbody>
-</table>
