@@ -43,13 +43,13 @@ namespace CatalogarPatrimonioWEB.Areas.Identity.Pages.Account
 
         public class InputModel
         {
-            [Required]
-            [EmailAddress]
+            [Required(ErrorMessage = "Email não pode ser vazio!")]
+            [DataType(DataType.EmailAddress, ErrorMessage = "Digite um email válido!")]
             public string Email { get; set; }
 
-            [Required]
             [Display(Name = "Senha")]
-            [DataType(DataType.Password)]
+            [Required(ErrorMessage = "Senha não pode ser vazia!")]
+            [DataType(DataType.Password, ErrorMessage = "Digite uma senha válida!")]
             public string Password { get; set; }
 
             [Display(Name = "Lembre de mim")]
