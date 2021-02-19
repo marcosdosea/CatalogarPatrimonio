@@ -59,7 +59,7 @@ namespace CatalogarPatrimonioWEB.Controllers
         // GET: TipomaterialController/Edit/5
         public ActionResult Edit(int id)
         {
-            Tipomaterial tipoMaterial  = _tipoMaterialService.Obter(id);
+            Tipomaterial tipoMaterial = _tipoMaterialService.Obter(id);
             TipomaterialModel tipoMaterialModel = _mapper.Map<TipomaterialModel>(tipoMaterial);
             return View(tipoMaterialModel);
         }
