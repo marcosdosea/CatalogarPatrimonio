@@ -36,7 +36,6 @@ namespace Service
             _context.Tipomaterial.Remove(_tipoMaterial);
             _context.SaveChanges();
         }
-
         public int GetNumeroTipomaterial()
         {
             return _context.Tipomaterial.Count();
