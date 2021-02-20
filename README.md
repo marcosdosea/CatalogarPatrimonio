@@ -10,7 +10,7 @@ Gerenciamento de patrimônios da empresa/cidade
 
 Sistema para manutenção e gerenciamneto de recursos patrimoniais. Nossa aplicação foi desenvolvida especialmente para ser adequada as necessidades, de cada negócio. Trazendo de maneira mais simples, a forma de controlar seus bens, através de uma ambiente amigável e simples de manusear. 
 
-<br><br><br><br>
+<br><br><br>
 
 <h2 id="autor" align=center>Colaboradores</h2>
 
