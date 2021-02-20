@@ -18,6 +18,7 @@ Sistema para manutenção e gerenciamneto de recursos patrimoniais. Nossa aplica
 - José Carlos (Desenvolvedor)
 - Liliane Aparecida (Desenvolvedora)
 - Rafael Silveira (Desenvolvedor)
+- Wagner Prata (Desenvolvedor)
 - Marcos Dósea (Orientador)
 
 ***
