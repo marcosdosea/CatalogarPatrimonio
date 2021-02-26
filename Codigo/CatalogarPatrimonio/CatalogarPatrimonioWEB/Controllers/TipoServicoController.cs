@@ -9,13 +9,13 @@ using System;
 
 namespace CatalogarPatrimonioWEB.Controllers
 {
-    public class TipoServicoController : Controller
+    public class TiposervicoController : Controller
     {
-        ITipoServicoService _tiposervicoService;
+        ITiposervicoService _tiposervicoService;
         IMapper _mapper;
 
         // private readonly IEmpresa empresa;
-        public TipoServicoController(ITipoServicoService tiposervicoService, IMapper mapper)
+        public TiposervicoController(ITiposervicoService tiposervicoService, IMapper mapper)
         {
             _tiposervicoService = tiposervicoService;
             _mapper = mapper;
@@ -24,16 +24,16 @@ namespace CatalogarPatrimonioWEB.Controllers
         // GET: TipoServicoController
         public ActionResult Index()
         {
-            var listaTipoServico = _tiposervicoService.ObterTodos();
-            var listaTipoServicoModel = _mapper.Map<List<TipoServicoModel>>(listaTipoServico);
-            return View(listaTipoServicoModel);
+            var listaTiposervico = _tiposervicoService.ObterTodos();
+            var listaTiposervicoModel = _mapper.Map<List<TiposervicoModel>>(listaTiposervico);
+            return View(listaTiposervicoModel);
         }
 
         // GET: TipoServicoController/Details/5
         public ActionResult Details(int id)
         {
             TipoServico tiposervico = _tiposervicoService.Obter(id);
-            TipoServicoModel tiposervicoModel = _mapper.Map<TipoServicoModel>(tiposervico);
+            TiposervicoModel tiposervicoModel = _mapper.Map<TiposervicoModel>(tiposervico);
             return View(tiposervicoModel);
         }
 
@@ -47,7 +47,7 @@ namespace CatalogarPatrimonioWEB.Controllers
         // POST: TipoServicoController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(TipoServicoModel tiposervicoModel)
+        public ActionResult Create(TiposervicoModel tiposervicoModel)
         {
             if (ModelState.IsValid)
             {
@@ -57,18 +57,18 @@ namespace CatalogarPatrimonioWEB.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        // GET: TipoServicoController/Edit/5
+        // GET: TiposervicoController/Edit/5
         public ActionResult Edit(int id)
         {
             TipoServico tiposervico = _tiposervicoService.Obter(id);
-            TipoServicoModel tiposervicoModel = _mapper.Map<TipoServicoModel>(tiposervico);
+            TiposervicoModel tiposervicoModel = _mapper.Map<TiposervicoModel>(tiposervico);
             return View(tiposervicoModel);
         }
 
-        // POST: TipoServicoController/Edit/5
+        // POST: TiposervicoController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, TipoServicoModel tiposervicoModel)
+        public ActionResult Edit(int id, TiposervicoModel tiposervicoModel)
         {
             if (ModelState.IsValid)
             {
@@ -78,20 +78,20 @@ namespace CatalogarPatrimonioWEB.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        // GET: TipoServicoController/Delete/5
+        // GET: TiposervicoController/Delete/5
         public ActionResult Delete(int id)
         {
             TipoServico tiposervico = _tiposervicoService.Obter(id);
-            TipoServicoModel tiposervicoModel = _mapper.Map<TipoServicoModel>(tiposervico);
+            TiposervicoModel tiposervicoModel = _mapper.Map<TiposervicoModel>(tiposervico);
             return View(tiposervicoModel);
         }
 
 
 
-        // POST: TipoServicoController/Delete/5
+        // POST: TiposervicoController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, TipoServicoModel tiposervico)
+        public ActionResult Delete(int id, TiposervicoModel tiposervico)
         {
             _tiposervicoService.Remover(id);
             return RedirectToAction(nameof(Index));

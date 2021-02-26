@@ -53,7 +53,7 @@ namespace CatalogarPatrimonioWEB
             //services.AddTransient<IStatusservicoService, StatusservicoService>();
             //services.AddTransient<ITipomaterialService, TipomaterialService>();
             services.AddTransient<ITipopatrimonioService, TipopatrimonioService > ();
-            services.AddTransient<ITipoServicoService, TipoServicoService>();
+            services.AddTransient<ITiposervicoService, TiposervicoService>();
             //services.AddTransient<ITransferenciaService, TransferenciaService>();
             //services.AddTransient<ITransferenciamaterialService, TransferenciamaterialService>();
 
@@ -78,6 +78,7 @@ namespace CatalogarPatrimonioWEB
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -85,6 +86,7 @@ namespace CatalogarPatrimonioWEB
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapRazorPages();
             });
         }
     }

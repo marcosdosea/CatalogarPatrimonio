@@ -8,11 +8,11 @@ using System.Text;
 
 namespace Service
 {
-    public class TipoServicoService : ITipoServicoService
+    public class TiposervicoService : ITiposervicoService
     {
         private readonly CatalogarPatrimonioContext _context;
 
-        public TipoServicoService(CatalogarPatrimonioContext context)
+        public TiposervicoService(CatalogarPatrimonioContext context)
         {
             _context = context;
         }
@@ -58,13 +58,13 @@ namespace Service
             return tiposervico;
         }
 
-        public IEnumerable<TipoServicoDTO> ObterPorNomeOrdenadoDescending(string nome)
+        public IEnumerable<TiposervicoDTO> ObterPorNomeOrdenadoDescending(string nome)
         {
             IQueryable<TipoServico> tb_tiposervico = _context.TipoServico;
             var query = from tiposervico in tb_tiposervico
                         where nome.StartsWith(nome)
                         orderby tiposervico.Nome descending
-                        select new TipoServicoDTO
+                        select new TiposervicoDTO
                         {
                             Nome = tiposervico.Nome
                         };
