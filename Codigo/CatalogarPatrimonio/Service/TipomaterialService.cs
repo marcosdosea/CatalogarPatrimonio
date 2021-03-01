@@ -36,6 +36,10 @@ namespace Service
             _context.Tipomaterial.Remove(_tipoMaterial);
             _context.SaveChanges();
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> e47de0450591caaca6b970b6ed673b1a57f47a5c
         public int GetNumeroTipomaterial()
         {
             return _context.Tipomaterial.Count();

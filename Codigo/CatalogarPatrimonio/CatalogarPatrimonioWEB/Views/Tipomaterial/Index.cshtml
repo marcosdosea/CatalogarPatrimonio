@@ -60,6 +60,7 @@
 
     <script type="text/javascript">
 
+<<<<<<< HEAD
         $(document).ready(function () {
             $('#tipomaterial').DataTable({
                 language: {
@@ -71,6 +72,19 @@
                 }]
             });
         });
+=======
+    $(document).ready( function () {
+        $('#tipomaterial').DataTable({
+            language: {
+                url: '/DataTables/plugins/pt_br.json'
+            },
+            columnDefs: [{
+                targets: 2,
+                orderable: false
+            }]
+        });
+    } );
+>>>>>>> e47de0450591caaca6b970b6ed673b1a57f47a5c
 
     </script>
 
