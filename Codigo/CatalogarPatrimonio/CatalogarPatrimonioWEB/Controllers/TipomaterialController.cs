@@ -42,7 +42,6 @@ namespace CatalogarPatrimonioWEB.Controllers
             return View();
         }
 
-
         // POST: TipomaterialController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -84,8 +83,6 @@ namespace CatalogarPatrimonioWEB.Controllers
             TipomaterialModel tipoMaterialModel = _mapper.Map<TipomaterialModel>(tipoMaterial);
             return View(tipoMaterialModel);
         }
-
-
 
         // POST: TipomaterialController/Delete/5
         [HttpPost]
