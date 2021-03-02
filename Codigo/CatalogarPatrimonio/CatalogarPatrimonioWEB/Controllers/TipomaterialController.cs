@@ -42,7 +42,6 @@ namespace CatalogarPatrimonioWEB.Controllers
             return View();
         }
 
-
         // POST: TipomaterialController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -59,11 +58,7 @@ namespace CatalogarPatrimonioWEB.Controllers
         // GET: TipomaterialController/Edit/5
         public ActionResult Edit(int id)
         {
-<<<<<<< HEAD
             Tipomaterial tipoMaterial = _tipoMaterialService.Obter(id);
-=======
-            Tipomaterial tipoMaterial  = _tipoMaterialService.Obter(id);
->>>>>>> e47de0450591caaca6b970b6ed673b1a57f47a5c
             TipomaterialModel tipoMaterialModel = _mapper.Map<TipomaterialModel>(tipoMaterial);
             return View(tipoMaterialModel);
         }
@@ -88,8 +83,6 @@ namespace CatalogarPatrimonioWEB.Controllers
             TipomaterialModel tipoMaterialModel = _mapper.Map<TipomaterialModel>(tipoMaterial);
             return View(tipoMaterialModel);
         }
-
-
 
         // POST: TipomaterialController/Delete/5
         [HttpPost]
