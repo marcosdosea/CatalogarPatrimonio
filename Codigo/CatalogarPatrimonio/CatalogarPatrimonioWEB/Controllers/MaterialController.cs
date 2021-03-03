@@ -29,7 +29,6 @@ namespace CatalogarPatrimonioWEB.Controllers
 		public ActionResult Index()
 		{
 			var listaMaterial = _materialService.ObterTodos();
-//			var listaMaterialModel = _mapper.Map<List<MaterialModel>>(listaMaterial);
 			return View(listaMaterial);
 		}
 
