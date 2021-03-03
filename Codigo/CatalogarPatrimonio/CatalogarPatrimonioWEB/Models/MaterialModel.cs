@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Core;
 
 namespace CatalogarPatrimonioWEB.Models
 {
@@ -18,7 +19,7 @@ namespace CatalogarPatrimonioWEB.Models
 		[StringLength(45, MinimumLength = 5)]
 		public string Nome { get; set; }
 
-		[Display(Name = "Categoria")]
+		[Display(Name = "Tipo")]
 		public int IdTipoMaterial { get; set; }
 
 		[Display(Name = "Status da Solicitacao")]
@@ -29,6 +30,8 @@ namespace CatalogarPatrimonioWEB.Models
 
 		[Display(Name = "Valor")]
 		public decimal? Valor { get; set; }
+
+		public virtual Tipomaterial IdTipoMaterialNavigation { get; set; }
 
 	}
 }

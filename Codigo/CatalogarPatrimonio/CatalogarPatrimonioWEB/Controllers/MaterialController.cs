@@ -5,6 +5,7 @@ using Core;
 using CatalogarPatrimonioWEB.Models;
 using System.Collections.Generic;
 using Core.Service;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace CatalogarPatrimonioWEB.Controllers
 {
@@ -16,8 +17,9 @@ namespace CatalogarPatrimonioWEB.Controllers
  
 		// private readonly IMaterialService materialService;
 
-		public MaterialController(IMaterialService materialService, IMapper mapper)
+		public MaterialController(IMaterialService materialService, IMapper mapper, ITipomaterialService tipomaterialService)
 		{
+			_tipomaterialService = tipomaterialService;
 			_materialService = materialService;
 			_mapper = mapper;
 		}
@@ -41,6 +43,8 @@ namespace CatalogarPatrimonioWEB.Controllers
 		// GET: MaterialController/Create
 		public ActionResult Create()
 		{
+			IEnumerable<Tipomaterial> tipoMateriais = _tipomaterialService.ObterTodos();
+			ViewBag.Tipos = new SelectList(tipoMateriais, "Id", "Nome", null);
 			return View();
 		}
 
