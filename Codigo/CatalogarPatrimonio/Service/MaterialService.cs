@@ -80,7 +80,7 @@ namespace Service
                 {
                     Id = material.Id,
                     Nome = material.Nome,
-                    IdTipoMaterial = material.IdTipoMaterialNavigation.Nome,
+                    TipoMaterial = material.IdTipoMaterialNavigation.Nome,
                     Valor = material.Valor,
                     DeveVincularMaterial = material.DeveVincularMaterial,
                     StatusSolicitacao = material.StatusSolicitacao

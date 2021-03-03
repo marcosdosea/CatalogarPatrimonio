@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
 using Core;
+using Core.DTO;
 using CatalogarPatrimonioWEB.Models;
 using System.Collections.Generic;
 using Core.Service;
@@ -28,8 +29,7 @@ namespace CatalogarPatrimonioWEB.Controllers
 		public ActionResult Index()
 		{
 			var listaMaterial = _materialService.ObterTodos();
-			var listaMaterialModel = _mapper.Map<List<MaterialModel>>(listaMaterial);
-			return View(listaMaterialModel);
+			return View(listaMaterial);
 		}
 
 		// GET: MaterialController/Details/5
