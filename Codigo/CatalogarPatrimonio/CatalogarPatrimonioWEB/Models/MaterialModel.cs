@@ -11,12 +11,10 @@ namespace CatalogarPatrimonioWEB.Models
 	{
 		[Display(Name = "Código")]
 		[Key]
-		[Required(ErrorMessage = "Id do material é obrigatório")]
 		public int Id { get; set; }
 
-		[Required]
+		[Required(ErrorMessage = "O nome do material é obrigatório")]
 		[Display(Name = "Nome")]
-		[StringLength(45, MinimumLength = 5)]
 		public string Nome { get; set; }
 
 		[Display(Name = "Tipo")]
