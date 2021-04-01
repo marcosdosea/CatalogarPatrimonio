@@ -64,8 +64,12 @@ namespace CatalogarPatrimonioWEB.Controllers
 		// GET: MaterialController/Edit/5
 		public ActionResult Edit(int id)
 		{
+
+			IEnumerable<Tipomaterial> tipoMateriais = _tipomaterialService.ObterTodos();
 			Material material = _materialService.Obter(id);
 			MaterialModel materialModel = _mapper.Map<MaterialModel>(material);
+
+			ViewBag.Tipos = new SelectList(tipoMateriais, "Id", "Nome", null);
 			return View(materialModel);
 		}
 
