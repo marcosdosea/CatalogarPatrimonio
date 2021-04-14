@@ -20,6 +20,7 @@ namespace CatalogarPatrimonioWEB.Areas.Identity
                         context.Configuration.GetConnectionString("CatalogarPatrimonioConnection")));
 
                 services.AddDefaultIdentity<Pessoa>(options => options.SignIn.RequireConfirmedAccount = true)
+                    .AddRoles<IdentityRole>()
                     .AddEntityFrameworkStores<IdentityContext>();
             });
         }

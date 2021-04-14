@@ -10,6 +10,6 @@ namespace Core
         public DateTime? Hora { get; set; }
         public int IdLocal { get; set; }
 
-        public virtual Predio IdLocalNavigation { get; set; }
+        public virtual Local IdLocalNavigation { get; set; }
     }
 }

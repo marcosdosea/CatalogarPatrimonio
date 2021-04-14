@@ -5,9 +5,11 @@ using Core;
 using CatalogarPatrimonioWEB.Models;
 using System.Collections.Generic;
 using Core.Service;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CatalogarPatrimonioWEB.Controllers
 {
+    [Authorize(Roles = "Administrador")]
     public class TipopatrimonioController : Controller
     {
         ITipopatrimonioService _tipoPatrimonioService;

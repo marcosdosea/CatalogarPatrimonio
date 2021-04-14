@@ -1,8 +1,6 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Core.DTO;
-using Core.Service;
 
 namespace Core
 {
@@ -18,8 +16,16 @@ namespace Core
         }
 
         public virtual DbSet<Almoxarifado> Almoxarifado { get; set; }
+        public virtual DbSet<Aspnetroleclaims> Aspnetroleclaims { get; set; }
+        public virtual DbSet<Aspnetroles> Aspnetroles { get; set; }
+        public virtual DbSet<Aspnetuserclaims> Aspnetuserclaims { get; set; }
+        public virtual DbSet<Aspnetuserlogins> Aspnetuserlogins { get; set; }
+        public virtual DbSet<Aspnetuserroles> Aspnetuserroles { get; set; }
+        public virtual DbSet<Aspnetusers> Aspnetusers { get; set; }
+        public virtual DbSet<Aspnetusertokens> Aspnetusertokens { get; set; }
         public virtual DbSet<Dialogoservico> Dialogoservico { get; set; }
         public virtual DbSet<Disponibilidade> Disponibilidade { get; set; }
+        public virtual DbSet<Efmigrationshistory> Efmigrationshistory { get; set; }
         public virtual DbSet<Empresa> Empresa { get; set; }
         public virtual DbSet<Entrada> Entrada { get; set; }
         public virtual DbSet<Entradamaterial> Entradamaterial { get; set; }
@@ -31,11 +37,11 @@ namespace Core
         public virtual DbSet<Pessoa> Pessoa { get; set; }
         public virtual DbSet<Predio> Predio { get; set; }
         public virtual DbSet<Servico> Servico { get; set; }
-        public virtual DbSet<ServicoMaterial> Servicomaterial { get; set; }
+        public virtual DbSet<Servicomaterial> Servicomaterial { get; set; }
         public virtual DbSet<Statusservico> Statusservico { get; set; }
         public virtual DbSet<Tipomaterial> Tipomaterial { get; set; }
         public virtual DbSet<Tipopatrimonio> Tipopatrimonio { get; set; }
-        public virtual DbSet<TipoServico> TipoServico { get; set; }
+        public virtual DbSet<Tiposervico> Tiposervico { get; set; }
         public virtual DbSet<Transferencia> Transferencia { get; set; }
         public virtual DbSet<Transferenciamaterial> Transferenciamaterial { get; set; }
 
@@ -67,6 +73,209 @@ namespace Core
                     .WithMany(p => p.Almoxarifado)
                     .HasForeignKey(d => d.IdEmpresa)
                     .HasConstraintName("fk_tb_almoxarifado_empresa");
+            });
+
+            modelBuilder.Entity<Aspnetroleclaims>(entity =>
+            {
+                entity.ToTable("aspnetroleclaims");
+
+                entity.HasIndex(e => e.RoleId)
+                    .HasName("IX_AspNetRoleClaims_RoleId");
+
+                entity.Property(e => e.Id).HasColumnType("int(11)");
+
+                entity.Property(e => e.ClaimType).HasDefaultValueSql("'NULL'");
+
+                entity.Property(e => e.ClaimValue).HasDefaultValueSql("'NULL'");
+
+                entity.Property(e => e.RoleId)
+                    .IsRequired()
+                    .IsUnicode(false);
+
+                entity.HasOne(d => d.Role)
+                    .WithMany(p => p.Aspnetroleclaims)
+                    .HasForeignKey(d => d.RoleId)
+                    .HasConstraintName("FK_AspNetRoleClaims_AspNetRoles_RoleId");
+            });
+
+            modelBuilder.Entity<Aspnetroles>(entity =>
+            {
+                entity.ToTable("aspnetroles");
+
+                entity.HasIndex(e => e.NormalizedName)
+                    .HasName("RoleNameIndex")
+                    .IsUnique();
+
+                entity.Property(e => e.Id).IsUnicode(false);
+
+                entity.Property(e => e.ConcurrencyStamp).HasDefaultValueSql("'NULL'");
+
+                entity.Property(e => e.Name)
+                    .HasMaxLength(256)
+                    .IsUnicode(false)
+                    .HasDefaultValueSql("'NULL'");
+
+                entity.Property(e => e.NormalizedName)
+                    .HasMaxLength(256)
+                    .IsUnicode(false)
+                    .HasDefaultValueSql("'NULL'");
+            });
+
+            modelBuilder.Entity<Aspnetuserclaims>(entity =>
+            {
+                entity.ToTable("aspnetuserclaims");
+
+                entity.HasIndex(e => e.UserId)
+                    .HasName("IX_AspNetUserClaims_UserId");
+
+                entity.Property(e => e.Id).HasColumnType("int(11)");
+
+                entity.Property(e => e.ClaimType).HasDefaultValueSql("'NULL'");
+
+                entity.Property(e => e.ClaimValue).HasDefaultValueSql("'NULL'");
+
+                entity.Property(e => e.UserId)
+                    .IsRequired()
+                    .IsUnicode(false);
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.Aspnetuserclaims)
+                    .HasForeignKey(d => d.UserId)
+                    .HasConstraintName("FK_AspNetUserClaims_AspNetUsers_UserId");
+            });
+
+            modelBuilder.Entity<Aspnetuserlogins>(entity =>
+            {
+                entity.HasKey(e => new { e.LoginProvider, e.ProviderKey })
+                    .HasName("PRIMARY");
+
+                entity.ToTable("aspnetuserlogins");
+
+                entity.HasIndex(e => e.UserId)
+                    .HasName("IX_AspNetUserLogins_UserId");
+
+                entity.Property(e => e.LoginProvider)
+                    .HasMaxLength(128)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.ProviderKey)
+                    .HasMaxLength(128)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.ProviderDisplayName).HasDefaultValueSql("'NULL'");
+
+                entity.Property(e => e.UserId)
+                    .IsRequired()
+                    .IsUnicode(false);
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.Aspnetuserlogins)
+                    .HasForeignKey(d => d.UserId)
+                    .HasConstraintName("FK_AspNetUserLogins_AspNetUsers_UserId");
+            });
+
+            modelBuilder.Entity<Aspnetuserroles>(entity =>
+            {
+                entity.HasKey(e => new { e.UserId, e.RoleId })
+                    .HasName("PRIMARY");
+
+                entity.ToTable("aspnetuserroles");
+
+                entity.HasIndex(e => e.RoleId)
+                    .HasName("IX_AspNetUserRoles_RoleId");
+
+                entity.Property(e => e.UserId).IsUnicode(false);
+
+                entity.Property(e => e.RoleId).IsUnicode(false);
+
+                entity.HasOne(d => d.Role)
+                    .WithMany(p => p.Aspnetuserroles)
+                    .HasForeignKey(d => d.RoleId)
+                    .HasConstraintName("FK_AspNetUserRoles_AspNetRoles_RoleId");
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.Aspnetuserroles)
+                    .HasForeignKey(d => d.UserId)
+                    .HasConstraintName("FK_AspNetUserRoles_AspNetUsers_UserId");
+            });
+
+            modelBuilder.Entity<Aspnetusers>(entity =>
+            {
+                entity.ToTable("aspnetusers");
+
+                entity.HasIndex(e => e.NormalizedEmail)
+                    .HasName("EmailIndex");
+
+                entity.HasIndex(e => e.NormalizedUserName)
+                    .HasName("UserNameIndex")
+                    .IsUnique();
+
+                entity.Property(e => e.Id).IsUnicode(false);
+
+                entity.Property(e => e.AccessFailedCount).HasColumnType("int(11)");
+
+                entity.Property(e => e.ConcurrencyStamp).HasDefaultValueSql("'NULL'");
+
+                entity.Property(e => e.Email)
+                    .HasMaxLength(256)
+                    .IsUnicode(false)
+                    .HasDefaultValueSql("'NULL'");
+
+                entity.Property(e => e.EmailConfirmed).HasColumnType("bit(1)");
+
+                entity.Property(e => e.LockoutEnabled).HasColumnType("bit(1)");
+
+                entity.Property(e => e.LockoutEnd).HasDefaultValueSql("'NULL'");
+
+                entity.Property(e => e.NormalizedEmail)
+                    .HasMaxLength(256)
+                    .IsUnicode(false)
+                    .HasDefaultValueSql("'NULL'");
+
+                entity.Property(e => e.NormalizedUserName)
+                    .HasMaxLength(256)
+                    .IsUnicode(false)
+                    .HasDefaultValueSql("'NULL'");
+
+                entity.Property(e => e.PasswordHash).HasDefaultValueSql("'NULL'");
+
+                entity.Property(e => e.PhoneNumber).HasDefaultValueSql("'NULL'");
+
+                entity.Property(e => e.PhoneNumberConfirmed).HasColumnType("bit(1)");
+
+                entity.Property(e => e.SecurityStamp).HasDefaultValueSql("'NULL'");
+
+                entity.Property(e => e.TwoFactorEnabled).HasColumnType("bit(1)");
+
+                entity.Property(e => e.UserName)
+                    .HasMaxLength(256)
+                    .IsUnicode(false)
+                    .HasDefaultValueSql("'NULL'");
+            });
+
+            modelBuilder.Entity<Aspnetusertokens>(entity =>
+            {
+                entity.HasKey(e => new { e.UserId, e.LoginProvider, e.Name })
+                    .HasName("PRIMARY");
+
+                entity.ToTable("aspnetusertokens");
+
+                entity.Property(e => e.UserId).IsUnicode(false);
+
+                entity.Property(e => e.LoginProvider)
+                    .HasMaxLength(128)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Name)
+                    .HasMaxLength(128)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.Value).HasDefaultValueSql("'NULL'");
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.Aspnetusertokens)
+                    .HasForeignKey(d => d.UserId)
+                    .HasConstraintName("FK_AspNetUserTokens_AspNetUsers_UserId");
             });
 
             modelBuilder.Entity<Dialogoservico>(entity =>
@@ -119,7 +328,7 @@ namespace Core
                 entity.ToTable("disponibilidade");
 
                 entity.HasIndex(e => e.IdLocal)
-                    .HasName("fk_Disponibilidade_Local1_idx");
+                    .HasName("fk_disponibilidade_local1_idx");
 
                 entity.Property(e => e.Id)
                     .HasColumnName("id")
@@ -142,7 +351,24 @@ namespace Core
                     .WithMany(p => p.Disponibilidade)
                     .HasForeignKey(d => d.IdLocal)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("fk_Disponibilidade_Local1");
+                    .HasConstraintName("fk_disponibilidade_local1");
+            });
+
+            modelBuilder.Entity<Efmigrationshistory>(entity =>
+            {
+                entity.HasKey(e => e.MigrationId)
+                    .HasName("PRIMARY");
+
+                entity.ToTable("__efmigrationshistory");
+
+                entity.Property(e => e.MigrationId)
+                    .HasMaxLength(150)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.ProductVersion)
+                    .IsRequired()
+                    .HasMaxLength(32)
+                    .IsUnicode(false);
             });
 
             modelBuilder.Entity<Empresa>(entity =>
@@ -368,7 +594,7 @@ namespace Core
                     .IsUnicode(false);
 
                 entity.Property(e => e.StatusSolicitacao)
-                    .HasColumnName("statusSolicitação")
+                    .HasColumnName("statusSolicitacao")
                     .HasColumnType("tinyint(4)")
                     .HasDefaultValueSql("'NULL'");
 
@@ -684,7 +910,7 @@ namespace Core
                     .HasConstraintName("fk_tb_ordemServico_tipoServico");
             });
 
-            modelBuilder.Entity<ServicoMaterial>(entity =>
+            modelBuilder.Entity<Servicomaterial>(entity =>
             {
                 entity.HasKey(e => new { e.IdMaterial, e.IdServico })
                     .HasName("PRIMARY");
@@ -780,7 +1006,7 @@ namespace Core
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TipoServico>(entity =>
+            modelBuilder.Entity<Tiposervico>(entity =>
             {
                 entity.ToTable("tiposervico");
 

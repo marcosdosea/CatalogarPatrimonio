@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Core.Service;
-using Core.DTO;
-using Core;
 
 namespace Core
 {
@@ -11,7 +8,7 @@ namespace Core
         public Servico()
         {
             Dialogoservico = new HashSet<Dialogoservico>();
-            Servicomaterial = new HashSet<ServicoMaterial>();
+            Servicomaterial = new HashSet<Servicomaterial>();
         }
 
         public int Id { get; set; }
@@ -32,8 +29,8 @@ namespace Core
         public virtual Pessoa IdSolicitanteNavigation { get; set; }
         public virtual Statusservico IdStatusServicoNavigation { get; set; }
         public virtual Pessoa IdTecnicoNavigation { get; set; }
-        public virtual TipoServico IdTipoServicoNavigation { get; set; }
+        public virtual Tiposervico IdTipoServicoNavigation { get; set; }
         public virtual ICollection<Dialogoservico> Dialogoservico { get; set; }
-        public virtual ICollection<ServicoMaterial> Servicomaterial { get; set; }
+        public virtual ICollection<Servicomaterial> Servicomaterial { get; set; }
     }
 }
