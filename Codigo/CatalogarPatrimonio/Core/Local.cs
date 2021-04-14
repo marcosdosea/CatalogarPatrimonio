@@ -7,6 +7,7 @@ namespace Core
     {
         public Local()
         {
+            Disponibilidade = new HashSet<Disponibilidade>();
             Patrimonio = new HashSet<Patrimonio>();
             Servico = new HashSet<Servico>();
         }
@@ -16,6 +17,7 @@ namespace Core
         public int IdPredio { get; set; }
 
         public virtual Predio IdPredioNavigation { get; set; }
+        public virtual ICollection<Disponibilidade> Disponibilidade { get; set; }
         public virtual ICollection<Patrimonio> Patrimonio { get; set; }
         public virtual ICollection<Servico> Servico { get; set; }
     }

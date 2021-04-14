@@ -7,7 +7,6 @@ namespace Core
     {
         public Predio()
         {
-            Disponibilidade = new HashSet<Disponibilidade>();
             Local = new HashSet<Local>();
         }
 
@@ -20,7 +19,6 @@ namespace Core
         public int IdEmpresa { get; set; }
 
         public virtual Empresa IdEmpresaNavigation { get; set; }
-        public virtual ICollection<Disponibilidade> Disponibilidade { get; set; }
         public virtual ICollection<Local> Local { get; set; }
     }
 }

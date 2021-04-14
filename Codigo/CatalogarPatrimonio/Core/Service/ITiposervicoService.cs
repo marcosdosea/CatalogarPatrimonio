@@ -6,11 +6,11 @@ namespace Core.Service
 {
     public interface ITiposervicoService
     {
-        public void Editar(TipoServico tiposervico);
-        public int Inserir(TipoServico tiposervico);
+        public void Editar(Tiposervico tiposervico);
+        public int Inserir(Tiposervico tiposervico);
         public void Remover(int idTipoServico);
-        public TipoServico Obter(int idTipoServico);
-        public IEnumerable<TipoServico> ObterPorNome(string nome);
-        public IEnumerable<TipoServico> ObterTodos();
+        public Tiposervico Obter(int idTipoServico);
+        public IEnumerable<Tiposervico> ObterPorNome(string nome);
+        public IEnumerable<Tiposervico> ObterTodos();
     }
 }

@@ -8,7 +8,7 @@ namespace CatalogarPatrimonioWEB.Mappers
     {
         public TiposervicoProfile()
         {
-            CreateMap<TiposervicoModel,TipoServico>().ReverseMap();
+            CreateMap<TiposervicoModel,Tiposervico>().ReverseMap();
         }
     }
 }

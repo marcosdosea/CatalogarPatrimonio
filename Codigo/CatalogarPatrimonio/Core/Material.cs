@@ -9,7 +9,7 @@ namespace Core
         {
             Entradamaterial = new HashSet<Entradamaterial>();
             Estoquematerial = new HashSet<Estoquematerial>();
-            Servicomaterial = new HashSet<ServicoMaterial>();
+            Servicomaterial = new HashSet<Servicomaterial>();
             Transferenciamaterial = new HashSet<Transferenciamaterial>();
         }
 
@@ -23,7 +23,7 @@ namespace Core
         public virtual Tipomaterial IdTipoMaterialNavigation { get; set; }
         public virtual ICollection<Entradamaterial> Entradamaterial { get; set; }
         public virtual ICollection<Estoquematerial> Estoquematerial { get; set; }
-        public virtual ICollection<ServicoMaterial> Servicomaterial { get; set; }
+        public virtual ICollection<Servicomaterial> Servicomaterial { get; set; }
         public virtual ICollection<Transferenciamaterial> Transferenciamaterial { get; set; }
     }
 }
