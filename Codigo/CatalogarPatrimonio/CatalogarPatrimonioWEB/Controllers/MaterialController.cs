@@ -2,9 +2,11 @@
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
 using Core;
+using Core.DTO;
 using CatalogarPatrimonioWEB.Models;
 using System.Collections.Generic;
 using Core.Service;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace CatalogarPatrimonioWEB.Controllers
 {
@@ -16,8 +18,9 @@ namespace CatalogarPatrimonioWEB.Controllers
  
 		// private readonly IMaterialService materialService;
 
-		public MaterialController(IMaterialService materialService, IMapper mapper)
+		public MaterialController(IMaterialService materialService, IMapper mapper, ITipomaterialService tipomaterialService)
 		{
+			_tipomaterialService = tipomaterialService;
 			_materialService = materialService;
 			_mapper = mapper;
 		}
@@ -26,8 +29,7 @@ namespace CatalogarPatrimonioWEB.Controllers
 		public ActionResult Index()
 		{
 			var listaMaterial = _materialService.ObterTodos();
-			var listaMaterialModel = _mapper.Map<List<MaterialModel>>(listaMaterial);
-			return View(listaMaterialModel);
+			return View(listaMaterial);
 		}
 
 		// GET: MaterialController/Details/5
@@ -41,6 +43,8 @@ namespace CatalogarPatrimonioWEB.Controllers
 		// GET: MaterialController/Create
 		public ActionResult Create()
 		{
+			IEnumerable<Tipomaterial> tipoMateriais = _tipomaterialService.ObterTodos();
+			ViewBag.Tipos = new SelectList(tipoMateriais, "Id", "Nome", null);
 			return View();
 		}
 
@@ -60,8 +64,12 @@ namespace CatalogarPatrimonioWEB.Controllers
 		// GET: MaterialController/Edit/5
 		public ActionResult Edit(int id)
 		{
+
+			IEnumerable<Tipomaterial> tipoMateriais = _tipomaterialService.ObterTodos();
 			Material material = _materialService.Obter(id);
 			MaterialModel materialModel = _mapper.Map<MaterialModel>(material);
+
+			ViewBag.Tipos = new SelectList(tipoMateriais, "Id", "Nome", null);
 			return View(materialModel);
 		}
 

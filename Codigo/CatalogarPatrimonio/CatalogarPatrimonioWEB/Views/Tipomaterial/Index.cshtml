@@ -1,18 +1,18 @@
-@model IEnumerable<Core.DTO.MaterialDTO>
+﻿@model IEnumerable<CatalogarPatrimonioWEB.Models.TipomaterialModel>
 
 @{
-    ViewData["Title"] = "Iní­cio Material";
+    ViewData["Title"] = "Início Tipo Material";
     Layout = "_LayoutInside";
 }
 
-<h1>Lista de Materiais</h1>
+<h1>Lista dos Tipos de Material</h1>
 
 <p>
-    <a class="btn btn-primary" asp-action="Create">Novo Material</a>
+    <a class="btn btn-primary" asp-action="Create">Novo Tipo de Material</a>
 </p>
 <div class="card">
     <div class="card-body">
-        <table id="material" class="table table-bordered table-striped dataTable" role="grid">
+        <table id="tipomaterial" class="table table-bordered table-striped dataTable" role="grid">
             <thead>
                 <tr>
                     <th>
@@ -20,9 +20,6 @@
                     </th>
                     <th>
                         @Html.DisplayNameFor(model => model.Nome)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.TipoMaterial)
                     </th>
                     <th>Ação</th>
                 </tr>
@@ -38,9 +35,6 @@
                             @Html.DisplayFor(modelItem => item.Nome)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.TipoMaterial)
-                        </td>
-                        <td>
                             @Html.ActionLink("", "Edit", new { id = item.Id }, new { @class = "fas fa-edit" })
                             @Html.ActionLink("", "Details", new { id = item.Id }, new { @class = "fas fa-eye" })
                             @Html.ActionLink("", "Delete", new { id = item.Id }, new { @class = "fas fa-trash-alt" })
@@ -51,13 +45,10 @@
             <tfoot>
                 <tr>
                     <th>
-                        Código
+                        @Html.DisplayNameFor(model => model.Id)
                     </th>
                     <th>
-                        Nome
-                    </th>
-                    <th>
-                        Tipo
+                        @Html.DisplayNameFor(model => model.Nome)
                     </th>
                     <th>Ação</th>
                 </tr>
@@ -70,16 +61,16 @@
 <script type="text/javascript">
 
     $(document).ready( function () {
-        $('#material').DataTable({
+        $('#tipomaterial').DataTable({
             language: {
                 url: '/DataTables/plugins/pt_br.json'
             },
             columnDefs: [{
-                targets: 3,
+                targets: 2,
                 orderable: false
             }]
         });
-    } ); 
+    } );
 
 </script>
 
