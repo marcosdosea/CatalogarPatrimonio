@@ -12,6 +12,13 @@ namespace CatalogarPatrimonioWEB.Controllers
     {
         IAdicionarGestorService _gestorService;
         IMapper _mapper;
+
+        public AdicionarGestorController(IAdicionarGestorService adicionarGestorService, IMapper mapper)
+        {
+            _gestorService = adicionarGestorService;
+            _mapper = mapper;
+        }
+
         // GET: AdicionarGestorController
         public ActionResult Index()
         {

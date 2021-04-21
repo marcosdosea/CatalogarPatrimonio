@@ -63,7 +63,7 @@ namespace CatalogarPatrimonioWEB.Areas.Identity.Pages.Account
                 ModelState.AddModelError(string.Empty, ErrorMessage);
             }
 
-            returnUrl ??= Url.Content("~/Servico");
+            returnUrl ??= Url.Content("~/");
 
             // Clear the existing external cookie to ensure a clean login process
             await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
@@ -75,7 +75,7 @@ namespace CatalogarPatrimonioWEB.Areas.Identity.Pages.Account
 
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
-            returnUrl ??= Url.Content("~/Servico");
+            // returnUrl ??= Url.Content("~/");
 
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
         
@@ -86,6 +86,20 @@ namespace CatalogarPatrimonioWEB.Areas.Identity.Pages.Account
                 var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
+                    var user = await _userManager.FindByNameAsync(Input.Email);
+                    var roles = await _userManager.GetRolesAsync(user);
+                    
+                    if(roles.Contains("Administrador"))
+                    {
+                        returnUrl ??= Url.Content("~/Empresa");
+                    } else if(roles.Contains("Solicitante") || roles.Contains("Gestor"))
+                    {
+                        returnUrl ??= Url.Content("~/Servico");
+                    } else if (roles.Contains("Almoxarife"))
+                    {
+                        returnUrl ??= Url.Content("~/Almoxarifado");
+                    }
+
                     _logger.LogInformation("Usuário autenticado!");
                     return LocalRedirect(returnUrl);
                 }
