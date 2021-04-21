@@ -5,57 +5,27 @@
             <img src="../../dist/img/user3-128x128.jpg" class="img-circle elevation-2" alt="User Image">
             </div> *@
         <ul class="info">
-            <li><a href="#" class="d-block">Gestor</a></li>
             <li><partial name="_LoginPartial"/></li>
+            <li><span class="text-white">Almoxarife</span></li>
         </ul>
     </div>
 
     <!-- Sidebar Menu -->
     <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
-            <!-- Add icons to the links using the .nav-icon class
-        with font-awesome or any other icon font library -->
             <li class="nav-item">
-                <a href="atenderSolicitacoes.html" class="nav-link active">
-                    <i class="fas fa-concierge-bell"></i>
+                <a href="@Url.Action("Index", "Almoxarifado")" class="nav-link active">
+                    <i class="fas fa-boxes"></i>
                     <p>
-                        Atender Solicitações
+                        Estoque
                     </p>
                 </a>
             </li>
         </ul>
 
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
-            <!-- Add icons to the links using the .nav-icon class
-        with font-awesome or any other icon font library -->
             <li class="nav-item">
-                <a href="solicitarServico.html" class="nav-link active">
-                    <i class="fas fa-tasks"></i>
-                    <p>
-                        Solicitar Serviço
-                    </p>
-                </a>
-            </li>
-        </ul>
-
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
-            <!-- Add icons to the links using the .nav-icon class
-            with font-awesome or any other icon font library -->
-            <li class="nav-item">
-                <a href="listaPessoa.html" class="nav-link active">
-                    <i class="fas fa-user"></i>
-                    <p>
-                        Lista de Pessoas
-                    </p>
-                </a>
-            </li>
-        </ul>
-
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
-            <!-- Add icons to the links using the .nav-icon class
-            with font-awesome or any other icon font library -->
-            <li class="nav-item">
-                <a href="listaTransferencias.html" class="nav-link active">
+                <a href="@Url.Action("", "")" class="nav-link active">
                     <i class="fas fa-exchange-alt"></i>
                     <p>
                         Transferir Material
@@ -65,10 +35,8 @@
         </ul>
 
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
-            <!-- Add icons to the links using the .nav-icon class
-            with font-awesome or any other icon font library -->
             <li class="nav-item">
-                <a href="listaEntradaMaterial.html" class="nav-link active">
+                <a href="@Url.Action("Index", "EntradaMaterial")" class="nav-link active">
                     <i class="fas fa-box"></i>
                     <p>
                         Entrada de Material
@@ -78,24 +46,52 @@
         </ul>
 
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
-            <!-- Add icons to the links using the .nav-icon class
-                with font-awesome or any other icon font library -->
             <li class="nav-item">
-                <a href="listaEstoque.html" class="nav-link active">
-                    <i class="fas fa-warehouse"></i>
+                <a href="@Url.Action("Index", "Material")" class="nav-link active">
+                    <i class="fas fa-box-open"></i>
                     <p>
-                        Lista de Almoxarifados
+                        Material
                     </p>
                 </a>
             </li>
         </ul>
 
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
+            <li class="nav-item">
+                <a href="@Url.Action("Index", "Fornecedor")" class="nav-link active">
+                    <i class="fas fa-arrow-right"></i>
+                    <p>
+                        Fornecedor
+                    </p>
+                </a>
+            </li>
+        </ul>
 
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
-            <!-- Add icons to the links using the .nav-icon class
-        with font-awesome or any other icon font library -->
             <li class="nav-item">
-                <a href="consultarHistoricoPatrimonio.html" class="nav-link active">
+                <a href="@Url.Action("Index", "Local")" class="nav-link active">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>
+                        Locais
+                    </p>
+                </a>
+            </li>
+        </ul>
+
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
+            <li class="nav-item">
+                <a href="@Url.Action("Index", "Servico")" class="nav-link active">
+                    <i class="fas fa-bell"></i>
+                    <p>
+                        Solicitar Serviço
+                    </p>
+                </a>
+            </li>
+        </ul>
+
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
+            <li class="nav-item">
+                <a href="@Url.Action("", "")" class="nav-link active">
                     <i class="fas fa-history"></i>
                     <p>
                         Histórico de Patrimônio
@@ -106,114 +102,12 @@
 
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
             <li class="nav-item">
-                <a href="listaPatrimonios.html" class="nav-link active">
-                    <i class="fas fa-globe"></i>
-                    <p>
-                        Patrimônios
-                    </p>
-                </a>
-            </li>
-        </ul>
-
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
-            <!-- Add icons to the links using the .nav-icon class
-        with font-awesome or any other icon font library -->
-            <li class="nav-item">
-                <a href="estoque.html" class="nav-link active">
-                    <i class="fas fa-boxes"></i>
-                    <p>
-                        Estoque
-                    </p>
-                </a>
-            </li>
-        </ul>
-
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
-            <!-- Add icons to the links using the .nav-icon class
-        with font-awesome or any other icon font library -->
-            <li class="nav-item">
-                <a href="materialHome.html" class="nav-link active">
-                    <i class="fas fa-box-open"></i>
-                    <p>
-                        Material
-                    </p>
-                </a>
-            </li>
-        </ul>
-
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
-            <!-- Add icons to the links using the .nav-icon class
-        with font-awesome or any other icon font library -->
-            <li class="nav-item">
-                <a href="listaFornecedor.html" class="nav-link active">
-                    <i class="fas fa-arrow-right"></i>
-                    <p>
-                        Fornecedor
-                    </p>
-                </a>
-            </li>
-        </ul>
-
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
-            <!-- Add icons to the links using the .nav-icon class
-        with font-awesome or any other icon font library -->
-            <li class="nav-item">
-                <a href="listaPredios.html" class="nav-link active">
-                    <i class="fas fa-building"></i>
-                    <p>
-                        Prédios
-                    </p>
-                </a>
-            </li>
-        </ul>
-
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
-            <!-- Add icons to the links using the .nav-icon class
-        with font-awesome or any other icon font library -->
-            <li class="nav-item">
-                <a href="listaLocal.html" class="nav-link active">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>
-                        Locais
-                    </p>
-                </a>
-            </li>
-        </ul>
-
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
-            <!-- Add icons to the links using the .nav-icon class
-            with font-awesome or any other icon font library -->
-            <li class="nav-item">
-                <a href="listaServicos.html" class="nav-link active">
-                    <i class="fas fa-tools"></i>
-                    <p>
-                        Tipo de Serviço
-                    </p>
-                </a>
-            </li>
-        </ul>
-
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
-            <li class="nav-item">
-                <a href="listaTipoPatrimonio.html" class="nav-link active">
-                    <i class="fas fa-atlas"></i>
-                    <p>
-                        Tipo do Patrimônio
-                    </p>
-                </a>
-            </li>
-        </ul>
-
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
-            <!-- Add icons to the links using the .nav-icon class
-        with font-awesome or any other icon font library -->
-            <li class="nav-item">
-                <a href="../../indexGestor.html" class="nav-link active">
-                    <i class="fas fa-sign-out-alt"></i>
-                    <p>
+                <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                    <button type="submit" class="btn btn-danger btn-block">
+                        <i class="fas fa-sign-out-alt"></i>
                         Sair
-                    </p>
-                </a>
+                    </button>
+                </form>
             </li>
         </ul>
     </nav>

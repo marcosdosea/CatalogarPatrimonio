@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace CatalogarPatrimonioWEB.Controllers
 {
-    [Authorize(Roles = "Administrador")]
+    [Authorize(Roles = "Gestor")]
     public class TipopatrimonioController : Controller
     {
         ITipopatrimonioService _tipoPatrimonioService;

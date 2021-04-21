@@ -92,11 +92,18 @@
             <!-- sidebar -->
             @if(User.IsInRole("Administrador"))
             {
-                @Html.Partial("_Administrador")
+                <partial name = "_Administrador"/>
             } else if (User.IsInRole("Solicitante"))
             {
-                @Html.Partial("_Solicitante")
+                <partial name = "_Solicitante"/>
+            } else if (User.IsInRole("Gestor"))
+            {
+                <partial name = "_Gestor"/>
+            } else if (User.IsInRole("Almoxarife"))
+            {
+                <partial name = "_Almoxarife"/>
             }
+
             <!-- /.sidebar -->
         </aside>
 
