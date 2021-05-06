@@ -90,6 +90,9 @@ namespace CatalogarPatrimonioWEB.Controllers
 		public ActionResult Delete(int id)
 		{
 			Material material = _materialService.Obter(id);
+			Tipomaterial tipoMaterial = _tipomaterialService.Obter(material.IdTipoMaterial);
+			ViewBag.Tipos = tipoMaterial.Nome;
+
 			MaterialModel materialModel = _mapper.Map<MaterialModel>(material);
 			return View(materialModel);
 		}
