@@ -21,7 +21,7 @@ namespace CatalogarPatrimonioWEB.Controllers
             _mapper = mapper;
         }
 
-        // GET: TipoServicoController
+        // GET: TiposervicoController
         public ActionResult Index()
         {
             var listaTiposervico = _tiposervicoService.ObterTodos();
@@ -29,29 +29,29 @@ namespace CatalogarPatrimonioWEB.Controllers
             return View(listaTiposervicoModel);
         }
 
-        // GET: TipoServicoController/Details/5
+        // GET: TiposervicoController/Details/5
         public ActionResult Details(int id)
         {
-            TipoServico tiposervico = _tiposervicoService.Obter(id);
+            Tiposervico tiposervico = _tiposervicoService.Obter(id);
             TiposervicoModel tiposervicoModel = _mapper.Map<TiposervicoModel>(tiposervico);
             return View(tiposervicoModel);
         }
 
-        // GET: TipoServicoController/Create
+        // GET: TiposervicoController/Create
         public ActionResult Create()
         {
             return View();
         }
 
 
-        // POST: TipoServicoController/Create
+        // POST: TiposervicoController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(TiposervicoModel tiposervicoModel)
         {
             if (ModelState.IsValid)
             {
-                var tiposervico = _mapper.Map<TipoServico>(tiposervicoModel);
+                var tiposervico = _mapper.Map<Tiposervico>(tiposervicoModel);
                 _tiposervicoService.Inserir(tiposervico);
             }
             return RedirectToAction(nameof(Index));
@@ -60,7 +60,7 @@ namespace CatalogarPatrimonioWEB.Controllers
         // GET: TiposervicoController/Edit/5
         public ActionResult Edit(int id)
         {
-            TipoServico tiposervico = _tiposervicoService.Obter(id);
+            Tiposervico tiposervico = _tiposervicoService.Obter(id);
             TiposervicoModel tiposervicoModel = _mapper.Map<TiposervicoModel>(tiposervico);
             return View(tiposervicoModel);
         }
@@ -72,7 +72,7 @@ namespace CatalogarPatrimonioWEB.Controllers
         {
             if (ModelState.IsValid)
             {
-                var tiposervico = _mapper.Map<TipoServico>(tiposervicoModel);
+                var tiposervico = _mapper.Map<Tiposervico>(tiposervicoModel);
                 _tiposervicoService.Editar(tiposervico);
             }
             return RedirectToAction(nameof(Index));
@@ -81,7 +81,7 @@ namespace CatalogarPatrimonioWEB.Controllers
         // GET: TiposervicoController/Delete/5
         public ActionResult Delete(int id)
         {
-            TipoServico tiposervico = _tiposervicoService.Obter(id);
+            Tiposervico tiposervico = _tiposervicoService.Obter(id);
             TiposervicoModel tiposervicoModel = _mapper.Map<TiposervicoModel>(tiposervico);
             return View(tiposervicoModel);
         }

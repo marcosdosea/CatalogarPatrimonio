@@ -36,6 +36,10 @@ namespace CatalogarPatrimonioWEB.Controllers
 		public ActionResult Details(int id)
 		{
 			Material material = _materialService.Obter(id);
+			Tipomaterial tipomaterial = _tipomaterialService.Obter(material.IdTipoMaterial);
+
+			ViewBag.Tipos = tipomaterial.Nome;
+
 			MaterialModel materialModel = _mapper.Map<MaterialModel>(material);
 			return View(materialModel);
 		}
@@ -90,6 +94,9 @@ namespace CatalogarPatrimonioWEB.Controllers
 		public ActionResult Delete(int id)
 		{
 			Material material = _materialService.Obter(id);
+			Tipomaterial tipoMaterial = _tipomaterialService.Obter(material.IdTipoMaterial);
+			ViewBag.Tipos = tipoMaterial.Nome;
+
 			MaterialModel materialModel = _mapper.Map<MaterialModel>(material);
 			return View(materialModel);
 		}

@@ -79,6 +79,7 @@ namespace CatalogarPatrimonioWEB.Areas.Identity.Pages.Account
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {
+                    var result1 = await _userManager.AddToRoleAsync(user, "Solicitante");
                     _logger.LogInformation("Você criou uma nova conta.");
 
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
