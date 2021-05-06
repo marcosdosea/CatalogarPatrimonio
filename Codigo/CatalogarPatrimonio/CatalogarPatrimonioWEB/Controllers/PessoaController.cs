@@ -1,14 +1,14 @@
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
 using Core;
 using CatalogarPatrimonioWEB.Models;
 using System.Collections.Generic;
 using Core.Service;
-using System;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CatalogarPatrimonioWEB.Controllers
 {
+    [Authorize(Roles = "Administrador, Gestor")]
     public class PessoaController : Controller
     {
         IPessoaService _pessoaService;

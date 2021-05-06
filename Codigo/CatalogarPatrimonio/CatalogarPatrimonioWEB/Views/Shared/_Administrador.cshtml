@@ -1,0 +1,48 @@
+<div class="sidebar">
+    <!-- Sidebar user panel (optional) -->
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        @* <div class="image">
+            <img src="../../dist/img/user3-128x128.jpg" class="img-circle elevation-2" alt="User Image">
+            </div> *@
+        <ul class="info">
+            <li><partial name="_LoginPartial"/></li>
+            <li><span class="text-white">Administrador</span></li>
+        </ul>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
+            <li class="nav-item">
+                <a href="@Url.Action("Index", "Empresa")" class="nav-link active">
+                    <i class="fas fa-university"></i>
+                    <p>
+                        Listar Empresas
+                    </p>
+                </a>
+            </li>
+        </ul>
+
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
+            <li class="nav-item">
+                <a href="@Url.Action("Index", "Pessoa")" class="nav-link active">
+                    <i class="fas fa-tasks"></i>
+                    <p>
+                        Listar Pessoas
+                    </p>
+                </a>
+            </li>
+        </ul>
+
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" data-accordion="false">
+            <li class="nav-item">
+                <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                    <button type="submit" class="btn btn-danger btn-block">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Sair
+                    </button>
+                </form>
+            </li>
+        </ul>
+    </nav>
+</div>

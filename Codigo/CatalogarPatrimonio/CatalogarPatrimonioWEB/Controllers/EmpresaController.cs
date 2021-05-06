@@ -1,13 +1,14 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using AutoMapper;
 using Core;
 using CatalogarPatrimonioWEB.Models;
 using System.Collections.Generic;
 using Core.Service;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CatalogarPatrimonioWEB.Controllers
 {
+    [Authorize(Roles = "Administrador")]
     public class EmpresaController : Controller
     {
         IEmpresaService _empresaService;

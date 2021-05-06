@@ -1,10 +1,8 @@
 using Core;
 using Core.DTO;
 using Core.Service;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Service
 {
@@ -17,42 +15,42 @@ namespace Service
             _context = context;
         }
 
-        public int Inserir(TipoServico tiposervico)
+        public int Inserir(Tiposervico tiposervico)
         {
             _context.Add(tiposervico);
             _context.SaveChanges();
             return tiposervico.Id;
         }
 
-        public void Editar(TipoServico tiposervico)
+        public void Editar(Tiposervico tiposervico)
         {
             _context.Update(tiposervico);
             _context.SaveChanges();
         }
 
-        public void Remover(int idTipoServico)
+        public void Remover(int idTiposervico)
         {
-            var _tiposervico = _context.TipoServico.Find(idTipoServico);
-            _context.TipoServico.Remove(_tiposervico);
+            var _tiposervico = _context.Tiposervico.Find(idTiposervico);
+            _context.Tiposervico.Remove(_tiposervico);
             _context.SaveChanges();
         }
 
-        public int GetNumeroTipoServico()
+        public int GetNumeroTiposervico()
         {
-            return _context.TipoServico.Count();
+            return _context.Tiposervico.Count();
         }
 
-        private IQueryable<TipoServico> GetQuery()
+        private IQueryable<Tiposervico> GetQuery()
         {
-            IQueryable<TipoServico> tb_tiposervico = _context.TipoServico;
+            IQueryable<Tiposervico> tb_tiposervico = _context.Tiposervico;
             var query = from tiposervico in tb_tiposervico
                         select tiposervico;
             return query;
         }
 
-        public IEnumerable<TipoServico> ObterPorNome(string nome)
+        public IEnumerable<Tiposervico> ObterPorNome(string nome)
         {
-            IEnumerable<TipoServico> tiposervico= GetQuery()
+            IEnumerable<Tiposervico> tiposervico= GetQuery()
                 .Where(tiposervicoModel => tiposervicoModel.Nome.
                 StartsWith(nome));
             return tiposervico;
@@ -60,7 +58,7 @@ namespace Service
 
         public IEnumerable<TiposervicoDTO> ObterPorNomeOrdenadoDescending(string nome)
         {
-            IQueryable<TipoServico> tb_tiposervico = _context.TipoServico;
+            IQueryable<Tiposervico> tb_tiposervico = _context.Tiposervico;
             var query = from tiposervico in tb_tiposervico
                         where nome.StartsWith(nome)
                         orderby tiposervico.Nome descending
@@ -71,14 +69,14 @@ namespace Service
             return query;
         }
 
-        public IEnumerable<TipoServico> ObterTodos()
+        public IEnumerable<Tiposervico> ObterTodos()
         {
             return GetQuery();
         }
 
-        public TipoServico Obter(int idTipoServico)
+        public Tiposervico Obter(int idTiposervico)
         {
-            IEnumerable<TipoServico> tiposervico = GetQuery().Where(tiposervicoModel => tiposervicoModel.Id.Equals(idTipoServico));
+            IEnumerable<Tiposervico> tiposervico = GetQuery().Where(tiposervicoModel => tiposervicoModel.Id.Equals(idTiposervico));
 
             return tiposervico.ElementAtOrDefault(0);
         }
