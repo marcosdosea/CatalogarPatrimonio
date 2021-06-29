@@ -8,7 +8,7 @@ namespace CatalogarPatrimonioWEB.Models
 {
 	public class LocalModel
 	{		
-		[Display(Name = "IdLocal")]
+		[Display(Name = "Local")]
 		[Key]
 		[Required(ErrorMessage = "Id do local é obrigatório")]
 		public int Id { get; set; }
