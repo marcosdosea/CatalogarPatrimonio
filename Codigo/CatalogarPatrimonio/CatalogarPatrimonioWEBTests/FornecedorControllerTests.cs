@@ -1,4 +1,4 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+ï»¿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using Moq;
 using Core;
@@ -11,28 +11,28 @@ using CatalogarPatrimonioWEB.Models;
 namespace CatalogarPatrimonioWEB.Controllers.Tests
 {
 	[TestClass()]
-	public class MaterialControllerTests
+	public class FornecedorControllerTests
 	{
-		private static MaterialController controller;
+		private static FornecedorController controller;
 
 		[ClassInitialize]
 		public static void Initialize(TestContext testContext)
 		{
 			// Arrange
-			var mockService = new Mock<IMaterialService>();
+			var mockService = new Mock<IFornecedorService>();
 
 			IMapper mapper = new MapperConfiguration(cfg =>
-				cfg.AddProfile(new MaterialProfile())).CreateMapper();
+				cfg.AddProfile(new FornecedorProfile())).CreateMapper();
 
 			mockService.Setup(service => service.ObterTodos())
-				.Returns(GetTestMaterial());
+				.Returns(GetTestFornecedor());
 			mockService.Setup(service => service.Obter(1))
-				.Returns(GetTargetMaterial());
-			mockService.Setup(service => service.Editar(It.IsAny<Material>()))
+				.Returns(GetTargetFornecedor());
+			mockService.Setup(service => service.Editar(It.IsAny<Fornecedor>()))
 				.Verifiable();
-			mockService.Setup(service => service.Inserir(It.IsAny<Material>()))
+			mockService.Setup(service => service.Inserir(It.IsAny<Fornecedor>()))
 				.Verifiable();
-			controller = new MaterialController(mockService.Object, mapper);
+			controller = new FornecedorController(mockService.Object, mapper);
 		}
 
 		[TestMethod()]
@@ -44,8 +44,8 @@ namespace CatalogarPatrimonioWEB.Controllers.Tests
 			// Assert
 			Assert.IsInstanceOfType(result, typeof(ViewResult));
 			ViewResult viewResult = (ViewResult)result;
-			Assert.IsInstanceOfType(viewResult.ViewData.Model, typeof(List<MaterialModel>));
-			List<MaterialModel> lista = (List<MaterialModel>)viewResult.ViewData.Model;
+			Assert.IsInstanceOfType(viewResult.ViewData.Model, typeof(List<FornecedorModel>));
+			List<FornecedorModel> lista = (List<FornecedorModel>)viewResult.ViewData.Model;
 			Assert.AreEqual(3, lista.Count);
 		}
 
@@ -58,9 +58,9 @@ namespace CatalogarPatrimonioWEB.Controllers.Tests
 			// Assert
 			Assert.IsInstanceOfType(result, typeof(ViewResult));
 			ViewResult viewResult = (ViewResult)result;
-			Assert.IsInstanceOfType(viewResult.ViewData.Model, typeof(MaterialModel));
-			MaterialModel MaterialModel = (MaterialModel)viewResult.ViewData.Model;
-			Assert.AreEqual("Eletrônico", MaterialModel.Nome);
+			Assert.IsInstanceOfType(viewResult.ViewData.Model, typeof(FornecedorModel));
+			FornecedorModel FornecedorModel = (FornecedorModel)viewResult.ViewData.Model;
+			Assert.AreEqual("Wagner", FornecedorModel.Nome);
 		}
 
 		[TestMethod()]
@@ -76,7 +76,7 @@ namespace CatalogarPatrimonioWEB.Controllers.Tests
 		public void CreateTest_Valid()
 		{
 			// Act
-			var result = controller.Create(GetNewMaterial());
+			var result = controller.Create(GetNewFornecedor());
 
 			// Assert
 			Assert.IsInstanceOfType(result, typeof(RedirectToActionResult));
@@ -92,7 +92,7 @@ namespace CatalogarPatrimonioWEB.Controllers.Tests
 			controller.ModelState.AddModelError("Nome", "Campo requerido");
 
 			// Act
-			var result = controller.Create(GetNewMaterial());
+			var result = controller.Create(GetNewFornecedor());
 
 			// Assert
 			Assert.AreEqual(1, controller.ModelState.ErrorCount);
@@ -111,16 +111,16 @@ namespace CatalogarPatrimonioWEB.Controllers.Tests
 			// Assert
 			Assert.IsInstanceOfType(result, typeof(ViewResult));
 			ViewResult viewResult = (ViewResult)result;
-			Assert.IsInstanceOfType(viewResult.ViewData.Model, typeof(MaterialModel));
-			MaterialModel MaterialModel = (MaterialModel)viewResult.ViewData.Model;
-			Assert.AreEqual("Lâmpada", MaterialModel.Nome);
+			Assert.IsInstanceOfType(viewResult.ViewData.Model, typeof(FornecedorModel));
+			FornecedorModel FornecedorModel = (FornecedorModel)viewResult.ViewData.Model;
+			Assert.AreEqual("Wagner", FornecedorModel.Nome);
 		}
 
 		[TestMethod()]
 		public void EditTest_Get()
 		{
 			// Act
-			var result = controller.Edit(GetTargetMaterialModel().Id, GetTargetMaterialModel());
+			var result = controller.Edit(GetTargetFornecedorModel().IdFornecedor, GetTargetFornecedorModel());
 
 			// Assert
 			Assert.IsInstanceOfType(result, typeof(RedirectToActionResult));
@@ -138,16 +138,16 @@ namespace CatalogarPatrimonioWEB.Controllers.Tests
 			// Assert
 			Assert.IsInstanceOfType(result, typeof(ViewResult));
 			ViewResult viewResult = (ViewResult)result;
-			Assert.IsInstanceOfType(viewResult.ViewData.Model, typeof(MaterialModel));
-			MaterialModel MaterialModel = (MaterialModel)viewResult.ViewData.Model;
-			Assert.AreEqual("Lâmpada", MaterialModel.Nome);
+			Assert.IsInstanceOfType(viewResult.ViewData.Model, typeof(FornecedorModel));
+			FornecedorModel FornecedorModel = (FornecedorModel)viewResult.ViewData.Model;
+			Assert.AreEqual("Wagner", FornecedorModel.Nome);
 		}
 
 		[TestMethod()]
 		public void DeleteTest_Get()
 		{
 			// Act
-			var result = controller.Delete(GetTargetMaterialModel().Id, GetTargetMaterialModel());
+			var result = controller.Delete(GetTargetFornecedorModel().IdFornecedor, GetTargetFornecedorModel());
 
 			// Assert
 			Assert.IsInstanceOfType(result, typeof(RedirectToActionResult));
@@ -156,51 +156,51 @@ namespace CatalogarPatrimonioWEB.Controllers.Tests
 			Assert.AreEqual("Index", redirectToActionResult.ActionName);
 		}
 
-		private static MaterialModel GetNewMaterial()
+		private static FornecedorModel GetNewFornecedor()
 		{
-			return new MaterialModel
+			return new FornecedorModel
 			{
-				Id = 4,
-				Nome = "Lâmpada",
+				IdFornecedor = 4,
+				Nome = "Wagner",
 			};
 
 		}
-		private static Material GetTargetMaterial()
+		private static Fornecedor GetTargetFornecedor()
 		{
-			return new Material
+			return new Fornecedor
 			{
 				Id = 1,
-				Nome = "Lâmpada",
+				Nome = "Wagner",
 			};
 		}
 
-		private static MaterialModel GetTargetMaterial()
+		private static FornecedorModel GetTargetFornecedorModel()
 		{
-			return new MaterialModel
+			return new FornecedorModel
 			{
-				Id = 2,
-				Nome = "Lâmpada",
+				IdFornecedor = 2,
+				Nome = "Rafael",
 			};
 		}
 
-		private static IEnumerable<Material> GetTestMateriais()
+		private static IEnumerable<Fornecedor> GetTestFornecedor()
 		{
-			return new List<Material>
+			return new List<Fornecedor>
 			{
-				new Material
+				new Fornecedor
 				{
 					Id = 1,
-					Nome = "Alicate",
+					Nome = "Daniel",
 				},
-				new Material
+				new Fornecedor
 				{
 					Id = 2,
-					Nome = "Fiação",
+					Nome = "Junior",
 				},
-				new Material
+				new Fornecedor
 				{
 					Id = 3,
-					Nome = "Interruptor",
+					Nome = "Liliane",
 				},
 			};
 		}
