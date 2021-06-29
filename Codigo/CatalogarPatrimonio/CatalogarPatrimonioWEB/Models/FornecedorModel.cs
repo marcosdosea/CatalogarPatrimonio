@@ -29,6 +29,9 @@ namespace CatalogarPatrimonioWEB.Models
 		[StringLength(45, MinimumLength = 5)]
 		public string Endereco { get; set; }
 
-
-	}
+        public static explicit operator FornecedorModel(object v)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }
