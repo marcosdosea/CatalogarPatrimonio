@@ -25,7 +25,7 @@ namespace CatalogarPatrimonioWEB.Controllers.Tests
 				cfg.AddProfile(new FornecedorProfile())).CreateMapper();
 
 			mockService.Setup(service => service.ObterTodos())
-				.Returns(GetTestFornecedor());
+				.Returns(GetTestFornecedores());
 			mockService.Setup(service => service.Obter(1))
 				.Returns(GetTargetFornecedor());
 			mockService.Setup(service => service.Editar(It.IsAny<Fornecedor>()))
@@ -183,7 +183,7 @@ namespace CatalogarPatrimonioWEB.Controllers.Tests
 			};
 		}
 
-		private static IEnumerable<Fornecedor> GetTestFornecedor()
+		private static IEnumerable<Fornecedor> GetTestFornecedores()
 		{
 			return new List<Fornecedor>
 			{
