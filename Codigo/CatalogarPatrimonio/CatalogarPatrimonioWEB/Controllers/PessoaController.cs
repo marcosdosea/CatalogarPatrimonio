@@ -5,6 +5,7 @@ using CatalogarPatrimonioWEB.Models;
 using System.Collections.Generic;
 using Core.Service;
 using Microsoft.AspNetCore.Authorization;
+using System;
 
 namespace CatalogarPatrimonioWEB.Controllers
 {
@@ -76,6 +77,11 @@ namespace CatalogarPatrimonioWEB.Controllers
                 _pessoaService.Editar(pessoa);
             }
             return RedirectToAction(nameof(Index));
+        }
+
+        public object Create(TipopatrimonioModel tipopatrimonioModel)
+        {
+            throw new NotImplementedException();
         }
 
         // GET: PessoaController/Delete/5

@@ -15,7 +15,7 @@ namespace CatalogarPatrimonioWEB.Models
 		[Display(Name = "Nome")]
 		[StringLength(45, MinimumLength = 5)]
 		public string nome { get; set; }
-
+        public string Nome { get; set; }
         [Display(Name = "Data de Nascimento")]
         [DataType(DataType.Date)]
         public DateTime dataNascimento { get; set; }
