@@ -5,6 +5,7 @@ using CatalogarPatrimonioWEB.Models;
 using System.Collections.Generic;
 using Core.Service;
 using Microsoft.AspNetCore.Authorization;
+using System;
 
 namespace CatalogarPatrimonioWEB.Controllers
 {
@@ -95,6 +96,11 @@ namespace CatalogarPatrimonioWEB.Controllers
         {
             _empresaService.Remover(id);
             return RedirectToAction(nameof(Index));
+        }
+
+        public object Edit(object id, object v)
+        {
+            throw new NotImplementedException();
         }
     }
 }
