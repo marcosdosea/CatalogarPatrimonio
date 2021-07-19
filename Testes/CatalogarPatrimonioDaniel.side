@@ -1,0 +1,658 @@
+{
+  "id": "a7e1a3c6-362f-4064-8ea2-842f1ac9b581",
+  "version": "2.0",
+  "name": "CatalogarPatrimonioDaniel",
+  "url": "https://localhost:5001",
+  "tests": [{
+    "id": "af8198ed-d0d3-4bcf-a6bd-c8ef879664ba",
+    "name": "Inserir Tipo Patrimonio Válido",
+    "commands": [{
+      "id": "e34e43f6-5154-4552-ab12-b08114c585fb",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:5001/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "af98265f-05ed-4898-8c1e-5b1972ea9841",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1053",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9b2fa8db-b134-49a6-ab9f-c2995457e8a9",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["linkText=Acessar Sistema", "linkText"],
+        ["css=#login", "css:finder"],
+        ["xpath=//a[contains(text(),'Acessar Sistema')]", "xpath:link"],
+        ["xpath=//a[@id='login']", "xpath:attributes"],
+        ["xpath=//header[@id='header']/div/nav/ul/li[9]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Identity/Account/Login')]", "xpath:href"],
+        ["xpath=//li[9]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Acessar Sistema')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d20591c8-2b43-43ae-a38a-e773e83886b2",
+      "comment": "",
+      "command": "click",
+      "target": "id=Input_Email",
+      "targets": [
+        ["id=Input_Email", "id"],
+        ["name=Input.Email", "name"],
+        ["css=#Input_Email", "css:finder"],
+        ["xpath=//input[@id='Input_Email']", "xpath:attributes"],
+        ["xpath=//form[@id='account']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2ed358c1-7ac7-49af-a3a0-872959e46a84",
+      "comment": "",
+      "command": "type",
+      "target": "id=Input_Email",
+      "targets": [
+        ["id=Input_Email", "id"],
+        ["name=Input.Email", "name"],
+        ["css=#Input_Email", "css:finder"],
+        ["xpath=//input[@id='Input_Email']", "xpath:attributes"],
+        ["xpath=//form[@id='account']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "daniel17sants@gmail.com"
+    }, {
+      "id": "6c2a0a61-6f2c-4bc8-88da-9971e25a3b11",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=Input.Password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='account']/div[3]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf06c364-dd38-412a-87ba-da73801a615f",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=Input.Password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='account']/div[3]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": "D@n123456"
+    }, {
+      "id": "bf4997a3-dab4-4b3f-a674-e7607d2b5be5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='account']/div[6]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Entrar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e1d0baa5-deef-427d-a489-26efd81407c9",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Tipo do Patrimônio",
+      "targets": [
+        ["linkText=Tipo do Patrimônio", "linkText"],
+        ["css=.nav:nth-child(15) .nav-link", "css:finder"],
+        ["xpath=//a[contains(@href, '/Tipopatrimonio')]", "xpath:href"],
+        ["xpath=//ul[15]/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4345aca7-7b23-4e2d-bc91-6c702a15289a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Novo Tipo de Patrimônio",
+      "targets": [
+        ["linkText=Novo Tipo de Patrimônio", "linkText"],
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//a[contains(text(),'Novo Tipo de Patrimônio')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Tipopatrimonio/Create')]", "xpath:href"],
+        ["xpath=//p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Novo Tipo de Patrimônio')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9718d839-725f-4e56-a174-66180838b87f",
+      "comment": "",
+      "command": "click",
+      "target": "id=Nome",
+      "targets": [
+        ["id=Nome", "id"],
+        ["name=Nome", "name"],
+        ["css=#Nome", "css:finder"],
+        ["xpath=//input[@id='Nome']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e7fd12e0-c419-4f2f-899b-b238fc688c75",
+      "comment": "",
+      "command": "type",
+      "target": "id=Nome",
+      "targets": [
+        ["id=Nome", "id"],
+        ["name=Nome", "name"],
+        ["css=#Nome", "css:finder"],
+        ["xpath=//input[@id='Nome']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "Elétrico"
+    }, {
+      "id": "1932291d-cfaf-4f1a-8964-fba1bf4bc29a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary:nth-child(1)",
+      "targets": [
+        ["css=.btn-primary:nth-child(1)", "css:finder"],
+        ["xpath=//input[@value='Salvar']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5027bbfc-9864-48b8-b881-f85a659b558a",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "b22265af-9cb4-4659-ac09-987ba05e1a5f",
+    "name": "Inserir Tipo Patrimonio Inválido",
+    "commands": [{
+      "id": "3bc45df9-c52d-4f1c-a452-55bde8b80646",
+      "comment": "",
+      "command": "open",
+      "target": "https://localhost:5001/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "96ea3ce2-7b5c-49e2-9867-43fc464ca5fc",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1053",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b9768d99-bbe0-4660-8dfb-22a111fc714b",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["linkText=Acessar Sistema", "linkText"],
+        ["css=#login", "css:finder"],
+        ["xpath=//a[contains(text(),'Acessar Sistema')]", "xpath:link"],
+        ["xpath=//a[@id='login']", "xpath:attributes"],
+        ["xpath=//header[@id='header']/div/nav/ul/li[9]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Identity/Account/Login')]", "xpath:href"],
+        ["xpath=//li[9]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Acessar Sistema')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cd6735d2-92d6-4d2a-8bba-57d88e6e70e6",
+      "comment": "",
+      "command": "click",
+      "target": "id=Input_Email",
+      "targets": [
+        ["id=Input_Email", "id"],
+        ["name=Input.Email", "name"],
+        ["css=#Input_Email", "css:finder"],
+        ["xpath=//input[@id='Input_Email']", "xpath:attributes"],
+        ["xpath=//form[@id='account']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "36e565d9-ec75-4b2b-8f5c-5f3b8cb50917",
+      "comment": "",
+      "command": "type",
+      "target": "id=Input_Email",
+      "targets": [
+        ["id=Input_Email", "id"],
+        ["name=Input.Email", "name"],
+        ["css=#Input_Email", "css:finder"],
+        ["xpath=//input[@id='Input_Email']", "xpath:attributes"],
+        ["xpath=//form[@id='account']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "daniel17sants@gmail.com"
+    }, {
+      "id": "9aa95638-2bfc-46aa-aae6-500f3c2aaf0e",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=Input.Password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='account']/div[3]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "57e8308b-1d8d-4e06-9b73-38da655ccf87",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=Input.Password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='account']/div[3]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": "D@n123456"
+    }, {
+      "id": "fbb79206-2570-4a45-ab17-f106352839a2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='account']/div[6]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Entrar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c3d1ed7-d324-4971-93d8-1b6cc446ac89",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Tipo do Patrimônio",
+      "targets": [
+        ["linkText=Tipo do Patrimônio", "linkText"],
+        ["css=.nav:nth-child(15) .nav-link", "css:finder"],
+        ["xpath=//a[contains(@href, '/Tipopatrimonio')]", "xpath:href"],
+        ["xpath=//ul[15]/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a02f0d6d-0ff4-458e-b50f-6813d9b3adf3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Novo Tipo de Patrimônio",
+      "targets": [
+        ["linkText=Novo Tipo de Patrimônio", "linkText"],
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//a[contains(text(),'Novo Tipo de Patrimônio')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/Tipopatrimonio/Create')]", "xpath:href"],
+        ["xpath=//p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Novo Tipo de Patrimônio')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b19fab0e-1279-4ec8-aeaa-ddeb00becdff",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary:nth-child(1)",
+      "targets": [
+        ["css=.btn-primary:nth-child(1)", "css:finder"],
+        ["xpath=//input[@value='Salvar']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fb6c01ae-552e-4758-b457-bf70533ffb59",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card-body > .form-group",
+      "targets": [
+        ["css=.card-body > .form-group", "css:finder"],
+        ["xpath=//form/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b95d8e29-b4a4-464c-90a4-434e9105b884",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=Nome-error",
+      "targets": [
+        ["id=Nome-error", "id"],
+        ["css=#Nome-error", "css:finder"],
+        ["xpath=//span[@id='Nome-error']", "xpath:attributes"],
+        ["xpath=//span/span", "xpath:position"]
+      ],
+      "value": "The Nome field is required."
+    }]
+  }, {
+    "id": "1f1c0b03-4f60-4550-a5d9-4abd4011701f",
+    "name": "Alterar Tipo Patrimônio Válido",
+    "commands": [{
+      "id": "da0ef649-b951-4997-a049-1a1dc0b5a1cf",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fd33742f-ab8f-4261-bb39-e58ce3514f3e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1053",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "29f37d0c-da64-42f4-8a4e-76ec8ca05e8d",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["linkText=Acessar Sistema", "linkText"],
+        ["css=#login", "css:finder"],
+        ["xpath=//a[contains(text(),'Acessar Sistema')]", "xpath:link"],
+        ["xpath=//a[@id='login']", "xpath:attributes"],
+        ["xpath=//header[@id='header']/div/nav/ul/li[9]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Identity/Account/Login')]", "xpath:href"],
+        ["xpath=//li[9]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Acessar Sistema')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e6d43ac6-bfab-4221-9294-8356ea2cd557",
+      "comment": "",
+      "command": "click",
+      "target": "id=Input_Email",
+      "targets": [
+        ["id=Input_Email", "id"],
+        ["name=Input.Email", "name"],
+        ["css=#Input_Email", "css:finder"],
+        ["xpath=//input[@id='Input_Email']", "xpath:attributes"],
+        ["xpath=//form[@id='account']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "907358fb-ca04-4c20-a902-14c541e71baf",
+      "comment": "",
+      "command": "type",
+      "target": "id=Input_Email",
+      "targets": [
+        ["id=Input_Email", "id"],
+        ["name=Input.Email", "name"],
+        ["css=#Input_Email", "css:finder"],
+        ["xpath=//input[@id='Input_Email']", "xpath:attributes"],
+        ["xpath=//form[@id='account']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "daniel17sants@gmail.com"
+    }, {
+      "id": "8afe0c44-11cd-4095-82c7-797e365b024e",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=Input.Password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='account']/div[3]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "10c051c6-0762-4872-99c3-7e63d9ef1f29",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=Input.Password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='account']/div[3]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": "D@n123456"
+    }, {
+      "id": "4132b37a-2fc0-4189-86e1-d4ea3c6725d6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='account']/div[6]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Entrar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d22d118c-7c6f-4fa0-b374-bafab8e61e7a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Tipo do Patrimônio",
+      "targets": [
+        ["linkText=Tipo do Patrimônio", "linkText"],
+        ["css=.nav:nth-child(15) .nav-link", "css:finder"],
+        ["xpath=//a[contains(@href, '/Tipopatrimonio')]", "xpath:href"],
+        ["xpath=//ul[15]/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "42afef9f-cc5c-466d-8dc4-1ec2f372bea2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.odd:nth-child(3) .fa-edit",
+      "targets": [
+        ["css=.odd:nth-child(3) .fa-edit", "css:finder"],
+        ["xpath=//table[@id='tipopatrimonio']/tbody/tr[3]/td[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Tipopatrimonio/Edit/30')]", "xpath:href"],
+        ["xpath=//tr[3]/td[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1cb40d8a-7231-4fff-b08f-d9f303729907",
+      "comment": "",
+      "command": "click",
+      "target": "id=Nome",
+      "targets": [
+        ["id=Nome", "id"],
+        ["name=Nome", "name"],
+        ["css=#Nome", "css:finder"],
+        ["xpath=//input[@id='Nome']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a2587ca6-e25f-4467-91e9-f14c0fafa6b6",
+      "comment": "",
+      "command": "type",
+      "target": "id=Nome",
+      "targets": [
+        ["id=Nome", "id"],
+        ["name=Nome", "name"],
+        ["css=#Nome", "css:finder"],
+        ["xpath=//input[@id='Nome']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "Elétrico"
+    }, {
+      "id": "da54adc1-9236-4790-8d3e-7789cabea899",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary:nth-child(1)",
+      "targets": [
+        ["css=.btn-primary:nth-child(1)", "css:finder"],
+        ["xpath=//input[@value='Salvar']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "ad9a7e41-f092-453f-bda2-6f03a7d43ebc",
+    "name": "Remover Tipo Patrimônio Válido",
+    "commands": [{
+      "id": "e6dadbdb-da70-4085-a5af-2fec0490d7b0",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "83749add-98e7-411d-a464-4da929b27b7b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1053",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fe99f010-ca0a-4895-b611-942875b3e848",
+      "comment": "",
+      "command": "click",
+      "target": "id=login",
+      "targets": [
+        ["id=login", "id"],
+        ["linkText=Acessar Sistema", "linkText"],
+        ["css=#login", "css:finder"],
+        ["xpath=//a[contains(text(),'Acessar Sistema')]", "xpath:link"],
+        ["xpath=//a[@id='login']", "xpath:attributes"],
+        ["xpath=//header[@id='header']/div/nav/ul/li[9]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Identity/Account/Login')]", "xpath:href"],
+        ["xpath=//li[9]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Acessar Sistema')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "597071ae-7fc4-4e42-a034-d3b36028e494",
+      "comment": "",
+      "command": "click",
+      "target": "id=Input_Email",
+      "targets": [
+        ["id=Input_Email", "id"],
+        ["name=Input.Email", "name"],
+        ["css=#Input_Email", "css:finder"],
+        ["xpath=//input[@id='Input_Email']", "xpath:attributes"],
+        ["xpath=//form[@id='account']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3a36bd57-0770-4bc7-adc6-94a15bb1dd76",
+      "comment": "",
+      "command": "type",
+      "target": "id=Input_Email",
+      "targets": [
+        ["id=Input_Email", "id"],
+        ["name=Input.Email", "name"],
+        ["css=#Input_Email", "css:finder"],
+        ["xpath=//input[@id='Input_Email']", "xpath:attributes"],
+        ["xpath=//form[@id='account']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "daniel17sants@gmail.com"
+    }, {
+      "id": "944be204-04f7-45df-a035-7191516ba81e",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=Input.Password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='account']/div[3]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "de6cc410-cd1a-455f-8f6f-7fe9fa699e1c",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=Input.Password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='account']/div[3]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": "D@n123456"
+    }, {
+      "id": "2f616874-b4df-423e-9f04-75532ea7e0b3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='account']/div[6]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Entrar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c9843030-cc51-4941-8fa3-500aa9845b8d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Tipo do Patrimônio",
+      "targets": [
+        ["linkText=Tipo do Patrimônio", "linkText"],
+        ["css=.nav:nth-child(15) .nav-link", "css:finder"],
+        ["xpath=//a[contains(@href, '/Tipopatrimonio')]", "xpath:href"],
+        ["xpath=//ul[15]/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "90268b9f-72d0-4f30-9d7a-c1182b63ec5c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.odd:nth-child(1) .fa-trash-alt",
+      "targets": [
+        ["css=.odd:nth-child(1) .fa-trash-alt", "css:finder"],
+        ["xpath=//table[@id='tipopatrimonio']/tbody/tr/td[3]/a[3]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Tipopatrimonio/Delete/26')]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "908657b1-4e7d-4bbc-a2f1-02e638c12b74",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card-footer .btn-danger",
+      "targets": [
+        ["css=.card-footer .btn-danger", "css:finder"],
+        ["xpath=//input[@value='Remover']", "xpath:attributes"],
+        ["xpath=//div[2]/form/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "9dd84f33-7512-488a-86ac-0d865e1223f9",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["af8198ed-d0d3-4bcf-a6bd-c8ef879664ba"]
+  }],
+  "urls": ["https://localhost:5001/"],
+  "plugins": []
+}
