@@ -23,7 +23,7 @@ namespace CatalogarPatrimonioWEB.Models
 		public decimal Valor { get; set; }
 
 		[Display(Name = "QrCode")]
-		public int QrCode { get; set; }
+		public string QrCode { get; set; }
 
 		[Display(Name = "Numero")]
 		public int Numero { get; set; }
