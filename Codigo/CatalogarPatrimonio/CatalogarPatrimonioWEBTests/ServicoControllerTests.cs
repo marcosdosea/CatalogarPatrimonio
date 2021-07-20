@@ -162,6 +162,10 @@ namespace CatalogarPatrimonioWEB.Controllers.Tests
 			{
 				Id = 4,
 				Descricao = "Lampada Queimada",
+				IdSolicitante = 2,
+				IdAlmoxarife =  1,
+				IdTecnico =  1,
+				IdLocal =  2,
 			};
 
 		}
@@ -171,6 +175,10 @@ namespace CatalogarPatrimonioWEB.Controllers.Tests
 			{
 				Id = 2,
 				Descricao = "Fechadura emperrada",
+				IdSolicitante = 2,
+				IdAlmoxarife =  1,
+				IdTecnico =  1,
+				IdLocal =  2,
 			};
 		}
 
@@ -180,6 +188,10 @@ namespace CatalogarPatrimonioWEB.Controllers.Tests
 			{
 				Id = 2,
 				Descricao = "Fechadura emperrada",
+				IdSolicitante = 2,
+				IdAlmoxarife =  1,
+				IdTecnico =  1,
+				IdLocal =  2,
 			};
 		}
 
@@ -191,16 +203,28 @@ namespace CatalogarPatrimonioWEB.Controllers.Tests
 				{
 					Id = 1,
 					Descricao = "Lampada queimada",
+					IdSolicitante = 2,
+					IdAlmoxarife =  1,
+					IdTecnico =  1,
+					IdLocal =  2,
 				},
 				new Servico
 				{
 					Id = 2,
 					Descricao = "Fechadura emperrada",
+					IdSolicitante = 1,
+					IdAlmoxarife =  1,
+					IdTecnico =  1,
+					IdLocal =  1,
 				},
 				new Servico
 				{
 					Id = 3,
 					Descricao = "Ar condicionado quebrou",
+					IdSolicitante = 3,
+					IdAlmoxarife =  1,
+					IdTecnico =  1,
+					IdLocal =  3,
 				},
 			};
 		}
