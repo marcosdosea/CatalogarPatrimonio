@@ -31,9 +31,27 @@ namespace Service.Tests
 			_context.Database.EnsureCreated();
 			var Servico = new List<Servico>
 				{
-					new Servico { Id = 1, Descricao = "Ar condicionado quebrou"},
-					new Servico { Id = 2, Descricao = "Fechadura emperrada"},
-					new Servico { Id = 3, Descricao = "Lampada queimada"},
+					new Servico {	 Id = 1, 
+									Descricao = "Ar condicionado quebrou",
+									IdStatusServico = 2,
+        							IdAlmoxarife = 1,
+        							IdTecnico = 1,
+        							IdLocal = 2,
+									},
+					new Servico { 	Id = 2, 
+									Descricao = "Fechadura emperrada",
+									IdStatusServico = 1,
+        							IdAlmoxarife = 2,
+        							IdTecnico = 1,
+        							IdLocal = 1,
+									},
+					new Servico { 	Id = 3, 
+									Descricao = "Lampada queimada",
+									IdStatusServico = 2,
+        							IdAlmoxarife = 1,
+        							IdTecnico = 1,
+        							IdLocal = 3,
+									},
 				};
 
 			_context.AddRange(Servico);
@@ -47,7 +65,13 @@ namespace Service.Tests
 		public void InserirTest()
 		{
 			// Act
-			_ServicoService.Inserir(new Servico() { Id = 4, Descricao = "Lampada queimada" });
+			_ServicoService.Inserir(new Servico() { Id = 4, 
+													Descricao = "Lampada queimada",
+													IdStatusServico = 2,
+													IdAlmoxarife = 1,
+													IdTecnico = 1,
+													IdLocal = 3, 
+												  });
 			// Assert
 			Assert.AreEqual(4, _ServicoService.ObterTodos().Count());
 			var Servico = _ServicoService.Obter(4);
